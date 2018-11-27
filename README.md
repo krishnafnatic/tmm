@@ -1,2 +1,2 @@
-# themoneymile
-TheMoneyMile Official Website Code Repository
+# MoneyMile
+TheMoneyMile Official Code Directory

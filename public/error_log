@@ -1,0 +1,1 @@
+[19-Nov-2018 08:02:50 UTC] PHP Fatal error:  require(): Failed opening required '/home/themoneymile/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/themoneymile/public_html/index.php on line 27

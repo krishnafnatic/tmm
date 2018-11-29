@@ -124,6 +124,7 @@ return [
         ],
         'speaker_description.*.short_description'   =>  [
             'required'  =>  'Please fill in this field.',
+            'max'       =>  'Contain atleast 255 chars',
         ],
         'speaker_description.*.meta_title'   =>  [
             'required'  =>  'Please fill in this field.',

@@ -82,14 +82,11 @@ class VideoDetailController extends Controller
 
             $all_speakers = array();
 
-            if( count( $speakers_using_cf ) ) {
+            if(  $speakers_using_cf ) {
                 $speakerQuery = DB::table('speakers')->whereIn( 'bc_speaker_name', $splitArraySpeaker )->get();
 
                 foreach( $speakerQuery as $speaker ) {
-                    // print '<pre>';
-                    //     print_r($speaker->id);
-                    // print '</pre>';
-                    // die;
+                    
                     $speaker_descriptions = SpeakerDescription::where( 'speaker_id', $speaker->id )->first();
 
                     $all_speakers[] = array(
@@ -261,7 +258,7 @@ class VideoDetailController extends Controller
 
             $all_speakers = array();
 
-            if( count( $speakers_using_cf ) ) {
+            if(  $speakers_using_cf ) { 
                 $speakerQuery = DB::table('speakers')->whereIn( 'bc_speaker_name', $splitArraySpeaker )->get();
 
                 foreach( $speakerQuery as $speaker ) {
@@ -383,7 +380,7 @@ class VideoDetailController extends Controller
 
             $all_speakers = array();
 
-            if( count( $speakers_using_cf ) ) {
+            if(  $speakers_using_cf ) {
                 $speakerQuery = DB::table('speakers')->whereIn( 'bc_speaker_name', $splitArraySpeaker )->get();
 
                 foreach( $speakerQuery as $speaker ) {

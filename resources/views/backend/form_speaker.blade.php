@@ -123,7 +123,7 @@
 
                                   <div class="form-group{{ $errors->has('speaker_description.'.$lang->id.'.short_description') ? ' has-error' : '' }}">
                                     <label for="short_description">{{ __( 'messages.short_description' ) }}</label>
-                                    <input type="text" class="form-control" id="short_description" name="speaker_description[{{ $lang->id }}][short_description]" placeholder="{{ __( 'messages.enter_short_description' ) }}" @if(isset($id)) value="{{ $speak[$lang->id]['short_description'] }}" @else value="{{ old('speaker_description.'.$lang->id.'.short_description') }}" @endif maxlength="100" required autofocus autocomplete="off">
+                                    <input type="text" class="form-control" id="short_description" name="speaker_description[{{ $lang->id }}][short_description]" placeholder="{{ __( 'messages.enter_short_description' ) }}" @if(isset($id)) value="{{ $speak[$lang->id]['short_description'] }}" @else value="{{ old('speaker_description.'.$lang->id.'.short_description') }}" @endif maxlength="255" required autofocus autocomplete="off">
                                     @if ($errors->has('speaker_description.'.$lang->id.'.short_description'))
                                       <span class="help-block">
                                           <strong>{{ $errors->first('speaker_description.'.$lang->id.'.short_description') }}</strong>

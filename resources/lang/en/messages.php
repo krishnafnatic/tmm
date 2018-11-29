@@ -22,6 +22,7 @@ return [
         Admin Messages
     */
     'page_added'    => ':page created successfully.',
+    'admin_activate' => 'Admin will check the message and will activate.',
     'page_updated'   => ':page updated successfully.',
     'page_delete'   => ':page deleted successfully.',
     'page_id_not_exists'    => ' “Cheating huh?” :page ID does not exists!',
@@ -128,12 +129,25 @@ return [
     'manage_info'       =>  'Manage Information',
     'manage_lang'       =>  'Manage Language',
     'manage_user'       =>  'Manage User',
+    'manage_comment'    =>  'Manage User Comment',
     'manage_speaker'    =>  'Manage Speaker',
     'create_menu'       =>  'Create Menu',
     'create_info'       =>  'Create Information',
     'create_user'       =>  'Create User',
+    'listing_comment'   =>  'Create User Comment',
     'create_lang'       =>  'Create Language',
     'create_speaker'    =>  'Create Speaker',
+    'comment'           =>  'User Comment',
+    'username'          =>  'User Name',
+    'videoname'         =>  'Video Name',
+    'user_created'      =>  'User Created',
+    'user_verified'     =>  'User Verified by email',
+    'parent'            =>  'Parent',
+    'root_comment'      =>  'Root Comment',
+    'active_comment'    =>  'Activate Comment',
+    'inactive_comment'  =>  'InActivate Comment',
+    'comment_activated' =>  'Comment Activated Successfully!',
+    'comment_inactivated' =>  'Comment Inactivated Successfully!',
 
 
     //Error message
@@ -154,6 +168,7 @@ return [
     'enter_code'   =>  'Enter Code',
     'enter_locale' =>  'Enter Locale',
     'enter_image'  =>  'Enter Image',
+    'enter_designation'         =>  'Enter Designation',
     'enter_short_description'   =>  'Enter Short Description',
     'enter_meta_title'          =>  'Enter Meta Title',
     'enter_meta_desc'           =>  'Enter Meta Description',

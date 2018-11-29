@@ -101,42 +101,47 @@ return [
 
     'custom' => [
         'information_description.*.title'   =>  [
-            'required'  =>  'Please fill in this field.',
+            'required'  =>  'The title field is required.',
             'regex'     =>  'The title may only contain letters.',
-            'max'       =>  '',
+            'max'       =>  'Contain atleast 100 chars',
         ],
         'information_description.*.short_description'   =>  [
-            'required'  =>  'Please fill in this field.',
+            'required'  =>  'The short description field is required.',
+            'max'       =>  'Contain atleast 255 chars',
         ],
         'information_description.*.meta_title'   =>  [
-            'required'  =>  'Please fill in this field.',
-            'regex'     =>  'The title may only contain letters.'
+            'required'  =>  'The meta title field is required.',
+            'regex'     =>  'The title may only contain letters.',
+            'max'       =>  'Contain atleast 100 chars',
         ],
         'information_description.*.meta_description'   =>  [
-            'required'  =>  'Please fill in this field.',
-            'regex'     =>  'The title may only contain letters.'
+            'required'  =>  'The meta description field is required.',
+            'regex'     =>  'The title may only contain letters.',
+            'max'       =>  'Contain atleast 155 chars',
         ],
         'speaker_description.*.name'   =>  [
-            'required'  =>  'Please fill in this field.',
+            'required'  =>  'The name field is required.',
             'unique'    =>  'The name has already been taken',
             'regex'     =>  'The name may only contain letters.',
-            'max'       =>  '',
+            'max'       =>  'Contain atleast 100 chars',
+        ],
+        'speaker_description.*.designation'   =>  [
+            'required'  =>  'The designation field is required.',
+            'max'       =>  'Contain atleast 100 chars.',
         ],
         'speaker_description.*.short_description'   =>  [
-            'required'  =>  'Please fill in this field.',
+            'required'  =>  'The short description field is required.',
             'max'       =>  'Contain atleast 255 chars',
         ],
         'speaker_description.*.meta_title'   =>  [
-            'required'  =>  'Please fill in this field.',
-            'regex'     =>  'The title may only contain letters.'
-        ],
-        'speaker_description.*.designation'   =>  [
-            'required'  =>  'Please fill in this field.',
-            'max'       =>  'This field can containt 50 chars.',
+            'required'  =>  'The meta title field is required.',
+            'regex'     =>  'The title may only contain letters.',
+            'max'       =>  'Contain atleast 100 chars',
         ],
         'speaker_description.*.meta_description'   =>  [
-            'required'  =>  'Please fill in this field.',
-            'regex'     =>  'The title may only contain letters.'
+            'required'  =>  'The meta description field is required.',
+            'regex'     =>  'The title may only contain letters.',
+            'max'       =>  'Contain atleast 155 chars',
         ],
         // 'setting.*.type'   =>  [
         //     'not_in'     => 'Please select proper type.'

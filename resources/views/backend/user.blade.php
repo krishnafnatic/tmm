@@ -26,13 +26,9 @@
     <!-- Main content -->
     <section class="content">
       <div class="row">
-        <div class="col-md-9 col-md-offset-1">
+        <div class="col-sm-7">
           @include('backend.elements.messages')
           <div class="box">
-            <!-- <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
-            </div> -->
-            <!-- /.box-header -->
             <div class="box-body">
               <table id="listing1" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
                 <thead>
@@ -45,9 +41,6 @@
                       {{ __( 'messages.email' ) }} 
                     </th>
                     <th class="text-left">
-                      {{ __( 'messages.mobile' ) }} 
-                    </th>
-                    <th class="text-right">
                       {{ __( 'messages.action' ) }}
                     </th>
                   </tr>
@@ -58,24 +51,10 @@
                     <td class="text-left">{{ $user->name }} </td>
                     <td class="text-left">{{ $user->email }} </td>
                     <td class="text-left">
-                      @if($user->mobile)
-                        {{ $user->mobile }}
-                      @else
-                        -
-                      @endif
-                    </td>
-                    <!-- <td>{{ App\Models\Role::where( 'id', $user->role_id )->first()->name }} </td> -->
-                    <td class="text-right">
                         <button type="button" class="btn bg-blue text-right view" onclick="window.location='{{ url("admin/user/$user->id/view") }}'">
-                          <i class="fa fa-street-view float-left" aria-hidden="true"></i>
+                          <i class="fa fa-eye float-left" aria-hidden="true"></i>
                           {{ __( 'messages.view' ) }}
                         </button> 
-
-                        <!-- <button type="button" class="btn bg-red text-right delete" onclick="return userDelete( '{{$user->name}}', '{{ url("admin/user/$user->id/delete") }}');">
-                          <i class="fa fa-trash float-left" aria-hidden="true"></i>
-                          {{ __( 'messages.delete' ) }}
-                        </button> -->
-
                     </td>
                   </tr>
                   @endforeach
@@ -89,9 +68,6 @@
                       {{ __( 'messages.email' ) }} 
                     </th>
                     <th class="th-sm text-left">
-                      {{ __( 'messages.mobile' ) }} 
-                    </th>
-                    <th class="th-sm text-right">
                       {{ __( 'messages.action' ) }}
                     </th>
                   </tr>

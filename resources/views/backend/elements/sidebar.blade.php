@@ -120,6 +120,12 @@
       </a>
     </li>
     <li>
+      <a href="{{ route('admin.comment') }}">
+        <i class="fa fa-comments"></i>
+        <span>{{ __( 'messages.manage_comment' ) }}</span>
+      </a>
+    </li>
+    <li>
       <a href="{{ route('admin.password.change') }}">
         <i class="fa fa-lock"></i>
         <span>{{ __( 'messages.change_password' ) }}</span>

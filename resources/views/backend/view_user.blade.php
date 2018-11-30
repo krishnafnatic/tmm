@@ -10,6 +10,10 @@
         <i class="fa fa-user-plus"></i>
         {{ __( 'messages.view' ) }} {{ $user->name }}
         <small>{{ __( 'messages.profile' ) }}</small> 
+        <button type="button" class="btn btn-success btn-add-new" onclick="window.location='{{ url("admin/user/") }}'">
+          <i class="fa fa-arrow-circle-left"></i>
+          {{ __( 'messages.back' ) }}
+        </button>
       </h1>
       <ol class="breadcrumb">
         <li>
@@ -83,9 +87,9 @@
                     <div class="col-sm-10">
                       <select class="form-control" readonly>
                         @if($user->status == 1)
-                          <option>Created</option>
+                          <option>{{ __( 'messages.user_created' ) }}</option>
                         @else
-                          <option>Verified</option>
+                          <option>{{ __( 'messages.user_verified' ) }}</option>
                         @endif
                       </select>
                     </div>

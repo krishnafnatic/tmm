@@ -75,23 +75,12 @@ class SpeakerController extends Controller
      */
     public function store(Request $request) {
 
-        $speaker =  $request->get('speaker_description');
-
-        $this->validate($request, [
-            'avatar' => 'required|image|max:2048',
-            'facebook'  =>  'nullable|url',
-            'linkedin'  =>  'nullable|url',
-            'google'    =>  'nullable|url',
-            'twitter'   =>  'nullable|url',
-        ]);
-
         $validator = Validator::make($request->all(), [ 
-            'slug'                                   => 'required|max:100|unique:speakers',
             'speaker_description.*.name'             => 'required|regex:/^[\pL\s\-]+$/u|max:100|unique:speaker_descriptions',
             'speaker_description.*.designation'      => 'required|max:100',
             'speaker_description.*.short_description' => 'required|max:255',
-            'speaker_description.*.meta_title'        => 'regex:/^[\pL\s\-]+$/u|max:100',
-            'speaker_description.*.meta_description'  => 'regex:/^[\pL\s\-]+$/u|max:155',
+            'speaker_description.*.meta_title'        => 'required|regex:/^[\pL\s\-]+$/u|max:100',
+            'speaker_description.*.meta_description'  => 'required|regex:/^[\pL\s\-]+$/u|max:155',
         ]);
 
         if ($validator->fails()) {
@@ -99,6 +88,17 @@ class SpeakerController extends Controller
                         ->withErrors($validator)
                         ->withInput();
         }
+
+        $this->validate($request, [
+            'slug'      => 'required|max:100|unique:speakers',
+            'avatar'    => 'required|image|max:2048',
+            'facebook'  =>  'nullable|url',
+            'linkedin'  =>  'nullable|url',
+            'google'    =>  'nullable|url',
+            'twitter'   =>  'nullable|url',
+        ]);
+
+        $speaker =  $request->get('speaker_description');
 
         /*
             fields inputs

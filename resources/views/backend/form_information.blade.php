@@ -99,7 +99,7 @@
 
                                   <div class="form-group{{ $errors->has('information_description.'.$lang->id.'.short_description') ? ' has-error' : '' }}">
                                     <label for="short_description">{{ __( 'messages.short_description' ) }}</label>
-                                    <input type="text" class="form-control" id="short_description" name="information_description[{{ $lang->id }}][short_description]" placeholder="{{ __( 'messages.enter_short_description' ) }}" @if(isset($id)) value="{{ $info[$lang->id]['short_description'] }}" @else value="{{ old('information_description.'.$lang->id.'.short_description') }}" @endif maxlength="100" required autofocus autocomplete="off">
+                                    <input type="text" class="form-control" id="short_description" name="information_description[{{ $lang->id }}][short_description]" placeholder="{{ __( 'messages.enter_short_description' ) }}" @if(isset($id)) value="{{ $info[$lang->id]['short_description'] }}" @else value="{{ old('information_description.'.$lang->id.'.short_description') }}" @endif maxlength="255" required autofocus autocomplete="off">
                                     @if ($errors->has('information_description.'.$lang->id.'.short_description'))
                                       <span class="help-block">
                                           <strong>{{ $errors->first('information_description.'.$lang->id.'.short_description') }}</strong>
@@ -152,7 +152,7 @@
                                   
                                   <div class="form-group{{ $errors->has('information_description.'.$lang->id.'.meta_keyword') ? ' has-error' : '' }}">
                                     <label for="meta_keyword">{{ __( 'messages.meta_keyword' ) }}</label>
-                                    <textarea id="meta_keyword" name="information_description[{{ $lang->id }}][meta_keyword]" rows="10" cols="80">@if(isset($id)) {{ $info[$lang->id]['meta_keyword'] }} @else {{ old('information_description.'.$lang->id.'.meta_keyword') }} @endif
+                                    <textarea class="form-control" id="meta_keyword" name="information_description[{{ $lang->id }}][meta_keyword]" rows="10" cols="80">@if(isset($id)) {{ $info[$lang->id]['meta_keyword'] }} @else {{ old('information_description.'.$lang->id.'.meta_keyword') }} @endif
                                     </textarea> 
                                     @if ($errors->has('information_description.'.$lang->id.'.meta_keyword'))
                                       <span class="help-block">

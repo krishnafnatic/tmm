@@ -39,21 +39,14 @@
         <div class="col-md-9 col-md-offset-1">
           @include('backend.elements.messages')
           <div class="box">
-           <!--  <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
-            </div> -->
-            <!-- /.box-header -->
             <div class="box-body">
               <table id="listing2" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
                 <thead>
                   <tr>
                     <th class="th-sm text-left">
                       {{ __( 'messages.title' ) }} 
-                    </th> 
-                    <th class="th-sm text-left">
-                      {{ __( 'messages.slug' ) }}
                     </th>
-                    <th class="th-sm text-center">
+                    <th class="th-sm text-left">
                       {{ __( 'messages.action' ) }}
                     </th>
                   </tr>
@@ -61,9 +54,8 @@
                 <tbody>
                   @foreach($menu_items as $menu)
                   <tr>
-                    <td>{{ $menu->title }} </td>
-                    <td class="th-sm text-left">{{ $menu->slug }}</td>
-                    <td class="text-center">  
+                    <td class="th-sm text-left">{{ $menu->title }} </td>
+                    <td class="th-sm text-left">  
                         <button type="button" class="btn bg-blue text-right edit" onclick="window.location='{{ url("admin/menu/item/$id/$menu->id/edit") }}'">
                           <i class="fa fa-edit float-left" aria-hidden="true"></i>
                           {{ __( 'messages.edit' ) }}
@@ -72,7 +64,6 @@
                           <i class="fa fa-trash float-left" aria-hidden="true"></i>
                           {{ __( 'messages.delete' ) }}
                         </button>
-
                     </td>
                   </tr>
                   @endforeach
@@ -83,9 +74,6 @@
                       {{ __( 'messages.title' ) }}
                     </th>
                     <th class="th-sm text-left">
-                      {{ __( 'messages.slug' ) }}
-                    </th>
-                    <th class="th-sm text-center">
                       {{ __( 'messages.action' ) }}
                     </th>
                   </tr>

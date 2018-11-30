@@ -370,4 +370,11 @@ Route::group(['prefix' => 'admin', /*'middleware' => 'super_admin'*/ ], function
     Route::get('/setting','Backend\SettingController@show')->name('admin.setting');
     Route::post('/setting','Backend\SettingController@store')->name('admin.setting.store.submit');
 
+    /*
+        Speaker Listing;
+    */
+    Route::get('/comment', 'Backend\CommentController@index')->name( 'admin.comment' );
+    Route::get('/commentState','Backend\CommentController@store')->name( 'admin.commentState' );
+    Route::get('/comment/{id}/view', 'Backend\CommentController@show')->name('admin.comment.id.view');
+
 });

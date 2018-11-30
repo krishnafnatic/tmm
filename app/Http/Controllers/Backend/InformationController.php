@@ -78,8 +78,8 @@ class InformationController extends Controller
         $validator = Validator::make($request->all(), [ 
             'information_description.*.title'             => 'required|regex:/^[\pL\s\-]+$/u|max:100|unique:information_descriptions',
             'information_description.*.short_description' => 'required|max:255',
-            'information_description.*.meta_title'        => 'regex:/^[\pL\s\-]+$/u|max:100',
-            'information_description.*.meta_description'  => 'regex:/^[\pL\s\-]+$/u|max:155',
+            'information_description.*.meta_title'        => 'required|regex:/^[\pL\s\-]+$/u|max:100',
+            'information_description.*.meta_description'  => 'required|regex:/^[\pL\s\-]+$/u|max:155',
         ]);
 
         if ($validator->fails()) {

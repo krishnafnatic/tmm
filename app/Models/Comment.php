@@ -29,7 +29,7 @@ class Comment extends Model {
      * @var array
      */
     protected $fillable = [
-        'user_id', 'video_id', 'parent_id', 'comments',
+        'user_id', 'video_id', 'parent_id', 'comments', 'status',
     ];
 
     /**
@@ -52,6 +52,8 @@ class Comment extends Model {
      * @return string
     */
     public function child_comments() {
-        return $this->hasMany('App\Models\Comment','parent_id','id')->orderBy('id', 'desc');
+        return $this->hasMany('App\Models\Comment','parent_id','id')
+                    ->where( 'status', 1)
+                    ->orderBy('id', 'desc');
     }
 }

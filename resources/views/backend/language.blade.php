@@ -30,10 +30,6 @@
         <div class="col-md-9 col-md-offset-1">
           @include('backend.elements.messages')
           <div class="box">
-            <!-- <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
-            </div> -->
-            <!-- /.box-header -->
             <div class="box-body">
               <table id="listing2" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
                 <thead>

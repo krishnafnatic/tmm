@@ -88,6 +88,7 @@ class CommentController extends Controller
         $comment->language_id   =   $lang_id;
         $comment->parent_id     =   $request->parent_id;
         $comment->comments      =   $request->comment;
+        $comment->status        =   0;
         $comment->created_at    =   $current_time;
         $comment->save();
 
@@ -106,6 +107,7 @@ class CommentController extends Controller
         $comments = Comment::where( 'video_id', $video_id )
                              ->where( 'language_id', $lang_id )
                              ->where( 'parent_id', 0 )
+                             ->where( 'status', 1)
                              ->orderBy( 'id', 'DESC' )
                              ->get();
 
@@ -126,7 +128,8 @@ class CommentController extends Controller
             'count'     => count($comments),
             'comments'  => $tree,
             'type'      => $type,
-            'message'   => Lang::get( 'messages.page_added', ['page' => "Comment"] ),
+            'message'   => Lang::get( 'messages.page_added', ['page' => "Comment"] ).' '.
+                           Lang::get( 'messages.admin_activate', ['page' => "Comment"] ),
         );
 
         return $msg;
@@ -200,7 +203,7 @@ class CommentController extends Controller
         $onClickReplySubmit= "event.preventDefault();replyCommentSubmit( '".$comment->id."', '".$comment->user_id."', '".$comment->video_id."' );";
         $tree = '';
         $tree .= '<li class="comment_id_'.$comment->id.' parent_id_'.$comment->parent_id.'">';
-            $tree .= '<span class="user-initials float-left"> SD </span>';
+            $tree .= '<span class="user-initials float-left">'. ucfirst( substr( $comment->user->name, 0, 1) ).'</span>';
             $tree .= '<h6 class="user-comment-name">'.$comment->user->name.'</h6>';
             $tree .= '<p class="user-typed-comment">'.$comment->comments.'</p>';
             $tree .= '<button class="btn btn-primary btn-sm  comment-reply" onclick="'.$enableComment.'" ><i class="fas fa-reply"></i> Reply</button>';

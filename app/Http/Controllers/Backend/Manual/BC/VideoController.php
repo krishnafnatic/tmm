@@ -63,7 +63,8 @@ class VideoController extends Controller {
         $account_id     =   env('account_id');
         $client_id      =   env('cms_video_client_id');
         $client_secret  =   env('cms_video_client_secret');
-        $request_url    =   env('cms_video_url').$account_id.'/videos';
+        $end_point      =   '?sort=-created_at&limit=100';
+        $request_url    =   env('cms_video_url').$account_id.'/videos'.$end_point;
 
         $auth_string    = "{$client_id}:{$client_secret}";
         $request_oauth  = env('oauth_url')."?grant_type=client_credentials";

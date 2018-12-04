@@ -24,7 +24,7 @@
                             <label for="password">
                                 {{ __( 'messages.password' ) }}
                             </label>
-                            <input id="password" type="password" class="form-control  {{ $errors->has('password') ? ' is-invalid' : '' }} " name="password" required>
+                            <input id="password" type="password" class="form-control  {{ $errors->has('password') ? ' is-invalid' : '' }}" value="{{ old('password') }}"  name="password" required>
                             <p id="passwordHelpBlock" class="form-text text-muted">
                                 {{ __( 'messages.tooltip_pwd' ) }}
                             </p>
@@ -40,7 +40,7 @@
                             <label for="password-confirm">
                                 {{ __( 'messages.confirm_password' ) }}
                             </label>
-                            <input id="password-confirm" type="password" class="form-control @if ($errors->has('password')) is-invalid  @endif" name="password_confirmation" required>
+                            <input id="password-confirm" type="password" class="form-control @if ($errors->has('password')) is-invalid  @endif" name="password_confirmation" value="{{ old('password_confirmation') }}" required>
 
                             @if ($errors->has('password'))
                                 <span class="invalid-feedback">

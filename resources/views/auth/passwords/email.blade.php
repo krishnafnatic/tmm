@@ -13,7 +13,6 @@
                         <div class="form-group {{ $errors->has('email') ? '' : '' }}">
                             <label>{{ __( 'messages.email' ) }}</label>
                             <input id="validationCustom03" type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" autocomplete="off" required />
-
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
                                         {{ $errors->first('email') }}

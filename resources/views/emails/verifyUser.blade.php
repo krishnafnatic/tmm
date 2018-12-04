@@ -31,10 +31,10 @@
                         <td class="header" style="font-family: Avenir, Helvetica, sans-serif;box-sizing: border-box; padding: 25px 0; text-align: center;">
                             <a href="{{ url('/') }}">
                                 <img src="{{ asset( 'frontend/images/the_money_mile_logo.png' ) }}" width="220" height="30" title="{{ config('app.name', 'TheMoneyMile') }}" alt="{{ config('app.name', 'TheMoneyMile') }}" />
-                            </a>
+                            </a><!-- 
                             <a href="{{ url('/') }}" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #bbbfc3; font-size: 19px; font-weight: bold; text-decoration: none; text-shadow: 0 1px 0 white;">
                                 {{ config('app.name', 'TheMoneyMile') }}
-                            </a>
+                            </a> -->
                         </td>
                     </tr>
 

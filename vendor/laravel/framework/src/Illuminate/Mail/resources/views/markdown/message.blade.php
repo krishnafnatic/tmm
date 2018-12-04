@@ -2,6 +2,9 @@
     {{-- Header --}}
     @slot('header')
         @component('mail::header', ['url' => config('app.url')])
+            <img src="" title="{{ config('app.name') }}" alt="{{ config('app.name') }}" {{ asset( 'frontend/images/the_money_mile_logo.png' ) }}" width="220" height="30" />
+        @endcomponent
+        @component('mail::header', ['url' => config('app.url')])
             {{ config('app.name') }}
         @endcomponent
     @endslot

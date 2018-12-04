@@ -232,7 +232,7 @@
                         <div class="box-body">
                           <div class="form-group{{ $errors->has('facebook') ? ' has-error' : '' }}">
                             <label for="facebook">{{ __( 'messages.facebook' ) }}</label>
-                            <input type="text" class="form-control" id="facebook" name="facebook" placeholder="{{ __( 'messages.enter_fb_url' ) }}" @if(isset( $social['facebook'] )) value=" {{ $social['facebook'] }}" @else value="{{ old('facebook') }}" @endif maxlength="100" required autofocus autocomplete="off">
+                            <input type="text" class="form-control" id="facebook" name="facebook" placeholder="{{ __( 'messages.enter_fb_url' ) }}" @if(isset( $social['facebook'] )) value="{{ $social['facebook'] }}" @else value="{{ old('facebook') }}" @endif maxlength="100" required autofocus autocomplete="off">
                             @if ($errors->has('facebook'))
                               <span class="help-block">
                                   <strong>{{ $errors->first('facebook') }}</strong>
@@ -241,7 +241,7 @@
                           </div>
                           <div class="form-group{{ $errors->has('linkedin') ? ' has-error' : '' }}">
                             <label for="linkedin">{{ __( 'messages.linkedin' ) }}</label>
-                            <input type="text" class="form-control" id="linkedin" name="linkedin" placeholder="{{ __( 'messages.enter_li_url' ) }}" @if(isset( $social['linkedin'] )) value=" {{ $social['linkedin'] }}" @else value="{{ old('linkedin') }}" @endif maxlength="100" required autofocus autocomplete="off">
+                            <input type="text" class="form-control" id="linkedin" name="linkedin" placeholder="{{ __( 'messages.enter_li_url' ) }}" @if(isset( $social['linkedin'] )) value="{{ $social['linkedin'] }}" @else value="{{ old('linkedin') }}" @endif maxlength="100" required autofocus autocomplete="off">
                             @if ($errors->has('linkedin'))
                               <span class="help-block">
                                   <strong>{{ $errors->first('linkedin') }}</strong>
@@ -250,7 +250,7 @@
                           </div>
                           <div class="form-group{{ $errors->has('google') ? ' has-error' : '' }}">
                             <label for="google">{{ __( 'messages.google' ) }}</label>
-                            <input type="text" class="form-control" id="google" name="google" placeholder="{{ __( 'messages.enter_gg_url' ) }}" @if(isset( $social['google'] )) value=" {{ $social['google'] }}" @else value="{{ old('google') }}" @endif maxlength="100" required autofocus autocomplete="off">
+                            <input type="text" class="form-control" id="google" name="google" placeholder="{{ __( 'messages.enter_gg_url' ) }}" @if(isset( $social['google'] )) value="{{ $social['google'] }}" @else value="{{ old('google') }}" @endif maxlength="100" required autofocus autocomplete="off">
                             @if ($errors->has('google'))
                               <span class="help-block">
                                   <strong>{{ $errors->first('google') }}</strong>
@@ -259,7 +259,7 @@
                           </div>
                           <div class="form-group{{ $errors->has('twitter') ? ' has-error' : '' }}">
                             <label for="twitter">{{ __( 'messages.twitter' ) }}</label>
-                            <input type="text" class="form-control" id="twitter" name="twitter" placeholder="{{ __( 'messages.enter_tw_url' ) }}" @if(isset( $social['twitter'] )) value=" {{ $social['twitter'] }}" @else value="{{ old('twitter') }}" @endif maxlength="100" required autofocus autocomplete="off">
+                            <input type="text" class="form-control" id="twitter" name="twitter" placeholder="{{ __( 'messages.enter_tw_url' ) }}" @if(isset( $social['twitter'] )) value="{{ $social['twitter'] }}" @else value="{{ old('twitter') }}" @endif maxlength="100" required autofocus autocomplete="off">
                             @if ($errors->has('twitter'))
                               <span class="help-block">
                                   <strong>{{ $errors->first('twitter') }}</strong>

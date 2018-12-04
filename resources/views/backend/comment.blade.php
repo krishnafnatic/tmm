@@ -26,31 +26,24 @@
     <!-- Main content -->
     <section class="content">
       <div class="row">
-        <div class="col-md-9 col-md-offset-1">
+        <div class="col-xs-12">
           @include('backend.elements.messages')
           <div class="alert alert-dismissible" id="msgCommentSuccess" style="display: none;"></div>
           <div class="box" id="comment_msg">
-            <!-- <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
-            </div> -->
-            <!-- /.box-header -->
             <div class="box-body">
-              <table id="listing1" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+              <table id="listing2" class="table table-bordered table-hover">
                 <thead>
                   <tr>
-                    <th class="th-sm text-left">
+                    <th>
                       {{ __( 'messages.username' ) }} 
                     </th>
-                    <th class="text-left">
+                    <th>
                       {{ __( 'messages.videoname' ) }} 
                     </th>
-                    <th class="text-left">
+                    <th>
                       {{ __( 'messages.comment' ) }} 
                     </th>
-                    <!-- <th class="text-left">
-                      {{ __( 'messages.status' ) }} 
-                    </th> -->
-                    <th class="text-right">
+                    <th>
                       {{ __( 'messages.action' ) }}
                     </th>
                   </tr>
@@ -63,7 +56,7 @@
                       $is_status = $comment['is_status'];
                     @endphp
                   <tr>
-                    <td class="text-left">
+                    <td>
                       <u>
                         <i>
                           <a href="{{ url("admin/user/$user_id/view") }}" target="_blank">
@@ -74,10 +67,9 @@
                         </i>
                       </u>
                     </td>
-                    <td class="text-left">{{ $comment['video_name'] }} </td>
-                    <td class="text-left">{{ $comment['comment'] }} </td> 
-                    <!-- <td class="text-left">{{ $comment['status'] }} </td>  -->
-                    <td class="text-right" style="position: relative;">
+                    <td>{{ $comment['video_name'] }} </td>
+                    <td>{{ $comment['comment'] }} </td>
+                    <td style="position: relative;">
                         <button type="button" class="btn bg-blue text-right view" onclick="window.location='{{ url("admin/comment/$id/view") }}'">
                           <i class="fa fa-eye float-left" aria-hidden="true"></i>
                           {{ __( 'messages.view' ) }}
@@ -99,19 +91,16 @@
                 </tbody>
                 <tfoot>
                   <tr>
-                    <th class="th-sm text-left">
+                    <th>
                       {{ __( 'messages.username' ) }} 
                     </th>
-                    <th class="text-left">
+                    <th>
                       {{ __( 'messages.videoname' ) }} 
                     </th>
-                    <th class="text-left">
+                    <th>
                       {{ __( 'messages.comment' ) }} 
                     </th>
-                    <!-- <th class="text-left">
-                      {{ __( 'messages.status' ) }} 
-                    </th> -->
-                    <th class="text-right">
+                    <th>
                       {{ __( 'messages.action' ) }}
                     </th>
                   </tr>
@@ -152,9 +141,6 @@
         Activate & Inactivate User Comments
       */
       function statusComment( comment_id, status_id, state) {
-
-        
-        console.log(comment_id +'-'+ status_id +'-'+ state);
 
         var loader    =   "{{ asset( 'frontend/images/loader.png' ) }}",
         commentState =  "{{ route( 'admin.commentState' ) }}",

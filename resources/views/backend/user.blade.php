@@ -26,31 +26,30 @@
     <!-- Main content -->
     <section class="content">
       <div class="row">
-        <div class="col-sm-7">
+        <div class="col-xs-12">
           @include('backend.elements.messages')
           <div class="box">
             <div class="box-body">
-              <table id="listing1" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+              <table id="listing2" class="table table-bordered table-hover">
                 <thead>
                   <tr>
-                    <th class="th-sm text-left">
+                    <th>
                       {{ __( 'messages.name' ) }} 
                     </th>
-
-                    <th class="text-left">
+                    <th>
                       {{ __( 'messages.email' ) }} 
                     </th>
-                    <th class="text-left">
+                    <th>
                       {{ __( 'messages.action' ) }}
                     </th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody> 
                   @foreach($users as $user)
                   <tr>
-                    <td class="text-left">{{ $user->name }} </td>
-                    <td class="text-left">{{ $user->email }} </td>
-                    <td class="text-left">
+                    <td>{{ $user->name }} </td>
+                    <td>{{ $user->email }} </td>
+                    <td>
                         <button type="button" class="btn bg-blue text-right view" onclick="window.location='{{ url("admin/user/$user->id/view") }}'">
                           <i class="fa fa-eye float-left" aria-hidden="true"></i>
                           {{ __( 'messages.view' ) }}
@@ -61,13 +60,13 @@
                 </tbody>
                 <tfoot>
                   <tr>
-                    <th class="th-sm text-left">
+                    <th>
                       {{ __( 'messages.name' ) }}
                     </th>
-                    <th class="th-sm text-left">
+                    <th>
                       {{ __( 'messages.email' ) }} 
                     </th>
-                    <th class="th-sm text-left">
+                    <th>
                       {{ __( 'messages.action' ) }}
                     </th>
                   </tr>

@@ -148,6 +148,9 @@ return [
     'inactive_comment'  =>  'InActivate Comment',
     'comment_activated' =>  'Comment Activated Successfully!',
     'comment_inactivated' =>  'Comment Inactivated Successfully!',
+    'home_setting'      =>  'Home Page Setting',
+    'contact_setting'   =>  'Contact Us',
+    'add_contact_content'=> 'Add Contact us Content',
 
 
     //Error message
@@ -277,7 +280,7 @@ return [
     'recommended_videos'    =>  'Recommended Videos',
     'already_added'         =>  'The video is already added for the :page.',
     'already_verified'      =>  'Your e-mail is already verified. You can now login.',
-    'email_verified'        =>  'Your e-mail is verified. You can now login.',
+    'email_verified'        =>  'Your e-mail is verified now. You can login with your email and password.',
     'wrong_email'           =>  ' Sorry your email cannot be identified.',
     'send_verify'           =>  'We sent you an activation code. Check your email and click on the link to verify.',
     'confirm_account'       =>  'You need to confirm your account. We have sent you an activation code, please check your email.',

@@ -1,7 +1,7 @@
 <?php
 
 	Return [
-	    'email' => 'vipin.y@iwebsun.com',
-	    'name' 	=> 'Vipin Yadav',
+	    'email' => 'admin@themoneymile.com',
+	    'name' 	=> 'TheMoneyMile',
 	];
 ?>

@@ -42,27 +42,9 @@
                                 <tr>
                                     <td class="content-cell" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;">
                                         <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">$contact['name'] has contacted from contact us form. Below are the details</p>
-                                        <table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; padding: 0; text-align: center; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;">
-                                            <tr>
-                                                <td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
-                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
-                                                        <tr>
-                                                            <td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
-                                                                <table border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
-                                                                    <tr>
-                                                                        <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
-                                                                            E-mail: {{ $contact['email'] }}
-                                                                            <br/>
-                                                                            Message: {{ $contact['message'] }}
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                        E-mail: {{ $contact['email'] }}
+                                        <br/>
+                                        Message: {{ $contact['message'] }}
                                         <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Regards,<br>{{ config('app.name', 'TheMoneyMile') }}
                                         </p>
                                     </td>
@@ -94,7 +76,6 @@
                             </table>
                         </td>
                     <tr>
-
                 </table>
             </td>
         </tr>

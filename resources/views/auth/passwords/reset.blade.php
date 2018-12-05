@@ -15,7 +15,7 @@
                         
                         <div class="form-group {{ $errors->has('email') ? '' : '' }}">
                             <label for="email">{{ __( 'messages.email' ) }}</label>
-                            <input id="email" type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" autocomplete="off" autofocus required />
+                            <input id="email" type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email or old('email') }}" autocomplete="off" autofocus required />
                             @if ($errors->has('email'))
                                 <span class="invalid-feedback">
                                     {{ $errors->first('email') }}

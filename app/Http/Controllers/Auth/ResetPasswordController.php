@@ -35,7 +35,7 @@ class ResetPasswordController extends Controller
     protected function rules() {
         return [
             'token' => 'required',
-            'email' => 'required|email|user:exists',
+            'email' => 'required|email|exists:users',
             'password' => 'required|string|min:8|confirmed|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/',
             //'g-recaptcha-response' => 'required|captcha',
         ];

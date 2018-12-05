@@ -10,6 +10,9 @@
                     <h3 class="text-center">{{ __( 'messages.reset_password' ) }}</h3>
                     <form class="form-horizontal" method="POST" action="{{ route('password.request') }}" autocomplete="off">
                         {{ csrf_field() }}
+
+                        <input type="hidden" name="token" value="{{ $token }}">
+                        
                         <div class="form-group {{ $errors->has('email') ? '' : '' }}">
                             <label for="email">{{ __( 'messages.email' ) }}</label>
                             <input id="email" type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" autocomplete="off" autofocus required />

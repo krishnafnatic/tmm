@@ -7,18 +7,20 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ContactEmail extends Mailable
+class UnSubscribeMe extends Mailable
 {
     use Queueable, SerializesModels;
+
+    public $user_unsubscribe;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($user_unsubscribe)
     {
-        //
+        $this->user_unsubscribe = $user_unsubscribe;
     }
 
     /**
@@ -28,6 +30,6 @@ class ContactEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('views.email');
+        return $this->view('emails.unSubscribeMe');
     }
 }

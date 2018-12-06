@@ -7,18 +7,20 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ContactEmail extends Mailable
+class SubscribeMe extends Mailable
 {
     use Queueable, SerializesModels;
+
+    public $user_subscribe;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($user_subscribe)
     {
-        //
+        $this->user_subscribe = $user_subscribe;
     }
 
     /**
@@ -28,6 +30,6 @@ class ContactEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('views.email');
+        return $this->view('emails.subscribeMe');
     }
 }

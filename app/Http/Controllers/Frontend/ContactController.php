@@ -37,7 +37,8 @@ class ContactController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store( ContactFormRequest $message, AdminMail $admin ) {
-
+        
+        $admin->email = $message['email'];
         //send the admin an notification
         $admin->notify(new InboxMessage($message));
         // redirect the user back

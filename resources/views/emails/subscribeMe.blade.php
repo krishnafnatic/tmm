@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <title>Change Password | TheMoneyMile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
@@ -41,7 +42,8 @@
                             <table class="inner-body" align=3"center" width="570" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; background-color: #FFFFFF; margin: 0 auto; padding: 0; width: 570px; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px;">
                                 <tr>
                                     <td class="content-cell" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;">
-                                        <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">$contact['name'] has contacted from contact us form. Below are the details</p>
+                                        <h1 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 19px; font-weight: bold; margin-top: 0; text-align: left;">Hello! {{$user_subscribe['name']}}</h1>
+                                        <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Your email id "{{ $user_subscribe['email']  }}" has successfully subscribed!</p>
                                         <table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; padding: 0; text-align: center; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;">
                                             <tr>
                                                 <td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
@@ -51,9 +53,7 @@
                                                                 <table border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
                                                                     <tr>
                                                                         <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
-                                                                            E-mail: {{ $contact['email'] }}
-                                                                            <br/>
-                                                                            Message: {{ $contact['message'] }}
+                                                                            <a href="{{$user_subscribe['url']}}" class="button button-blue" target="_blank" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); color: #FFF; display: inline-block; text-decoration: none; -webkit-text-size-adjust: none; background-color: #3097D1; border-top: 10px solid #3097D1; border-right: 18px solid #3097D1; border-bottom: 10px solid #3097D1; border-left: 18px solid #3097D1;">UnSubscribe</a>
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -65,6 +65,17 @@
                                         </table>
                                         <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Regards,<br>{{ config('app.name', 'TheMoneyMile') }}
                                         </p>
+                                        <table class="subcopy" width="100%" cellpadding="0" cellspacing="0" border-top: 1px solid #EDEFF2; margin-top: 25px; padding-top: 25px;">
+                                            <tr>
+                                                <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                                                    <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; line-height: 1.5em; margin-top: 0; text-align: left; font-size: 12px;">If you are having trouble clicking the "UnSubscribe User" button, copy and paste the URL below into your web browser: 
+                                                        <a href="{{$user_subscribe['url']}}" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color:#3869D4;">
+                                                            {{$user_subscribe['url']}}
+                                                        </a>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </td>
                                 </tr>
                             </table>

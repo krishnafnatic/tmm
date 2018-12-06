@@ -7,18 +7,20 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ContactEmail extends Mailable
+class ChangeNotification extends Mailable
 {
     use Queueable, SerializesModels;
+
+    public $notify;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct( $notify )
     {
-        //
+        $this->notify = $notify;
     }
 
     /**
@@ -28,6 +30,6 @@ class ContactEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('views.email');
+        return $this->view('emails.changeNotification');
     }
 }

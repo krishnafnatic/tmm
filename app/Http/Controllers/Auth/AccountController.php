@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Lang;
 use App\Models\Video;
 use App\Models\VideoMeta;
 use Newsletter;
+use App\Mail\ChangePassword;
+use App\Mail\ChangeNotification;
+use App\Mail\AccountDeactivate;
+use Illuminate\Support\Facades\Mail;
 
 use App\Repositories\User\UserInterface as UserInterface;
 
@@ -127,7 +131,8 @@ class AccountController extends Controller {
     *   Change password
         */
     
-    public function updatePassword(Request $request){
+    public function updatePassword(Request $request) {
+
         if (!(Hash::check($request->get('current-password'), Auth::user()->password))) {
         // The passwords matches
             return redirect()->back()->with("error","Your current password does not matches with the password you provided. Please try again.");
@@ -150,7 +155,17 @@ class AccountController extends Controller {
         $user = Auth::user();
         $user->password = bcrypt($request->get('new-password'));
         $user->save();
-        return redirect( '/change-password#current-password' )->back()->with("success","Password changed successfully !");
+
+        /*
+            Send Mail to user for password change
+        */
+        $email = $user->email;
+        Mail::to($email)->send(new ChangePassword($user));
+
+        /*
+            Redirect to page once done.
+        */
+        return redirect( '/change-password' )->with("success","Password changed successfully !");
     }
 
     /*
@@ -489,6 +504,20 @@ class AccountController extends Controller {
         */
         $this->userProfileCheck( 'v_notify', $v_notify);
 
+        /*
+            Send Mail to user for password change
+        */
+        $email = Auth::user()->email;
+        $notify = array( 
+                    'name' => Auth::user()->name, 
+                    'n_notify' => $n_notify, 
+                    'v_notify' => $v_notify
+                );
+        /*
+            Send Mail to user for user notification;
+        */
+        Mail::to($email)->send(new ChangeNotification($notify));
+
         return redirect()->back()->with("success","Notification changed successfully !");
     }
 
@@ -555,6 +584,20 @@ class AccountController extends Controller {
             Insert or update meta_key = deactivate_reason
         */
         $this->userProfileCheck( 'deactivate_reason', $deactivation);
+
+        $userReasonIs = UserDeactivateReason::where( 'id', $deactivation)->first()->name;
+        /*
+            Send Mail to user for password change
+        */
+        $email = Auth::user()->email;
+        $user_reason = array( 
+            'name' => Auth::user()->name,
+            'reason'=>$userReasonIs
+        );
+        /*
+            Send Mail to user for user notification;
+        */
+        Mail::to($email)->send(new AccountDeactivate($user_reason));
 
         return redirect()->back()->with("success","Account Deactivated successfully !");
 

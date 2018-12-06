@@ -185,6 +185,7 @@
         video wish list
     */
     Route::post('/subscribe', 'Frontend\HomeController@subscribeNewsletter')->name('subscribe');
+    Route::get('/unsubscribe/{slug}', 'Frontend\HomeController@unSubscribeNewsletter')->name('subscribe');
 
     /*
         Contact page

@@ -7,18 +7,20 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ContactEmail extends Mailable
+class AccountDeactivate extends Mailable
 {
     use Queueable, SerializesModels;
+
+    public $user_reason;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct( $user_reason )
     {
-        //
+        $this->user_reason = $user_reason;
     }
 
     /**
@@ -28,6 +30,6 @@ class ContactEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('views.email');
+        return $this->view('emails.deactivateAccount');
     }
 }

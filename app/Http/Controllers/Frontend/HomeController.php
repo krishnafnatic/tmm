@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Lang;
 use Newsletter;
 use Auth;
 
+use App\Mail\SubscribeMe;
+use Illuminate\Support\Facades\Mail;
 use App\Repositories\User\UserInterface as UserInterface;
 
 class HomeController extends Controller {
@@ -102,8 +104,21 @@ class HomeController extends Controller {
             $split_name = explode( ' ', $request->name );
             $firstName =  $split_name[0];
             $lastName =  isset( $split_name[1] ) ? $split_name[1] : '' ;
+            //echo $request->email;die;
 
-            Newsletter::subscribe( $request->email, ['FNAME'=> ucwords( $firstName ), 'LNAME'=> $lastName]);
+            Newsletter::subscribe('rincewind@discworld.com');
+            Newsletter::subscribe( $request->email);
+
+            $email = $request->email;
+            $user_subscribe = array( 
+                'name' =>  ucwords( $firstName ),
+                'email'=>  $request->email,
+                'url'  =>   url('/unsubscribe/'.$request->email) 
+            );
+            /*
+                Send Mail to user for user notification;
+            */
+            Mail::to($email)->send(new SubscribeMe($user_subscribe));
 
             $msg = array(
                 'status' => 'success', 
@@ -114,6 +129,38 @@ class HomeController extends Controller {
 
         return response()->json($msg);
 
+    }
+
+    public function unSubscribeNewsletter( $email ) {
+        
+
+        //Check if a member is subscribed to a list
+        $isSubscribed = Newsletter::isSubscribed( $email );
+
+        if( $isSubscribed === true) { 
+
+            /*
+                UnSubscribe From MailChimp
+            */
+            Newsletter::unsubscribe( $email );
+
+
+            $user_unsubscribe = array( 
+                'name' =>  $email,
+                'email'=>  $email
+            );
+            /*
+                Send Mail to user for user notification;
+            */
+            Mail::to($email)->send(new UnSubscribeMe($user_unsubscribe));
+
+            /*
+                Redirect to page once done.
+            */
+            return redirect('/')->with("success", Lang::get( 'messages.already_subscribed'));
+        } else {
+            return redirect('/')->with("success", 'The email id you have provided has not been found in database!');
+        }
     }
 
     private function homeSetting( $type, $heading, $videoMeta ) {
@@ -153,7 +200,7 @@ class HomeController extends Controller {
         if( $type == 'tag' || $type == 'trending' ) {
 
             $videos = getVideos( $type, $allTags ); 
-            if( isset( $videos ) && count( $videos ) > 0  ) {
+            if( isset( $videos ) && count( $videos ) > 0 ) {
                 foreach( $videos as $video ) {
                     if( !empty( $video['id'] ) ) {
                             $getVideoInfo         = Video::where('id', $video['id'] )->first();

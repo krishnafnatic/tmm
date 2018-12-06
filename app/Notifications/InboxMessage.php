@@ -41,14 +41,16 @@ class InboxMessage extends Notification
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail($notifiable)
-    {
+    public function toMail($notifiable) {
+
         return (new MailMessage)
-                    ->subject(config('admin.name') . ", Contact us mail!")
-                    ->greeting(" ")
-                    ->salutation(" ")
                     ->from($this->message->email, $this->message->name)
-                    ->line($this->message->message);
+                    ->subject(config('admin.name'). ", ".config('admin.msg'))
+                    ->greeting( " " )
+                    ->salutation( " " )
+                    ->line('"'. $this->message->name.'"'.' has contacted from contact us form. Below are the details')
+                    ->line("Email ID is: ". $this->message->email)
+                    ->line("Message is: ". $this->message->message);
     }
 
     /**

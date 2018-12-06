@@ -76,7 +76,7 @@ var subscribeMe = function() {
 	var name 	= document.getElementById( 'subscribe_name' ),
 		email 	= document.getElementById( 'subscribe_email' ),
 		msgSubscribMe 	= document.getElementById( 'msgSubscribMe' ),
-		loader    =   "{{ asset( 'frontend/images/loader.png' ) }}",
+		//loader    =   "{{ asset( 'frontend/images/loader.png' ) }}",
 		ck_name = /^[A-Za-z ]{3,25}$/;
 
 	if( !isDefined( msgSubscribMe ) ) {

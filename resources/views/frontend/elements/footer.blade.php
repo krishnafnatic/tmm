@@ -32,11 +32,11 @@
             <div class="col footer-social">
                 <h5>{{ __( 'messages.find_on_social' ) }}</h5>
                 <ul class="">
-                    <li> <a href="" target="_tab"> <i class="fab fa-youtube-square"></i>  </a> </li>
-                    <li> <a href="" target="_tab"> <i class="fab fa-facebook-square"></i> </a> </li>
-                    <li> <a href="" target="_tab"> <i class="fab fa-linkedin"></i> </a> </li>
-                    <li> <a href="" target="_tab"> <i class="fab fa-twitter"></i> </a> </li>
-                    <li> <a href="" target="_tab"> <i class="fab fa-google-plus-g"></i> </a> </li>
+                    <!-- <li> <a href="" target="_tab"> <i class="fab fa-youtube-square"></i>  </a> </li> -->
+                    <li> <a href="https://www.facebook.com/TheMoneyMile/" target="_tab"> <i class="fab fa-facebook-square"></i> </a> </li>
+                    <li> <a href="https://www.linkedin.com/company/themoneymile/" target="_tab"> <i class="fab fa-linkedin"></i> </a> </li>
+                    <li> <a href="https://twitter.com/money_mile" target="_tab"> <i class="fab fa-twitter"></i> </a> </li>
+                    <!-- <li> <a href="" target="_tab"> <i class="fab fa-google-plus-g"></i> </a> </li> -->
                 </ul>
             </div>
         </div>

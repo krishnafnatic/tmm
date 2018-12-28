@@ -108,6 +108,16 @@
                                           @endforeach
                                         @endif
                                       </optgroup>
+                                      <optgroup label="Folder" id="folder">
+                                        <option value="5bdfe38abda6bb0ce8e60d8c" @if(isset( $setting[$i]['type'] ) && $setting[$i]['type'] == '5bdfe38abda6bb0ce8e60d8c' ) selected="selected" @endif>Ask Surya</option>
+                                        <option value="5bdfe37b7f25347d9823a146" @if(isset( $setting[$i]['type'] ) && $setting[$i]['type'] == '5bdfe37b7f25347d9823a146' ) selected="selected" @endif>Be Safe Be Insured</option>
+                                        <option value="5bdfe3707e881b4ae4fdc688" @if(isset( $setting[$i]['type'] ) && $setting[$i]['type'] == '5bdfe3707e881b4ae4fdc688' ) selected="selected" @endif>ELSS Sahi Hai</option>
+                                        <option value="5bdfe3b046e02e118e78ea03" @if(isset( $setting[$i]['type'] ) && $setting[$i]['type'] == '5bdfe3b046e02e118e78ea03' ) selected="selected" @endif>Equity Sahi Hai</option>
+                                        <option value="5bdfe39d82aca467d2b66f05" @if(isset( $setting[$i]['type'] ) && $setting[$i]['type'] == '5bdfe39d82aca467d2b66f05' ) selected="selected" @endif>Nivesh Kar Befikar</option>
+                                        <option value="5bdfe3a622224851c58db127" @if(isset( $setting[$i]['type'] ) && $setting[$i]['type'] == '5bdfe3a622224851c58db127' ) selected="selected" @endif>Nivesh Kar Befikar - 4th Generation ULIPs</option>
+                                        <option value="5bdfe3930332284b34ff63e5" @if(isset( $setting[$i]['type'] ) && $setting[$i]['type'] == '5bdfe3930332284b34ff63e5' ) selected="selected" @endif>The Law of Money</option>
+                                        <option value="5bdfe3647f25347d9823a139" @if(isset( $setting[$i]['type'] ) && $setting[$i]['type'] == '5bdfe3647f25347d9823a139' ) selected="selected" @endif>The Money Chef</option>
+                                      </optgroup>
                                     </select>
                                     <span class="help-block" id="type_error_{{ $i }}"></span>
                                   </td>
@@ -121,7 +131,7 @@
                                      
                                       <input type="text" name="setting[{{$i}}][order]" id="order_{{$i}}" placeholder="Add Order" class="form-control" value="{{ $setting[$i]['order'] }}" autocomplete="off" required />
                                       
-                                    <div class="col-xs-3"> 
+                                    <!--<div class="col-xs-3"> 
                                       <input type="text" name="setting[{{$i}}][height]" id="height_{{$i}}" placeholder="Add height of image" class="form-control" value="{{ $setting[$i]['height'] }}" autocomplete="off" required /> 
                                     </div> -->
                                   </td>
@@ -196,13 +206,4 @@
       </div>
     </section>
   </div>
-  <!-- <optgroup label="Playlist" id="playlist">
-    @if( isset( $playlist ) && count( $playlist ) > 0 )
-      @foreach( $playlist as $listing )
-        <option value="{{ $listing['slug'] }} " @if(isset( $setting[$i]['type'] ) && $setting[$i]['type'] == $listing['slug'] ) selected="selected" @endif>
-          {{ $listing['name'] }} 
-      </option>
-      @endforeach
-    @endif
-  </optgroup> -->
 @endsection

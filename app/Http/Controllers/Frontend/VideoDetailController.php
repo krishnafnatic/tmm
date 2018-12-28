@@ -501,7 +501,7 @@ class VideoDetailController extends Controller
 
             $all_speakers = array();
 
-            if( count( $speakers_using_cf ) ) {
+            if( $speakers_using_cf ) {
                 $speakerQuery = DB::table('speakers')->whereIn( 'bc_speaker_name', $splitArraySpeaker )->get();
 
                 foreach( $speakerQuery as $speaker ) {
@@ -648,6 +648,171 @@ class VideoDetailController extends Controller
             }
 
             return view('frontend.tag', [ 'vidoes' => $videos_array, 'tag' => $tag ]);
+            
+        } else {
+            return redirect()->route('404');
+        }
+    } 
+
+    public function folderWatchNext( $category_name, $video_slug, VideoMeta $videoMeta ) {
+
+        $verifyVideoSlug = Video::where( 'slug', $video_slug )->first();
+
+        if(isset($verifyVideoSlug) ){
+
+            $video_detail = array();
+
+            $videoMeta = new VideoMeta;
+
+            $video_detail['account_id']  = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'account_id' );
+            $video_detail['video_id']  = $verifyVideoSlug->id;
+            $video_detail['name']      = $verifyVideoSlug->name;
+            $video_detail['slug']      = $verifyVideoSlug->slug;
+            $video_detail['tags']      = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'tags' ));
+            $video_detail['description']    = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'description' );
+            $video_detail['images']    = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'images' ) );
+            $video_detail['custom_fields']  = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'custom_fields' ) );
+            /*
+                Get Speaker from video custom fields;
+            */
+            $speakers_using_cf = $this->getCustomSpeakers( $video_detail['custom_fields'] );
+
+            $splitArraySpeaker = explode( ',', $speakers_using_cf );
+            //die;
+
+            $all_speakers = array();
+
+            if( $speakers_using_cf ) {
+                $speakerQuery = DB::table('speakers')->whereIn( 'bc_speaker_name', $splitArraySpeaker )->get();
+
+                foreach( $speakerQuery as $speaker ) {
+                    $speaker_descriptions = SpeakerDescription::where( 'speaker_id', $speaker->id )->first();
+
+                    $all_speakers[] = array(
+                        'speaker_id'    =>  $speaker->id,
+                        'name'          =>  $speaker_descriptions->name,
+                        'slug'          =>  $speaker->slug,
+                        'avatar'        =>  $speaker->avatar,
+                        'designation'   =>  $speaker_descriptions->designation,
+                        'short_description'   =>  $speaker_descriptions->short_description,
+                    );
+                }
+            } 
+
+            /*
+                Get User ID;
+            */
+            $user_id = Auth::user()->id ?? '';
+
+            /*
+                Get wishlist listing by user id;
+            */
+
+            $wishlistQuery = wishlist::where( 'user_id', $user_id )->get();
+
+            $all_videos = array();
+
+            if( count( $wishlistQuery ) > 0 ) {
+                foreach($wishlistQuery as $wishlist ) {
+
+                    $account_id  = $videoMeta->getVideoMeta( $wishlist['video_id'], 'account_id' );
+                    $name        = $videoMeta->getVideoMeta( $wishlist['video_id'], 'name' );
+                    $description = $videoMeta->getVideoMeta( $wishlist['video_id'], 'description' );
+                    $images      = unserialize( $videoMeta->getVideoMeta( $wishlist['video_id'], 'images' ) );
+                    $filename    = $videoMeta->getVideoMeta( $wishlist['video_id'], 'original_filename' );
+                    $slug        = $videoMeta->getVideoSlug( $wishlist['video_id'] );
+
+                    $all_videos[] = array(
+                        'video_id'      =>  $wishlist['video_id'],
+                        'account_id'    =>  $account_id,
+                        'name'          =>  $name,
+                        'slug'          =>  $slug,
+                        'description'   =>  $description,
+                        'images'        =>  $images,
+                        'filename'      =>  $filename,
+                    );
+                }
+            }
+
+            /*
+                Watch Next based on Folder_ID of Videos
+            */
+            $type = array();
+
+            switch ($category_name) {
+                case 'Ask Surya':
+                    $type['id'] = '5bdfe38abda6bb0ce8e60d8c';
+                    $type['name'] = $category_name;
+                    break;
+
+                case 'Be Safe Be Insured':
+                    $type['id'] = '5bdfe37b7f25347d9823a146';
+                    $type['name'] = $category_name;
+                    break;
+
+                case 'ELSS Sahi Hai':
+                    $type['id'] = '5bdfe3707e881b4ae4fdc688';
+                    $type['name'] = $category_name;
+                    break;
+
+                case 'Equity Sahi Hai':
+                    $type['id'] = '5bdfe3b046e02e118e78ea03';
+                    $type['name'] = $category_name;
+                    break;
+
+                case 'Nivesh Kar Befikar':
+                    $type['id'] = '5bdfe39d82aca467d2b66f05';
+                    $type['name'] = $category_name;
+                    break;
+
+                case 'Nivesh Kar Befikar - 4th Generation ULIPs':
+                    $type['id'] = '5bdfe3a622224851c58db127';
+                    $type['name'] = $category_name;
+                    break;
+
+                case 'The Law of Money':
+                    $type['id'] = '5bdfe3930332284b34ff63e5';
+                    $type['name'] = $category_name;
+                    break;
+
+                case 'The Money Chef':
+                    $type['id'] = '5bdfe3647f25347d9823a139';
+                    $type['name'] = $category_name;
+                    break;
+            }
+
+
+            $data = $videoMeta->getVideoFolderMeta( 'folder_id', $type['id'] );
+            $videos_array = array();
+
+            if( count($data) > 0 ) {
+                foreach(  $data as $video_data ) {
+
+                    $video = Video::where( 'id', $video_data->video_id)->first();
+
+                    if( isset( $video) &&  !empty( $video ) ) {
+                        $vidoe_images       = unserialize( $videoMeta->getVideoMeta( $video_data->video_id, 'images' ) );
+
+                        $videos_array[] = array(
+                            'video_id'       =>  $video_data->video_id,
+                            'name'           =>  substr( $video['name'], 0, env('char_limit') ).' ...',
+                            'slug'           =>  $video['slug'],
+                            'images'         =>  $vidoe_images,
+                        );
+                    }
+                }
+             }
+
+            //return $videos_array;
+
+            $folder_videos = array();
+
+            $folder_videos['folder']['folder_id']     =   $type['id'];
+            $folder_videos['folder']['folder_name']   =   $type['name'];
+            //$folder_videos['folder']['folder_slug'] =   $type['name'];
+            $folder_videos['folder']['folder_videos'] =   $videos_array;
+
+            return view('frontend.video_detail', ['video_detail' =>  $video_detail, 'wishlist' => $all_videos, 'speakers' => $all_speakers, 'folder_watch_next' => $folder_videos ]);
             
         } else {
             return redirect()->route('404');

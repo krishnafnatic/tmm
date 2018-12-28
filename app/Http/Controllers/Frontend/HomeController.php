@@ -70,6 +70,9 @@ class HomeController extends Controller {
                     $home_setting_array[$setting->type]   =   $this->homeSetting( $setting->type, $setting->heading, $videoMeta );
                 } else if( isset( $setting ) && ( !empty( $setting->type ) &&  $setting->type == 'tag' ) ) {
                     $home_setting_array[$setting->type]   =   $this->homeSetting( $setting->type, $setting->heading, $videoMeta );
+                } else if(   $setting->type == '5bdfe38abda6bb0ce8e60d8c' || $setting->type == '5bdfe37b7f25347d9823a146' || $setting->type == '5bdfe3707e881b4ae4fdc688' || $setting->type == '5bdfe3b046e02e118e78ea03' || $setting->type == '5bdfe39d82aca467d2b66f05' || $setting->type == '5bdfe3a622224851c58db127' || $setting->type == '5bdfe3930332284b34ff63e5' || $setting->type == '5bdfe3647f25347d9823a139' ) {
+                    $home_setting_array[$setting->type]   =   $this->getFolderVidoes( $setting->type, $setting->heading, $videoMeta );
+
                 } else {
                     $home_setting_array[$setting->type]   =   $this->getPlaylistVidoes( $setting->type, $setting->heading, $videoMeta, $playlistMeta );
                 }
@@ -247,6 +250,9 @@ class HomeController extends Controller {
         return $videos_array;
     }
 
+    /*
+        get videos form a playlist
+    */
     private function getPlaylistVidoes( $type, $heading, $videoMeta, $playlistMeta ) {
         /*
             Get playlist data   using $slug and  model
@@ -304,6 +310,51 @@ class HomeController extends Controller {
         $playlist_videos['playlist']['playlist_videos'] =   $videos_array;
 
         return $playlist_videos;
+    }
+
+
+    /*
+        get Videos from a folder
+    */
+    private function getFolderVidoes( $type, $heading, $videoMeta ) {
+
+
+        $videos_array = array();
+
+        $data = $videoMeta->getVideoFolderMeta( 'folder_id', $type );
+
+        if( count($data) > 0 ) {
+            foreach(  $data as $video_data ) {
+
+                $video = Video::where( 'id', $video_data->video_id)->first();
+
+                if( isset( $video) &&  !empty( $video ) ) {
+                    $vidoe_images       = unserialize( $videoMeta->getVideoMeta( $video_data->video_id, 'images' ) );
+
+                    $videos_array[] = array(
+                        'video_id'       =>  $video_data->video_id,
+                        'name'           =>  substr( $video['name'], 0, env('char_limit') ).' ...',
+                        'slug'           =>  $video['slug'],
+                        'images'         =>  $vidoe_images,
+                    );
+                }
+            }
+        }
+
+        //return $videos_array;
+
+        $folder_videos = array();
+
+
+        $folder_videos['folder']['folder_id']             =   $type;
+        //$folder_videos['folder']['folder_name']           =   '';
+        if( isset( $heading ) && !empty( $heading ) ) {
+            $folder_videos['folder']['folder_heading']    =   $heading;
+        }
+        $folder_videos['folder']['folder_videos']         =   $videos_array;
+
+        return $folder_videos;
+
     }
 
 }

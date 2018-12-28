@@ -10,13 +10,13 @@
         <div class="viewlabel">{{ __( 'messages.views' ) }}</div>
 	</div>
 	<div class="video-related-tags">
-    	<h6>{{ __( 'messages.realated_tags' ) }}</h6>
     	@if(count($video_detail['tags']) > 0)
+            <h6>{{ __( 'messages.realated_tags' ) }}</h6>
     		@foreach( $video_detail['tags'] as $tag ) 
     			@if($loop->last)
-    				<a href="{{ url( '/tag/'. $tag) }}">{{ $tag }}</a> 
+    				<a href="{{ url( '/tag/'. $tag) }}">{{ ucfirst ( $tag ) }}</a> 
     			@else 
-    				<a href="{{ url( '/tag/'. $tag) }}">{{ $tag }}</a>,
+    				<a href="{{ url( '/tag/'. $tag) }}">{{ ucfirst ( $tag ) }}</a>,
     			@endif 
     		@endforeach
     	@endif

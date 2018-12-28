@@ -57,6 +57,11 @@
     */
     Route::get('/tag/{video_slug}', 'Frontend\VideoDetailController@tagWatchNext');
 
+     /*
+        Video Details Page for category / folder videos
+    */
+    Route::get('/category/{category_name}/{video_slug}', 'Frontend\VideoDetailController@folderWatchNext');
+
     /*
         Get Video Like Using Ajax;
     */

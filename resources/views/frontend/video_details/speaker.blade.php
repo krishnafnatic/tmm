@@ -3,13 +3,17 @@
 		@foreach( $speakers as $speaker )
 		  	<li> 
 		        <a href="{{ url( 'speaker/'.$speaker['slug'] ) }}" class="profile-pic float-left">
-		        	<img src="{{ asset( $speaker['avatar'] ) }}" alt="{{ $speaker['name'] }} " title="{{ $speaker['name'] }} " />
+		        	@if( !empty( $speaker['avatar'] ) )
+		        		<img src="{{ asset( $speaker['avatar'] ) }}" alt="{{ $speaker['name'] }} " title="{{ $speaker['name'] }} " />
+		        	@else
+		              	<img src="{{ asset( 'frontend/images/tmm-logo2.png' ) }}"alt="{{ $speaker['name'] }} " title="{{ $speaker['name'] }} ">
+		          @endif
 		        </a>
 		        <a href="{{ url( 'speaker/'.$speaker['slug'] ) }}" class="title" title="{{ $speaker['name'] }} ">
-		        	{{ $speaker['name'] }} 
+		        	{{ ucfirst( $speaker['name'] ) }} 
 		        </a>
 		        <div class="designation">
- 		        	{{ $speaker['designation'] }}
+ 		        	{{ ucfirst( $speaker['designation'] ) }}
 		        </div>
 		        <p>
 		        	{{ $speaker['short_description'] }}

@@ -11,12 +11,16 @@
             @foreach( $popular_videos as $popular )
                 <div class="card">
                     <a href="{{ url('popular/'.$popular['slug']) }}">
-                        <img class="card-img-top" src="{{  $popular['images']['thumbnail']['src'] }}" alt="{{ $popular['name'] }}" title="{{ $popular['name'] }}" />
+                        @if( !empty( $popular['images']['thumbnail']['src'] ) )
+                            <img class="card-img-top" src="{{  $popular['images']['thumbnail']['src'] }}" alt="{{ $popular['name'] }}" title="{{ $popular['name'] }}" />
+                        @else
+                            <img class="card-img-top" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" alt="{{ $popular['name'] }}" title="{{ $popular['name'] }}">
+                        @endif
                     </a>
                     <div class="card-body">
                         <h6 class="card-title">
                             <a href="{{ url('popular/'.$popular['slug']) }}">
-                                {{ $popular['name'] }}
+                                {{ ucfirst( $popular['name'] ) }}
                             </a>
                         </h6>
                     </div>

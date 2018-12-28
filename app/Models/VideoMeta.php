@@ -60,4 +60,17 @@ class VideoMeta extends Model
 
         return $video['slug'] ?? '';
     }
+
+    /*
+        Get User Meta using meta_key
+    */
+    public function getVideoFolderMeta( $key, $value ) {
+
+        $folder = VideoMeta::where('meta_key', $key)
+                        ->Where('meta_value', $value)
+                        ->select('video_id')
+                        ->get();
+
+        return $folder;
+    }
 }

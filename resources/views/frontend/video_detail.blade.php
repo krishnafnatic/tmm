@@ -138,6 +138,12 @@
           		@endforeach
           	@endif
 
+            @if( isset( $folder_watch_next ) && count( $folder_watch_next) > 0 )
+              @foreach( $folder_watch_next as $home)
+                @include('frontend.video_details.folder_video', [ 'folder_videos' => $home ])
+              @endforeach
+            @endif
+
           	@if (Auth::check())
         		@include('frontend.video_details.my_list')
         	@endif

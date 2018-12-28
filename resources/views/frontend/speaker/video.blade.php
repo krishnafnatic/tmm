@@ -5,7 +5,11 @@
         @foreach( $videos as $video )
             <div class="card">
                 <a href="{{ url('video/'.$video['slug']) }}">
-                    <img class="card-img-top" src="{{  $video['images']['thumbnail']['src'] }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}" />
+                    @if( !empty( $video['images']['thumbnail']['src'] ) )
+                        <img class="card-img-top" src="{{  $video['images']['thumbnail']['src'] }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}" />
+                    @else
+                        <img class="card-img-top" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}">
+                    @endif
                 </a>
                 <div class="card-body">
                     <h6 class="card-title">

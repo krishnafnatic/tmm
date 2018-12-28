@@ -14,7 +14,7 @@
                 <div class="card-body">
                     <h6 class="card-title">
                         <a href="{{ url('video/'.$video['slug']) }}">
-                            {{ $video['name'] }}
+                            {{ ucfirst( $video['name'] ) }}
                         </a>
                     </h6>
                 </div>

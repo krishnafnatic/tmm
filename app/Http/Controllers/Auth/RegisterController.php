@@ -148,6 +148,13 @@ class RegisterController extends Controller
         if( $request->get('error') == 'access_denied' ) {
             return redirect()->route('404');
         }
+
+        /*
+            If user cancel the page: send it to 404;
+        */
+        if( $request->get('error_code') == '1349187' ) {
+            return redirect()->route('404');
+        }
         
         
         /*

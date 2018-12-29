@@ -225,7 +225,6 @@ function AjaxSuccess( data, divID ) {
   using video_id;
 */
 if( isDefined( video_id ) ) {
-
   data = { 'video_id': video_id };
   callAjax( 'POST', 'json', analyticsURL, data, 'viewcount' );
 } 

@@ -64,8 +64,9 @@
             $client_id      =   env('cms_video_client_id');
             $client_secret  =   env('cms_video_client_secret');
             $analytics_data_limit   =   env( 'analytics_data_limit' );
-            $endpoint       =   '?q=%2Btags:%22'.urlencode( $tag ).'%22&limit='.$analytics_data_limit;
+            //$endpoint       =   '?q=%2Btags:%22'.urlencode( $tag ).'%22&limit='.$analytics_data_limit;
             //$endpoint = '?q=tags:'.$tag.'&limit='.$analytics_data_limit;
+            $endpoint       =   '?q=tags:'.urlencode($tag).'&limit='.$analytics_data_limit;
             $request_url    =   env('cms_video_url').$account_id.'/videos'.$endpoint;
             
 
@@ -127,7 +128,6 @@
         ));
         $response = curl_exec($ch);
         curl_close($ch);
-
         /**
             Check for errors and log them if any
             note that logging will fail unless
@@ -136,7 +136,7 @@
         */
         if ($response === FALSE) {
             $message = "Error: there was a problem with your CMS API call" . curl_error($ch);
-            return $message;
+            die("There is some issue with the CMS API ". $message );
         }
 
         /**

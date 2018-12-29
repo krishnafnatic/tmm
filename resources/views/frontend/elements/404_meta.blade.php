@@ -11,6 +11,8 @@
   @else
     <title>404 Page Not Found | {{ config('app.name', 'TheMoneyMile') }} | {{ config('app.message', 'TheMoneyMile') }}</title>
   @endif
+  <!--no index follow -->
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW" />
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" type="text/css" href="{{ asset( 'frontend/css/style.css' ) }}" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />

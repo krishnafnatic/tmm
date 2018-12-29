@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Title -->
   <title>{{ config('app.name', 'TheMoneyMile') }}</title>
+  <!--no index follow -->
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW" />
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" type="text/css" href="{{ asset( 'frontend/css/style.css' ) }}" />
   <!--Bootstrap Css File -->

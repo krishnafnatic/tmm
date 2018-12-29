@@ -71,9 +71,9 @@ class AccountController extends Controller {
             'designation'   =>  $userProfiles->get( 'designation' )->meta_value ?? '',
         );
 
-        // print '<pre>';
-        //     print_r($user_profile);
-        // print '</pre>';die;
+        print '<pre>';
+            print_r($user_profile);
+        print '</pre>';die;
 
 
         /*

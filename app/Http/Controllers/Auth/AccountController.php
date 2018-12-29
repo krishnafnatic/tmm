@@ -55,9 +55,12 @@ class AccountController extends Controller {
         /*
             Add user profile variables;
         */
+
+        $exUnUserTags = $userProfiles->get( 'tag' )->meta_value ?? '';
+
         $user_profile = array(
             'tags'          =>  $tags,
-            //'user_tag'      =>  explode(',', unserialize( $userProfiles->get( 'tag' )->meta_value ) ) ?? '',
+            'user_tag'      =>  explode( ',', unserialize( $exUnUserTags ) ),
             'social'        =>  array(
                 'facebook'      =>  $userProfiles->get( 's_facebook' )->meta_value ?? '',
                 'linkedin'      =>  $userProfiles->get( 's_linkedin' )->meta_value ?? '',

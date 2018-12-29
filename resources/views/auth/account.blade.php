@@ -53,7 +53,7 @@
                                 </a>
                             </li>
                         </ul>
-                        @if( $user_profile['tags'] )
+                        @if( isset( $user_profile['user_tag'] ) && !empty( $user_profile['user_tag'] ) )
                             <h6>{{ __( 'messages.interests' ) }}</h6>
                         @endif
                         <div class="user-interested pl-0">

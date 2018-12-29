@@ -53,7 +53,9 @@
                                 </a>
                             </li>
                         </ul>
-                        <h6>{{ __( 'messages.interests' ) }}</h6>
+                        @if( $user_profile['tags'] )
+                            <h6>{{ __( 'messages.interests' ) }}</h6>
+                        @endif
                         <div class="user-interested pl-0">
                             <div class="" data-toggle="buttons">
                                 @if( $user_profile['tags'] )

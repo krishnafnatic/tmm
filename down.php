@@ -11,7 +11,15 @@
     <title>TheMoneyMile | Comming Soon </title>
   </head>
   <body>
-    <h1>Comming Soon...</h1>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1 style="text-align: center;">
+      <img src="http://themoneymile.com/themoneymile/public/frontend/images/the_money_mile_logo.png" />
+      Comming Soon...
+    </h1>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

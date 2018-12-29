@@ -227,6 +227,13 @@ class RegisterController extends Controller
         if( $request->get('error') == 'user_cancelled_login' ) {
             return redirect()->route('404');
         }
+
+        /*
+            If user cancel the page: send it to 404;
+        */
+        if( $request->get('error') == 'user_cancelled_authorize' ) {
+            return redirect()->route('404');
+        }
         
         
         /*

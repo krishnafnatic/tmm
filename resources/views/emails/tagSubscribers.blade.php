@@ -10,13 +10,16 @@
 	<table class="head-wrap" bgcolor="#999999">
 		<tr>
 			<td></td>
-			<td class="header container" align="">
+			<td class="header container" align="center">
 				<div class="content">
-					<table bgcolor="#999999" >
+					<table bgcolor="#999999">
 						<tr>
-							<td><img src="{{ asset( 'frontend/images/the_money_mile_logo.png' ) }}" /></td>
-							<td align="right"><h6 class="collapse">{{ config('app.name', 'TheMoneyMile') }} | {{ config('app.message', 'TheMoneyMile') }}</h6></td>
-						</tr>
+	                        <td class="header" style="font-family: Avenir, Helvetica, sans-serif;box-sizing: border-box; padding: 25px 0; text-align: center;">
+	                            <a href="{{ url('/') }}">
+	                                <img src="{{ asset( 'frontend/images/the_money_mile_logo.png' ) }}" width="220" height="30" title="{{ config('app.name', 'TheMoneyMile') }}" alt="{{ config('app.name', 'TheMoneyMile') }}" />
+	                            </a>
+	                        </td>
+	                    </tr>
 					</table>
 				</div>
 			</td>
@@ -33,7 +36,8 @@
 							<table bgcolor="">
 								<tr>
 									<td class="small" width="20%" style="vertical-align: top; padding-right:10px;">
-										<img src="{{ $video['images']['thumbnail']['src'] }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}" width="75" height="75" /></td>
+										<img src="{{ $video['images']['thumbnail']['src'] }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}" />
+									</td>
 									<td>
 										<h4>{{ $video['name'] }}</h4>
 										<p class="">{{ $video['description'] }}</p>

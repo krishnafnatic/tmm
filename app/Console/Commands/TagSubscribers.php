@@ -67,7 +67,7 @@ class TagSubscribers extends Command
                 $all_tags = $this->getUserTags( $user );
                 
                 /*
-                    Get User Meta; meta_key is age;
+                    Get User Meta; meta_key is v_notify;
 
                 */
                 $user_v_notify =$this->user->getUserMeta( $user['id'], 'v_notify' );
@@ -91,7 +91,7 @@ class TagSubscribers extends Command
                                 Get Video Array;
                             */
                             $videos = $this->mailVideoArray( $video_query );
-    
+   
                             /*
                                 Send mail to users;
                             */
@@ -103,6 +103,7 @@ class TagSubscribers extends Command
                     }
                 }
             } 
+
         }
     } 
 
@@ -148,7 +149,8 @@ class TagSubscribers extends Command
                 /*
                     get all video that are uploaded today
                 */
-                $banner_query       = Video::where('id', $video['id'] )->whereDate('created_at', Carbon::today())->first();
+                //$banner_query       = Video::where('id', $video['id'] )->whereDate('created_at', Carbon::today())->first();
+                  $banner_query       = Video::where('id', $video['id'])->first();
                 if( isset( $banner_query) &&  !empty( $banner_query )) {
 
                     $images             = $banner_query->video_meta->where( 'meta_key', 'images' )->first();

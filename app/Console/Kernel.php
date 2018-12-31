@@ -29,16 +29,19 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('fetch:video')
-            ->everyMinute();
+            ->daily(); //Run the task every day at midnight
 
         $schedule->command('fetch:playlist')
-            ->everyMinute();
+            ->daily(); //Run the task every day at midnight
 
         $schedule->command('fetch:tag')
-            ->everyMinute();
+            ->daily(); //Run the task every day at midnight
 
         $schedule->command('fetch:player')
-            ->everyMinute();
+            ->daily(); //Run the task every day at midnight
+
+        $schedule->command('tag:subscribers')
+            ->everyFiveMinutes(); //Run the task every day at midnight
         // $schedule->command('inspire')
         //          ->hourly();
         // $schedule->command('word:day')

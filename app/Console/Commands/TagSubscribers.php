@@ -149,8 +149,9 @@ class TagSubscribers extends Command
                 /*
                     get all video that are uploaded today
                 */
+                $banner_query       = Video::where('id', $video['id'] )->first();
                 //$banner_query       = Video::where('id', $video['id'] )->whereDate('created_at', Carbon::today())->first();
-                  $banner_query       = Video::where('id', $video['id'])->first();
+
                 if( isset( $banner_query) &&  !empty( $banner_query )) {
 
                     $images             = $banner_query->video_meta->where( 'meta_key', 'images' )->first();

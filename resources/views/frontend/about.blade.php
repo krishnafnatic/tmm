@@ -24,10 +24,26 @@ Your browser does not support the video tag.
                 <div class="col-sm-8 text-center"><br>
                 	<h3>Money Mile</h3>     
                  	<ul class="user-profile-social-ico">
-                   		<li> <a href=""> <i class="fab fa-facebook fa-2x"></i> </a> </li>
-                   		<li> <a href=""> <i class="fab fa-linkedin fa-2x"></i> </a> </li>
-                   		<li> <a href=""> <i class="fab fa-google fa-2x"></i> </a> </li>
-                   		<li> <a href=""> <i class="fab fa-twitter-square fa-2x"></i> </a> </li>
+                   		<li>
+                   			<a href="https://www.facebook.com/TheMoneyMile/" target="_blank">
+                   				<i class="fab fa-facebook fa-2x"></i>
+                   			</a>
+                   		</li>
+                   		<li>
+                   			<a href="https://www.linkedin.com/company/themoneymile/" target="_blank">
+                   				<i class="fab fa-linkedin fa-2x"></i>
+                   			</a>
+                   		</li>
+                   		<!-- <li>
+                   			<a href="">
+                   				<i class="fab fa-google fa-2x"></i>
+                   			</a>
+                   		</li> -->
+                   		<li>
+                   			<a href="https://twitter.com/money_mile" target="_blank">
+                   				<i class="fab fa-twitter-square fa-2x"></i>
+                   			</a>
+                   		</li>
                  	</ul>
              	</div>
 		    </div>  

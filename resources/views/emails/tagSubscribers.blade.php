@@ -12,9 +12,9 @@
 			<td></td>
 			<td class="header container" align="center">
 				<div class="content">
-					<table bgcolor="#999999">
+					<table class="content" width="100%" cellpadding="0" cellspacing="0">
 						<tr>
-	                        <td class="header" style="font-family: Avenir, Helvetica, sans-serif;box-sizing: border-box; padding: 25px 0; text-align: center;">
+	                        <td class="header" align="center" style="font-family: Avenir, Helvetica, sans-serif;box-sizing: border-box; padding: 25px 0; text-align: center;">
 	                            <a href="{{ url('/') }}">
 	                                <img src="{{ asset( 'frontend/images/the_money_mile_logo.png' ) }}" width="220" height="30" title="{{ config('app.name', 'TheMoneyMile') }}" alt="{{ config('app.name', 'TheMoneyMile') }}" />
 	                            </a>

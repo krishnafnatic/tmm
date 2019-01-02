@@ -111,8 +111,8 @@ class HomeController extends Controller {
             $lastName =  isset( $split_name[1] ) ? $split_name[1] : '' ;
             //echo $request->email;die;
 
-            Newsletter::subscribe('rincewind@discworld.com');
-            Newsletter::subscribe( $request->email);
+            //Newsletter::subscribe('rincewind@discworld.com');
+            Newsletter::subscribeOrUpdate( $request->email );
 
             $email = $request->email;
             $user_subscribe = array( 

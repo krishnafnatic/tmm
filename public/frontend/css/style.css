@@ -334,7 +334,8 @@ footer{
 				}
 .footer-nav li a:hover{
 					color: #8a8a8a;
-				}				
+				}		
+.footer-subscribe .form-inline { margin-bottom: 20px !important; }						
 .footer-subscribe h5{
 						font-size: 1.25rem;
 						text-align: left;

@@ -51,8 +51,8 @@
                                             <tr>
                                                 <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
                                                     <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; line-height: 1.5em; margin-top: 0; text-align: left; font-size: 12px;">If you are having trouble clicking the "UnSubscribe User" button, copy and paste the URL below into your web browser: 
-                                                        <a href="{{$user_subscribe['url']}}" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color:#3869D4;">
-                                                            {{$user_subscribe['url']}}
+                                                        <a href="{{$user_unsubscribe['url']}}" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color:#3869D4;">
+                                                            {{$user_unsubscribe['url']}}
                                                         </a>
                                                     </p>
                                                 </td>

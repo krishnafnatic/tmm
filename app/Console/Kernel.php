@@ -41,7 +41,7 @@ class Kernel extends ConsoleKernel
             ->daily(); //Run the task every day at midnight
 
         $schedule->command('tag:subscribers')
-            ->everyFiveMinutes(); //Run the task every day at midnight
+            ->daily(); //Run the task every day at midnight
         // $schedule->command('inspire')
         //          ->hourly();
         // $schedule->command('word:day')

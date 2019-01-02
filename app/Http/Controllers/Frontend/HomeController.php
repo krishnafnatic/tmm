@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Lang;
 use Newsletter;
 use Auth;
 
+use Illuminate\Support\Facades\Mail;
+
 use App\Mail\SubscribeMe;
 use App\Mail\UnSubscribeMe;
-use Illuminate\Support\Facades\Mail;
 use App\Repositories\User\UserInterface as UserInterface;
 
 class HomeController extends Controller {
@@ -127,7 +128,7 @@ class HomeController extends Controller {
             $msg = array(
                 'status' => 'success', 
                 'type'   => 'newsletter',
-                'message' => Lang::get( 'messages.page_added', ['page' => "Subscribe to Newsletter"] )
+                'message' => Lang::get( 'messages.page_added', ['page' => "Subscribed to Newsletter"] )
             );
         }
 
@@ -161,7 +162,7 @@ class HomeController extends Controller {
             /*
                 Redirect to page once done.
             */
-            return redirect('/')->with("success", Lang::get( 'messages.already_subscribed'));
+            return redirect('/')->with("success", Lang::get( 'messages.already_unsubscribed'));
         } else {
             return redirect('/')->with("success", 'The email id you have provided has not been found in database!');
         }

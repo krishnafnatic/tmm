@@ -266,6 +266,7 @@ return [
     'send'                  =>  'Send',
     'add_wishlist'          =>  'Add to wish list',
     'already_subscribed'    =>  'You are already Subscribed.',
+    'already_unsubscribed'  =>  'You are already Unsubscribed.',
     'my_list'               =>  'My List',
     'wishlist_found'        =>  'No list of video found',
     'speaker_found'         =>  'No speaker for current video! ',

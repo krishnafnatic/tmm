@@ -115,7 +115,7 @@ class HomeController extends Controller {
             Newsletter::subscribeOrUpdate( $request->email );
 
             $email = $request->email;
-            $user_subscribe = array( 
+            $user_unsubscribe = array( 
                 'name' =>  ucwords( $firstName ),
                 'email'=>  $request->email,
                 'url'  =>   url('/unsubscribe/'.$request->email) 
@@ -123,7 +123,7 @@ class HomeController extends Controller {
             /*
                 Send Mail to user for user notification;
             */
-            Mail::to($email)->send(new SubscribeMe($user_subscribe));
+            Mail::to($email)->send(new SubscribeMe($user_unsubscribe));
 
             $msg = array(
                 'status' => 'success', 

@@ -17,7 +17,7 @@
             <div class="col-md-auto footer-subscribe" id="divSubscribeMe">
                 <h5>{{ __( 'messages.subscribe_newsletter' ) }}</h5>
                 <div class="alert alert-dismissible" id="msgSubscribMe" style="display: none;"></div>
-                <div class="form-inline my-2 my-lg-0 ml-auto {{ $errors->has('name') ? ' was-validated' : '' }}" role="subscribe">
+                <div class="form-inline my-2 my-lg-0 ml-auto {{ $errors->has('name') ? ' was-validated' : '' }}" role="subscribe" style="margin-bottom: 20px !important;">
                     <input type="text" name="subscribe_name" id="subscribe_name" placeholder="{{ __( 'messages.name' ) }}" autocomplete="off" required />
                     <input type="email" name="subscribe_email" id="subscribe_email" placeholder="{{ __( 'messages.email' ) }}" autocomplete="off" required />
                     <button type="submit" onclick="subscribeMe();" id="subscribeMe">{{ __( 'messages.subscribe' ) }}</button>

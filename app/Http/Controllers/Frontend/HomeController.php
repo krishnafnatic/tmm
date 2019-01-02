@@ -16,6 +16,7 @@ use Newsletter;
 use Auth;
 
 use App\Mail\SubscribeMe;
+use App\Mail\UnSubscribeMe;
 use Illuminate\Support\Facades\Mail;
 use App\Repositories\User\UserInterface as UserInterface;
 

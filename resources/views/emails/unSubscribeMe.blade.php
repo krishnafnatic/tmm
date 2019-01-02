@@ -47,17 +47,6 @@
                                         
                                         <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Regards,<br>{{ config('app.name', 'TheMoneyMile') }}
                                         </p>
-                                        <table class="subcopy" width="100%" cellpadding="0" cellspacing="0" border-top: 1px solid #EDEFF2; margin-top: 25px; padding-top: 25px;">
-                                            <tr>
-                                                <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
-                                                    <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; line-height: 1.5em; margin-top: 0; text-align: left; font-size: 12px;">If you are having trouble clicking the "UnSubscribe User" button, copy and paste the URL below into your web browser: 
-                                                        <a href="{{$user_unsubscribe['url']}}" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color:#3869D4;">
-                                                            {{$user_unsubscribe['url']}}
-                                                        </a>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </table>
                                     </td>
                                 </tr>
                             </table>

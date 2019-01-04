@@ -124,7 +124,7 @@ class RegisterController extends Controller
         /*
             Send email to user
         */
-        Mail::to($user->email)->from( 'MAIL_FROM_ADDRESS' )->send(new VerifyMail($user));
+        Mail::to($user->email)->send(new VerifyMail($user));
         return $user;
     }
 

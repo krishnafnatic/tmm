@@ -402,7 +402,7 @@ class RegisterController extends Controller
 
     protected function registered(Request $request, $user) {
         $this->guard('web')->logout();
-        return redirect('/login')->with('status', Lang::get( 'messages.send_verify' ) );
+        return redirect('/login')->with('status', Lang::get( 'messages.send_verify', [ 'email' => $user['email']] ) );
     }
     
     public function registerVerify() {

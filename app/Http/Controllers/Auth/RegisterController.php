@@ -120,11 +120,6 @@ class RegisterController extends Controller
             'user_id' => $user->id,
             'token' => str_random(40)
         ]);
-
-        $user->senderEmail = env('MAIL_FROM_ADDRESS', 'hello@example.com');
-        $user->senderName = 'The Money Mile';
-        $user->email = $user->email;        
-        $user->subject = 'Activate Your The Money Mile Account';  
         
         /*
             Send email to user

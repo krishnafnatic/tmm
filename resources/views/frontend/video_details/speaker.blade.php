@@ -16,7 +16,7 @@
  		        	{{ ucfirst( $speaker['designation'] ) }}
 		        </div>
 		        <p>
-		        	{{ $speaker['biography'] }}
+		        	{{ $speaker['short_description'] }}
 		        </p>
 		    </li>
 		@endforeach

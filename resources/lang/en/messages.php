@@ -203,7 +203,7 @@ return [
     'confirm_password'  =>  'Confirm Password',
     'already_account'   =>  'Already have an accont ?',
     'logging_help'      =>  'Reset Your Password',
-    'forget_pwd_note'   =>  'Fear not. We’ll email you instructions to reset your password.'
+    'forget_pwd_note'   =>  'Fear not. We’ll email you instructions to reset your password.',
     'email_address'     =>  'E-Mail Address',
     'captcha'           =>  'Captcha',
     'update_profile'    =>  'Update Profile',

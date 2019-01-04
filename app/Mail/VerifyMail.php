@@ -29,7 +29,7 @@ class VerifyMail extends Mailable
      */
     public function build()
     {
-        return $this->from( 'vipin@gmail.com' )
+        return $this->from( env( 'MAIL_FROM_NAME'), env( 'MAIL_FROM_ADDRESS') )
                     ->subject( 'Activate Your The Money Mile Account' )
                     ->view('emails.verifyUser');
     }

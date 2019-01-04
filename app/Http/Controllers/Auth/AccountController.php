@@ -168,7 +168,7 @@ class AccountController extends Controller {
         /*
             Redirect to page once done.
         */
-        return redirect( '/change-password' )->with("success","Password changed successfully !");
+        return redirect( '/profile' )->with("success","Password changed successfully !");
     }
 
     /*

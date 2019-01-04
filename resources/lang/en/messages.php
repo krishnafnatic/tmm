@@ -284,7 +284,7 @@ return [
     'already_verified'      =>  'Your e-mail is already verified. You can now login.',
     'email_verified'        =>  'Your e-mail is verified now. You can login with your email and password.',
     'wrong_email'           =>  ' Sorry your email cannot be identified.',
-    'send_verify'           =>  'We’ve sent a message to <b>:email</b> with a link to activate your account.',
+    'send_verify'           =>  'We’ve sent a message to :email with a link to activate your account.',
     'confirm_account'       =>  'You need to confirm your account. We have sent you an activation code, please check your email.',
     'accunt_disabled'       =>  'The selected email is invalid or the account has been disabled.',
     'wishlist_added'        =>  'The video is added in your :page',

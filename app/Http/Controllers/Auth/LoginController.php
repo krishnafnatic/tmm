@@ -27,7 +27,7 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    public $maxAttempts = 1; // change to the max attemp you want.
+    public $maxAttempts = 3; // change to the max attemp you want.
     public $decayMinutes = 1; // change to the minutes you want.
 
     /**

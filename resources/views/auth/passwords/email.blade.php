@@ -7,11 +7,12 @@
                 <div class="col-sm"></div>
 
                 <div class="col-sm hidden-sm hidden-md">
-                    <h3 class="text-center">{{ __( 'messages.logging_help' ) }}</h3>
+                    <h3 class="text-left">{{ __( 'messages.logging_help' ) }}<</h3>
+                    <p>{{ __( 'messages.forget_pwd_note' ) }}</p>
                     <form class="form-horizontal" method="POST" action="{{ route('password.email') }}" autocomplete="off">
                         {{ csrf_field() }}
                         <div class="form-group {{ $errors->has('email') ? '' : '' }}">
-                            <label>{{ __( 'messages.email' ) }}</label>
+                            <label style="margin-top: 5px;">{{ __( 'messages.email' ) }}</label>
                             <input id="validationCustom03" type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" autocomplete="off" required />
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">

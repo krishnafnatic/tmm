@@ -7,7 +7,8 @@
                 <div class="col-sm"></div>
 
                 <div class="col-sm hidden-sm hidden-md">
-                    <h3 class="text-center">{{ __( 'messages.reset_password' ) }}</h3>
+                    <h3 class="text-center">{{ __( 'messages.reset_your_password' ) }}</h3>
+                    <p>{{ __( 'messages.reset_note' ) }}</p>
                     <form class="form-horizontal" method="POST" action="{{ route('password.request') }}" autocomplete="off">
                         {{ csrf_field() }}
 

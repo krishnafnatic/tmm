@@ -31,6 +31,8 @@
                         <td class="header" style="font-family: Avenir, Helvetica, sans-serif;box-sizing: border-box; padding: 25px 0; text-align: center;">
                             <a href="{{ url('/') }}">
                                 <img src="{{ asset( 'frontend/images/the_money_mile_logo.png' ) }}" width="220" height="30" title="{{ config('app.name', 'TheMoneyMile') }}" alt="{{ config('app.name', 'TheMoneyMile') }}" />
+                                <br />
+                                <strong>Your Money's Best Friend</strong>
                             </a><!-- 
                             <a href="{{ url('/') }}" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #bbbfc3; font-size: 19px; font-weight: bold; text-decoration: none; text-shadow: 0 1px 0 white;">
                                 {{ config('app.name', 'TheMoneyMile') }}
@@ -44,9 +46,8 @@
                             <table class="inner-body" align=3"center" width="570" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; background-color: #FFFFFF; margin: 0 auto; padding: 0; width: 570px; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px;">
                                 <tr>
                                     <td class="content-cell" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;">
-                                        <h1 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 19px; font-weight: bold; margin-top: 0; text-align: left;">Hello! {{$user['name']}}</h1>
-                                        <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Welcome to the site</p>
-                                        <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Your registered email-id is {{$user['email']}} , Please click on the below link to verify your email account</p>
+                                        <h1 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 19px; font-weight: bold; margin-top: 0; text-align: left;">We're glad you're here, {{$user['name']}}</h1>
+                                        <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Please click on the below button to verify your email and activate your account.</p>
                                         <table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; padding: 0; text-align: center; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;">
                                             <tr>
                                                 <td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
@@ -56,7 +57,7 @@
                                                                 <table border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
                                                                     <tr>
                                                                         <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
-                                                                            <a href="{{url('user/verify', $user->verifyUser->token)}}" class="button button-blue" target="_blank" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); color: #FFF; display: inline-block; text-decoration: none; -webkit-text-size-adjust: none; background-color: #3097D1; border-top: 10px solid #3097D1; border-right: 18px solid #3097D1; border-bottom: 10px solid #3097D1; border-left: 18px solid #3097D1;">Verify Email</a>
+                                                                            <a href="{{url('user/verify', $user->verifyUser->token)}}" class="button button-blue" target="_blank" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); color: #FFF; display: inline-block; text-decoration: none; -webkit-text-size-adjust: none; background-color: #3097D1; border-top: 10px solid #3097D1; border-right: 18px solid #3097D1; border-bottom: 10px solid #3097D1; border-left: 18px solid #3097D1;">Activate Account</a>
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -66,12 +67,10 @@
                                                 </td>
                                             </tr>
                                         </table>
-                                        <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Regards,<br>{{ config('app.name', 'TheMoneyMile') }}
-                                        </p>
                                         <table class="subcopy" width="100%" cellpadding="0" cellspacing="0" border-top: 1px solid #EDEFF2; margin-top: 25px; padding-top: 25px;">
                                             <tr>
                                                 <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
-                                                    <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; line-height: 1.5em; margin-top: 0; text-align: left; font-size: 12px;">If you are having trouble clicking the "Verify Email" button, copy and paste the URL below into your web browser: 
+                                                    <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; line-height: 1.5em; margin-top: 0; text-align: left; font-size: 12px;">If you are having trouble clicking the  "Activate Account" button, copy and paste the URL below into your web browser:
                                                         <a href="{{url('user/verify', $user->verifyUser->token)}}" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color:#3869D4;">
                                                             {{url('user/verify', $user->verifyUser->token)}}
                                                         </a>
@@ -79,6 +78,8 @@
                                                 </td>
                                             </tr>
                                         </table>
+                                        <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Kind regards,<br>The Money Mile Team
+                                        </p>
                                     </td>
                                 </tr>
                             </table>

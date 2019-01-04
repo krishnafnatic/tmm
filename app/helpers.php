@@ -41,21 +41,21 @@
             
             // Newest Video  = Recent Videos will be lable and heading
 
-            $client_id      =   env( 'cms_video_client_id' );
-            $client_secret  =   env( 'cms_video_client_secret' );
-            $limit          =   env( 'cms_video_limit' );
-            $end_point      =   '?sort=-created_at&limit='.$limit;
-            $request_url    =   env( 'cms_video_url' ).$account_id.'/videos'.$end_point;
+            // $client_id      =   env( 'cms_video_client_id' );
+            // $client_secret  =   env( 'cms_video_client_secret' );
+            // $limit          =   env( 'cms_video_limit' );
+            // $end_point      =   '?sort=-created_at&limit='.$limit;
+            // $request_url    =   env( 'cms_video_url' ).$account_id.'/videos'.$end_point;
 
-            // $client_id      =   env('analytics_client_id');
-            // $client_secret  =   env('analytics_client_secret');
-            // $analytics_data_limit   =   env( 'analytics_data_limit' );
-            // $request_url    =   env('analytics_data_url').'?accounts='.$account_id.'&dimensions=video&sort=-video_view&limit='.$analytics_data_limit.'&from='.$yesterday;
+            $client_id      =   env('analytics_client_id');
+            $client_secret  =   env('analytics_client_secret');
+            $analytics_data_limit   =   env( 'analytics_data_limit' );
+            $request_url    =   env('analytics_data_url').'?accounts='.$account_id.'&dimensions=video&sort=-video_view&limit='.$analytics_data_limit.'&from='.$yesterday;
 
         } else if( $type == 'popular' ) {
 
             $client_id      =   env('analytics_client_id');
-            $client_secret  =   env('analytics_client_secret');
+            // $client_secret  =   env('analytics_client_secret');
             $analytics_data_limit   =   env( 'analytics_data_limit' );
             $request_url    =   env('analytics_data_url').'?accounts='.$account_id.'&dimensions=video&sort=-video_view&limit='.$analytics_data_limit;
 

@@ -9,7 +9,7 @@
   @if( !empty( $meta['meta_title'] ) )
     <title>{{ $meta['meta_title'] }} | {{ config('app.name', 'TheMoneyMile') }}</title>
   @else
-    <title>404 - Page Not Found | {{ config('app.name', 'TheMoneyMile') }} | {{ config('app.message', 'TheMoneyMile') }}</title>
+    <title>500 - Internal Server Error | {{ config('app.name', 'TheMoneyMile') }} | {{ config('app.message', 'TheMoneyMile') }}</title>
   @endif
   <!--no index follow -->
   <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW" />

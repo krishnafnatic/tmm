@@ -165,7 +165,7 @@ function AjaxSuccess( data, divID ) {
 
     $( "#remove_to_list" ).remove();
     var onclick = "user_list('add')";
-    $( "#view-video").before('<a class="add-to-wishlist" name="add_to_list" id="add_to_list" onclick="'+onclick+'" title="Add to list"><img src="'+heart_normal+'" alt="Add to list" title="Add to list" /></a>');
+    $( "#view-video").before('<a class="add-to-wishlist" name="add_to_list" id="add_to_list" onclick="'+onclick+'" title="Add to my list"><img src="'+heart_normal+'" alt="Add to my list" title="Add to my list" /></a>');
 
   }
 
@@ -176,7 +176,7 @@ function AjaxSuccess( data, divID ) {
     showStatus( 'success', 'msgDiv', data.message);
     $( "#add_to_list" ).remove();
     var onclick = "user_list('remove')";
-    $( "#view-video").before('<a class="remove-to-wishlist" name="remove_to_list" id="remove_to_list" onClick="'+onclick+'" title="Remove to list"><img src="'+heart_red+'" alt="Remove to list" title="Remove to list" /></a>');
+    $( "#view-video").before('<a class="remove-to-wishlist" name="remove_to_list" id="remove_to_list" onClick="'+onclick+'" title="Remove to my list"><img src="'+heart_red+'" alt="Remove to my list" title="Remove to my list" /></a>');
   }
 
   /*
@@ -336,11 +336,11 @@ function user_list( target ) {
   console.log(msgDiv);
 
   if( !isDefined( msgDiv ) ) {
-    $( "#divMainContainer" ).before('<div class="alert alert-dismissible" id="msgDiv" style="display: none;"></div>');
+    $( "#divMainContainer" ).before('<div class="alert" id="msgDiv" style="display: none;"></div>');
   }
 
   if ( $("#logged_user_id").val() == 0) {
-    showStatus( 'danger', 'msgDiv', 'Please login first to make a comment.'); 
+    showStatus( 'danger', 'msgDiv', 'Please login to add the video to your list.'); 
     return false;
   }
 

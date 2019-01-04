@@ -29,7 +29,6 @@ class VerifyMail extends Mailable
      */
     public function build()
     {
-        echo env( 'MAIL_FROM_ADDRESS');die( ' checkit');
         return $this->from( env( 'MAIL_FROM_ADDRESS') )
                     ->subject( 'Activate Your The Money Mile Account' )
                     ->view('emails.verifyUser');

@@ -1,8 +1,8 @@
 <?php
 
 	return [
-	    'email' => 	'admin@themoneymile.com',
-	    'name' 	=> 	'TheMoneyMile',
+	    'email' => 	'donotreply@themoneymile.com',
+	    'name' 	=> 	'The Money Mile',
 	    'msg'	=>	'Contact us mail!',
 	];
 ?>

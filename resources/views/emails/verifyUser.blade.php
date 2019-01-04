@@ -32,7 +32,7 @@
                             <a href="{{ url('/') }}">
                                 <img src="{{ asset( 'frontend/images/the_money_mile_logo.png' ) }}" width="220" height="30" title="{{ config('app.name', 'TheMoneyMile') }}" alt="{{ config('app.name', 'TheMoneyMile') }}" />
                                 <br />
-                                <strong>Your Money's Best Friend</strong>
+                                <strong style="text-decoration: none;color:#666;">Your Money's Best Friend</strong>
                             </a><!-- 
                             <a href="{{ url('/') }}" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #bbbfc3; font-size: 19px; font-weight: bold; text-decoration: none; text-shadow: 0 1px 0 white;">
                                 {{ config('app.name', 'TheMoneyMile') }}

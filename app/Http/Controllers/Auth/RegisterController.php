@@ -124,7 +124,13 @@ class RegisterController extends Controller
         /*
             Send email to user
         */
-        Mail::to($user->email)->send(new VerifyMail($user));
+         Mail::send('mail', $user, function($message) {
+             $message->to($user->email, $user->name)->subject
+                ('Activate Your The Money Mile Account');
+             $message->from( env( 'MAIL_FROM_ADDRESS' ), env( 'MAIL_FROM_NAME' ));
+        });
+
+        //Mail::to($user->email)->send(new VerifyMail($user));
         return $user;
     }
 

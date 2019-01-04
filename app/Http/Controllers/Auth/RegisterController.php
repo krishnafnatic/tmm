@@ -121,12 +121,10 @@ class RegisterController extends Controller
             'token' => str_random(40)
         ]);
 
-
-        $event = Event::find($request->event_id);
-        $event->senderEmail = env('MAIL_FROM_ADDRESS', 'hello@example.com');
-        $event->senderName = 'The Money Mile';
-        $event->email = $user->email;        
-        $event->subject = 'Activate Your The Money Mile Account';  
+        $user->senderEmail = env('MAIL_FROM_ADDRESS', 'hello@example.com');
+        $user->senderName = 'The Money Mile';
+        $user->email = $user->email;        
+        $user->subject = 'Activate Your The Money Mile Account';  
         
         /*
             Send email to user

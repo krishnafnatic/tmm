@@ -63,10 +63,10 @@
                             </div>
                         </div>    
                     </div>
-                    <div class="col-sm-1">
+                    <!-- <div class="col-sm-1">
                         <span class="profile-seperator"> </span> 
-                    </div>  
-                    <div class="col-sm-5" title="Speaker Short Description">
+                    </div>   -->
+                    <div class="col-sm-6 pl-5 pt-0" title="Speaker Short Description">
                         <p> {!! $description !!} </p> 
                     </div>
                 </div>

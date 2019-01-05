@@ -22,7 +22,7 @@
 			 	</div>
 		 	
                 <div class="col-sm-8 text-center"><br>
-                	<h3 title="Website Title">The Money Mile</h3>     
+                	<h3 title="Website Title">{{ config('app.name', 'TheMoneyMile') }}</h3>     
                  	<ul class="user-profile-social-ico">
                    		<li>
                    			<a href="https://www.facebook.com/TheMoneyMile/" target="_blank" title="Follow on Linkedin" alt="Follow on Linkedin">
@@ -48,8 +48,8 @@
              	</div>
 		    </div>  
 		    <br><br><br>
-		    <h1>Your Money's Best Friend</h1>
-		    <p>India’s premier money, investment and personal finance offering. Founded by veteran business journalists Vivek Law, Mitali Mukherjee, finance guru Surya Bhatia and content creator Sumit Sabharwal that cuts across digital, TV and other mediums.</p>
+		    <h1>{{ config('app.message') }}</h1>
+		    <p>{{ config('app.about_us') }}</p>
 		</div>
 	</div>	
 </div>  	

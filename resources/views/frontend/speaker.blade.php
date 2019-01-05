@@ -22,9 +22,11 @@
                             <div class="col-sm-12">
                               	<h2 title="Speaker Name">{{ $name }}</h2>
                               	<h4 title="Speaker Deisgnation">{{ $designation }}</h4>
-                                <p style="margin: 20px 0px  0px 0px; " title="Follow Speaker on Social">
-                                    {{ __( 'messages.follow_us_on' ) }}
-                                </p>
+                                @if( isset( $social['facebook'] ) && !empty( $social['facebook'] ) )
+                                    <p style="margin: 20px 0px  0px 0px; " title="Follow Speaker on Social">
+                                        {{ __( 'messages.follow_us_on' ) }}
+                                    </p>
+                                @endif
 	                            <ul class="user-profile-social-ico">
                                     @if( isset( $social['facebook'] ) && !empty( $social['facebook'] ) )
 	                                   <li> 

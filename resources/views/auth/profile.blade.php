@@ -27,7 +27,7 @@
                         <div class="tab-pane fade show active" id="profile" role="profile">
                             <form class="form-horizontal" method="POST" action="{{ route( 'profile' ) }}">
                                 {{ csrf_field() }}
-                                <h6> {{ __( 'messages.detail_setup' ) }}</h6>
+                                <h3> <strong>{{ __( 'messages.detail_setup' ) }}</strong></h3>
                                 <br><br>
                                 <h3> {{ __( 'messages.how_old' ) }} </h3>
                                 <div class="col user-age pl-0 form-group{{ $errors->has('age') ? ' was-validated' : '' }}">

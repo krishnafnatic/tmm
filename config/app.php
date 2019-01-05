@@ -14,7 +14,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
-    'message' => env('APP_MESSAGE', 'The Money Mile Website'),
+    'message' => env('APP_MESSAGE', 'Your Money\'s Best Friend'),
 
     /*
     |--------------------------------------------------------------------------

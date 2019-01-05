@@ -847,8 +847,16 @@ button[type="submit"], input[type="submit"], button[type="button"]{
 					font-size: 3rem; 
 					border-radius: 100%;
 					line-height: 6.25rem;
-					
-				}						 
+				}
+.speaker_fullprofile {
+	text-align: center;
+    background: #e2e2e2;
+    color: #f8f8f8;
+    font-size: 3rem;
+    border-radius: 100%;
+    line-height: 6.25rem;
+	margin-bottom: 20px;
+}						 
 .edit-profile-2{
 					font-size: .8rem;
 					color: #999 !important;

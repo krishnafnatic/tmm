@@ -6,22 +6,23 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="row">
-                            <div class="col-sm-3 text-center">
-	                            <div class="user-initials-2">
+                            <div class="col-sm-12 text-center">
+	                            <div class="speaker_fullprofile">
 	                            	@php
                             			$name = $speakers_detail['name'];
                             			$designation = $speakers_detail['designation'];
                             			$description = $speakers_detail['description'];
                             		@endphp
 	                            	@if( !empty( $speakers_detail['avatar'] ) )
-	                                	<img src="{{ asset( '/'.$speakers_detail['avatar']) }}" width="100%" height="100%" title="{{ $name }}" alt="{{ $name }}" style="    border-radius: 100px;" />
+	                                	<img src="{{ asset( '/'.$speakers_detail['avatar']) }}" class="img-fluid" title="{{ $name }}" alt="{{ $name }}"  />
 	                                @endif
 	                            </div>
                             	<!-- <a href="" class="edit-profile-2">Edit Profile</a> -->
                             </div>
-                            <div class="col-sm-8">
+                            <div class="col-sm-12">
                               	<h2>{{ $name }}</h2>
                               	<h4>{{ $designation }}</h4>
+                                <p style="margin: 20px 0px  0px 0px; ">{{ __( 'messages.follow_us_on' ) }}</p>
 	                            <ul class="user-profile-social-ico">
                                     @if( isset( $social['facebook'] ) && !empty( $social['facebook'] ) )
 	                                   <li> 

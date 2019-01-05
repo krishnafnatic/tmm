@@ -298,4 +298,5 @@ return [
     'internal_server_error' =>  'Internal Server Error',
     'requred_url_server'    =>  'The requested URL could not be found on the server.',
     'internal_server_error_msg' => '500 Internal Server Error is a generic error message, given when no more specific message is suitable. There are a number of causes for a 500 Internal Server Error to display in a web browser. Below is a sample error message.',
+    'follow_us_on'          =>  'Follow Me',
 ];

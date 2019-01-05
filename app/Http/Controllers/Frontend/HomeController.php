@@ -205,7 +205,8 @@ class HomeController extends Controller {
         if( $type == 'tag' || $type == 'trending' ) {
 
             $videos = getVideos( $type, $allTags ); 
-            if( isset( $videos ) && count( $videos ) > 0 ) {
+
+            if( isset( $videos ) && !isset( $Videos['error_message']) ) {
                 foreach( $videos as $video ) {
                     if( !empty( $video['id'] ) ) {
                             $getVideoInfo         = Video::where('id', $video['id'] )->first();

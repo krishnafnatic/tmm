@@ -93,9 +93,11 @@
         $response = curl_exec($ch);
         curl_close($ch);
 
+        $message = array();
+
         // Check for errors
         if ($response === FALSE) {
-            $message = "Error: there was a problem with your Oauth API call"; //. curl_error($ch);
+            $message['error_message'] = "Error: there was a problem with your Oauth API call"; //. curl_error($ch);
             return $message;
         }
 

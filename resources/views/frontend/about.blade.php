@@ -22,7 +22,7 @@
 			 	</div>
 		 	
                 <div class="col-sm-8 text-center"><br>
-                	<h3 title="Website Title">{{ config('app.name', 'TheMoneyMile') }}</h3>     
+                	<h3 title="Website Title">{{  'The MoneyMile' }}</h3>     
                  	<ul class="user-profile-social-ico">
                    		<li>
                    			<a href="https://www.facebook.com/TheMoneyMile/" target="_blank" title="Follow on Linkedin" alt="Follow on Linkedin">
@@ -48,8 +48,8 @@
              	</div>
 		    </div>  
 		    <br><br><br>
-		    <h1>{{ config('app.message') }}</h1>
-		    <p>{{ config('app.about_us') }}</p>
+		    <h1 title="Website TagLine">{{ config('app.message') }}</h1>
+		    <p title="Website About Us">{{ config('app.about_us') }}</p>
 		</div>
 	</div>	
 </div>  	

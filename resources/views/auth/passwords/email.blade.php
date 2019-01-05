@@ -7,7 +7,7 @@
                 <div class="col-sm"></div>
 
                 <div class="col-sm hidden-sm hidden-md">
-                    <h3 class="text-left">{{ __( 'messages.logging_help' ) }}<</h3>
+                    <h3 class="text-left">{{ __( 'messages.logging_help' ) }}</h3>
                     <p>{{ __( 'messages.forget_pwd_note' ) }}</p>
                     <form class="form-horizontal" method="POST" action="{{ route('password.email') }}" autocomplete="off">
                         {{ csrf_field() }}

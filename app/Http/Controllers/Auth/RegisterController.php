@@ -389,7 +389,7 @@ class RegisterController extends Controller
             if($user->state == 1) { //here user state is 'created' => 1;
                 $verifyUser->user->state = 2;   //Now user is verified, so state is change from created to verified;
                 $verifyUser->user->save();
-                $status = Lang::get( 'messages.email_verified', [ 'name' => $verifyUser->user->name] );
+                $status = Lang::get( 'messages.email_verified', [ 'name' => ucfirst( $verifyUser->user->name ) ] );
             }else{
                 $status = Lang::get( 'messages.already_verified' );
             }

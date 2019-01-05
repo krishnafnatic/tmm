@@ -6,7 +6,7 @@
                     @if( isset( $menu_footer ) &&count( $menu_footer ) > 0 )
                         @foreach( $menu_footer as $footer )
                             <li class="{{ $footer->icon_class }} nav-item {{ Request::is( $footer->slug ) ? 'active' : '' }}">
-                                <a href="{{ url('/'.$footer->slug) }}" target="{{ $footer->target }}">
+                                <a href="{{ url('/'.$footer->slug) }}" target="{{ $footer->target }}" title="{{ $footer->title }}" alt="{{ $footer->title }}">
                                     {{ $footer->title }}
                                 </a> 
                             </li>
@@ -34,17 +34,17 @@
                 <ul class="">
                     <!-- <li> <a href="" target="_blank"> <i class="fab fa-youtube-square"></i>  </a> </li> -->
                     <li> 
-                        <a href="https://www.facebook.com/TheMoneyMile/" target="_blank">
+                        <a href="https://www.facebook.com/TheMoneyMile/" target="_blank" title="Find us on Facebook" alt="Find us on Facebook">
                             <i class="fab fa-facebook-square"></i> 
                         </a> 
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/company/themoneymile/" target="_blank">
+                        <a href="https://www.linkedin.com/company/themoneymile/" target="_blank" title="Find us on Linkedin" alt="Find us on Linkedin">
                             <i class="fab fa-linkedin"></i> 
                         </a> 
                     </li>
                     <li>
-                        <a href="https://twitter.com/money_mile" target="_blank">
+                        <a href="https://twitter.com/money_mile" target="_blank" title="Find us on Twitter" alt="Find us on Twitter">
                             <i class="fab fa-twitter"></i> 
                         </a> 
                     </li>
@@ -60,7 +60,7 @@
                     @if( isset( $menu_cms_footer ) && count( $menu_cms_footer ) > 0 )
                         @foreach( $menu_cms_footer as $cms_footer )
                             <li class="{{ $cms_footer->icon_class }} {{ Request::is( $cms_footer->slug ) ? 'active' : '' }}">
-                                <a href="{{  url('/'.$cms_footer->slug)  }}" target="{{ $cms_footer->target }}">
+                                <a href="{{  url('/'.$cms_footer->slug)  }}" target="{{ $cms_footer->target }}" title="{{ $cms_footer->title }}" alt="{{ $cms_footer->title }}">
                                     {{ $cms_footer->title }}
                                 </a> 
                             </li>

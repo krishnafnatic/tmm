@@ -45,19 +45,19 @@
         @endif
         @guest
           <li class="nav-item active">
-            <a class="nav-link" href="{{ route('login') }}">
+            <a class="nav-link" href="{{ route('login') }}" title="{{ __( 'messages.log_in' ) }}" alt="{{ __( 'messages.log_in' ) }}">
               {{ __( 'messages.log_in' ) }}
             </a>
           </li>
         @else
           <li class="nav-item dropdown dropleft">
-            <a class="nav-link dropdown-toggle user-login-initials" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle user-login-initials" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ Auth::user()->name }}" alt="{{ Auth::user()->name }}">
               {{ substr( Auth::user()->name, 0, 1) }}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               @if( isset( $menu_profile ) && count( $menu_profile ) > 0 )
                 @foreach( $menu_profile as $profile )
-                  <a href="{{ url( $profile->slug ) }}" target="{{ $profile->target }}" class="dropdown-item {{ $profile->icon_class}}">
+                  <a href="{{ url( $profile->slug ) }}" target="{{ $profile->target }}" class="dropdown-item {{ $profile->icon_class}}" title="{{ $profile->title }}" alt="{{ $profile->title }}">
                       {{ $profile->title }}
                   </a>
                 @endforeach
@@ -65,7 +65,7 @@
               <div class="dropdown-divider"></div> 
               <a href="#" class="btn btn-default btn-flat"
                         onclick="event.preventDefault();
-                           document.getElementById('logout-form').submit();">
+                           document.getElementById('logout-form').submit();" title="{{ __( 'messages.logout' ) }}" alt="{{ __( 'messages.logout' ) }}">
                 {{ __( 'messages.logout' ) }}
               </a>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

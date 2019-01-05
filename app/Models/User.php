@@ -90,4 +90,14 @@ class User extends Authenticatable
         return $meta[0]['meta_value'] ?? '';
     }
 
+    /**
+     * Send the password reset notification.
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token) {
+        $this->notify(new App\Notifications\MailResetPasswordNotification($token));
+    }
+
 }

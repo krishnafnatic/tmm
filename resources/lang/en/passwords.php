@@ -17,7 +17,7 @@ return [
     'reset' => 'Success!
                 Your password has been updated.',
     'sent' => 'Success!
-                We\'ve sent an email to :email with password reset instructions.',
+                We\'ve sent an email to ":email" with password reset instructions.',
     'token' => 'This password reset token is invalid.',
     'user' => "We can't find a user with that e-mail address.",
 

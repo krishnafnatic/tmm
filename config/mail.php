@@ -62,7 +62,7 @@ return [
 
     'reply_to' => [
         'address'   =>  env('MAIL_USERNAME', 'donotreply@themoneymile.com'),
-        'name'      =>  env('MAIL_FROM_NAME', 'The Money Mile'),
+        'name'      =>  env('APP_NAME', 'The Money Mile'),
     ],
 
     /*

@@ -20,13 +20,15 @@
                             	<!-- <a href="" class="edit-profile-2">Edit Profile</a> -->
                             </div>
                             <div class="col-sm-12">
-                              	<h2>{{ $name }}</h2>
-                              	<h4>{{ $designation }}</h4>
-                                <p style="margin: 20px 0px  0px 0px; ">{{ __( 'messages.follow_us_on' ) }}</p>
+                              	<h2 title="Speaker Name">{{ $name }}</h2>
+                              	<h4 title="Speaker Deisgnation">{{ $designation }}</h4>
+                                <p style="margin: 20px 0px  0px 0px; " title="Follow Speaker on Social">
+                                    {{ __( 'messages.follow_us_on' ) }}
+                                </p>
 	                            <ul class="user-profile-social-ico">
                                     @if( isset( $social['facebook'] ) && !empty( $social['facebook'] ) )
 	                                   <li> 
-                                            <a href="{{ $social['facebook'] }}" target="_blank">
+                                            <a href="{{ $social['facebook'] }}" target="_blank" title="Follow on Facebook" alt="Follow on Facebook">
                                                 <i class="fab fa-facebook fa-2x"></i>
                                             </a>
                                         </li>
@@ -34,7 +36,7 @@
 
                                     @if( isset( $social['linkedin'] ) && !empty( $social['linkedin'] ) )
                                        <li> 
-                                            <a href="{{ $social['linkedin'] }}" target="_blank">
+                                            <a href="{{ $social['linkedin'] }}" target="_blank" title="Follow on Linkedin" alt="Follow on Linkedin">
                                                 <i class="fab fa-linkedin fa-2x"></i>
                                             </a>
                                         </li>
@@ -42,7 +44,7 @@
 
                                     @if( isset( $social['google'] ) && !empty( $social['google'] ) )
                                        <li> 
-                                            <a href="{{ $social['google'] }}" target="_blank">
+                                            <a href="{{ $social['google'] }}" target="_blank" title="Follow on Google" alt="Follow on Google">
                                                 <i class="fab fa-google fa-2x"></i>
                                             </a>
                                         </li>
@@ -50,7 +52,7 @@
 
                                     @if( isset( $social['twitter'] ) && !empty( $social['twitter'] ) )
                                        <li> 
-                                            <a href="{{ $social['twitter'] }}" target="_blank">
+                                            <a href="{{ $social['twitter'] }}" target="_blank" title="Follow on Twitter" alt="Follow on Twitter">
                                                 <i class="fab fa-twitter-square fa-2x"></i>
                                             </a>
                                         </li>
@@ -62,7 +64,7 @@
                     <div class="col-sm-1">
                         <span class="profile-seperator"> </span> 
                     </div>  
-                    <div class="col-sm-5">
+                    <div class="col-sm-5" title="Speaker Short Description">
                         <p> {!! $description !!} </p> 
                     </div>
                 </div>

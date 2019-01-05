@@ -51,7 +51,7 @@
           </li>
         @else
           <li class="nav-item dropdown dropleft">
-            <a class="nav-link dropdown-toggle user-login-initials" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ Auth::user()->name }}" alt="{{ Auth::user()->name }}" style="color: #fff; ">
+            <a class="nav-link dropdown-toggle user-login-initials" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ Auth::user()->name }}" alt="{{ Auth::user()->name }}" style="color: #fff !important; background: #666 !important; ">
               {{ substr( Auth::user()->name, 0, 1) }}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">

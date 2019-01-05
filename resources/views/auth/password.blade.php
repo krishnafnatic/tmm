@@ -27,7 +27,7 @@
                          <div class="tab-pane fade show active" id="change-password" role="change-password">
                             <form class="form-horizontal" role="change-password" method="POST" action="{{ route('change-password') }}" autocomplete="on">
                                 {{ csrf_field() }}
-                                <h3> {{ __( 'messages.manage_password' ) }} </h3>
+                                <h3> {{ __( 'messages.change_password' ) }} </h3>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group{{ $errors->has('current-password') ? '' : '' }}">

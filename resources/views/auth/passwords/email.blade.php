@@ -22,7 +22,7 @@
                         </div>
                         <div class="form-group">
                             <br>    
-                            <button type="submit" class="btn-secondary" value="{{ __( 'messages.submit' ) }}" onclick="cancelURL( '{{ route('login') }} ' )">
+                            <button type="button" class="btn-secondary" value="{{ __( 'messages.cancel' ) }}" onclick="cancelURL( '{{ route('login') }} ' )">
                                 {{ __( 'messages.cancel' ) }}
                             </button> &nbsp; &nbsp;
                             <input type="submit" class="" value="{{ __( 'messages.submit' ) }}" />

@@ -24,14 +24,14 @@
           @foreach( $menu_header as $header )
             @if(count($header->child_menu_items) == 0 )
               <li class="nav-item {{ Request::is( $header->slug ) ? 'active' : '' }}">
-                <a class="nav-link" href="{{ url( $header->slug ) }}">
+                <a class="nav-link" href="{{ url( $header->slug ) }}" title="{{ $header->title }}" alt="{{ $header->title }}">
                   {{ $header->title }}
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
             @else 
               <li class="nav-item dropdown {{ Request::is('speaker*') ? 'active' : '' }}">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ $header->title }}" alt="{{ $header->title }}">
                   {{ $header->title }}
                 </a>
                 <div class="dropdown-menu master-speaker" aria-labelledby="navbarDropdown">

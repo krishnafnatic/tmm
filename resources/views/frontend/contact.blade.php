@@ -41,7 +41,7 @@
 
 		                <div class="form-group{{ $errors->has('message') ? '' : '' }}">
 			 	  			<label>Message</label>
-			 	  			<textarea class="col" name="message" id="message"  value="{{ old( 'message' )}}" placeholder="{{ __('messages.enter_message') }}"   required></textarea>
+			 	  			<textarea class="col" name="message" id="message"  value="{{ old( 'message' )}}" placeholder="{{ __('messages.enter_message') }}" style="border: 1px solid #ced4da;" required></textarea>
 			 	  			<input type="submit" name="" value="{{ __('messages.send') }}">
 			 	  			@if ($errors->has('message'))
 			                    <span class="text-danger">

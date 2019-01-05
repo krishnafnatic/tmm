@@ -6,6 +6,11 @@ button, button[type="button"]{
 	outline: none !important;
 }
 
+button.close {
+	color:#000;
+	opacity: .5;
+}
+
 body{
 		font-family: 'Roboto', sans-serif !important;
 		background: #fcfcfc !important;

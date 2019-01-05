@@ -29,7 +29,8 @@ class VerifyMail extends Mailable
      */
     public function build()
     {
-        return $this->subject( 'Activate Your The Money Mile Account' )
+        return $this->from( 'donotreply@themoneymile.com', 'The Money Mile' )
+                    ->subject( 'Activate Your The Money Mile Account' )
                     ->view('emails.verifyUser');
     }
 }

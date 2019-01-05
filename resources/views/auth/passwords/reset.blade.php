@@ -7,7 +7,7 @@
                 <div class="col-sm"></div>
 
                 <div class="col-sm hidden-sm hidden-md">
-                    <h3 class="text-center">{{ __( 'messages.reset_your_password' ) }}</h3>
+                    <h3 class="text-left">{{ __( 'messages.reset_your_password' ) }}</h3>
                     <p>{{ __( 'messages.reset_note' ) }}</p>
                     <form class="form-horizontal" method="POST" action="{{ route('password.request') }}" autocomplete="off">
                         {{ csrf_field() }}
@@ -15,7 +15,7 @@
                         <input type="hidden" name="token" value="{{ $token }}">
                         
                         <div class="form-group {{ $errors->has('email') ? '' : '' }}">
-                            <label for="email">{{ __( 'messages.email' ) }}</label>
+                            <label for="email" style="margin-top:5px;">{{ __( 'messages.email' ) }}</label>
                             <input id="email" type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email or old('email') }}" autocomplete="off" autofocus required />
                             @if ($errors->has('email'))
                                 <span class="invalid-feedback">

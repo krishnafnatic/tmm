@@ -820,7 +820,7 @@ button[type="submit"], input[type="submit"], button[type="button"]{
 .user-login-initials{
 						width: 2rem;
 						height: 2rem;
-						background: #999999;
+						background: #666;
 						border-radius: 100%;
 						
 					}

@@ -36,7 +36,7 @@
                 </a>
                 <div class="dropdown-menu master-speaker" aria-labelledby="navbarDropdown">
                   @foreach( $header->child_menu_items as $child )
-                    <a class="dropdown-item" href="{{ url( $child->slug ) }}">{{ $child->title }}</a>
+                    <a class="dropdown-item" href="{{ url( $child->slug ) }}" title="{{ $child->title }}" alt="{{ $child->title }}">{{ $child->title }}</a>
                   @endforeach
                 </div>
               </li>
@@ -51,7 +51,7 @@
           </li>
         @else
           <li class="nav-item dropdown dropleft">
-            <a class="nav-link dropdown-toggle user-login-initials" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ Auth::user()->name }}" alt="{{ Auth::user()->name }}">
+            <a class="nav-link dropdown-toggle user-login-initials" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ Auth::user()->name }}" alt="{{ Auth::user()->name }}" style="color: #fff; ">
               {{ substr( Auth::user()->name, 0, 1) }}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">

@@ -36,7 +36,11 @@
 							<table bgcolor="">
 								<tr>
 									<td class="small" width="20%" style="vertical-align: top; padding-right:10px;">
-										<img src="{{ $video['images']['thumbnail']['src'] }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}" />
+										@if( !empty( $video['images']['thumbnail']['src'] ) )
+											<img src="{{ $video['images']['thumbnail']['src'] }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}" />
+										@else
+				                            <img class="card-img-top" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}">
+				                        @endif
 									</td>
 									<td>
 										<h4>{{ $video['name'] }}</h4>

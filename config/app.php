@@ -183,6 +183,7 @@ return [
         Spatie\Newsletter\NewsletterServiceProvider::class,
         App\Providers\FrontViewComposerServiceProvider::class,
         App\Repositories\User\UserRepoServiceProvide::class,
+        \Ecrmnn\LaravelHttps\Providers\ServiceProvider::class,
     ],
 
     /*

@@ -107,6 +107,7 @@ class ComposerStaticInit3fcd3ff21b3155308dc4b865fa30227c
         'E' => 
         array (
             'Egulias\\EmailValidator\\' => 23,
+            'Ecrmnn\\LaravelHttps\\' => 20,
         ),
         'D' => 
         array (
@@ -302,6 +303,10 @@ class ComposerStaticInit3fcd3ff21b3155308dc4b865fa30227c
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
         ),
+        'Ecrmnn\\LaravelHttps\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ecrmnn/laravel-https/src',
+        ),
         'DrewM\\MailChimp\\' => 
         array (
             0 => __DIR__ . '/..' . '/drewm/mailchimp-api/src',
@@ -384,6 +389,7 @@ class ComposerStaticInit3fcd3ff21b3155308dc4b865fa30227c
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
+        'App\\Http\\Controllers\\Backend\\CommentController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/CommentController.php',
         'App\\Http\\Controllers\\Backend\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/DashboardController.php',
         'App\\Http\\Controllers\\Backend\\InformationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/InformationController.php',
         'App\\Http\\Controllers\\Backend\\LanguageController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/LanguageController.php',
@@ -415,8 +421,13 @@ class ComposerStaticInit3fcd3ff21b3155308dc4b865fa30227c
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\ContactFormRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ContactFormRequest.php',
+        'App\\Mail\\AccountDeactivate' => __DIR__ . '/../..' . '/app/Mail/AccountDeactivate.php',
+        'App\\Mail\\ChangeNotification' => __DIR__ . '/../..' . '/app/Mail/ChangeNotification.php',
+        'App\\Mail\\ChangePassword' => __DIR__ . '/../..' . '/app/Mail/ChangePassword.php',
         'App\\Mail\\ContactEmail' => __DIR__ . '/../..' . '/app/Mail/ContactEmail.php',
+        'App\\Mail\\SubscribeMe' => __DIR__ . '/../..' . '/app/Mail/SubscribeMe.php',
         'App\\Mail\\SubscriberTags' => __DIR__ . '/../..' . '/app/Mail/SubscriberTags.php',
+        'App\\Mail\\UnSubscribeMe' => __DIR__ . '/../..' . '/app/Mail/UnSubscribeMe.php',
         'App\\Mail\\VerifyMail' => __DIR__ . '/../..' . '/app/Mail/VerifyMail.php',
         'App\\Models\\AdminMail' => __DIR__ . '/../..' . '/app/Models/AdminMail.php',
         'App\\Models\\AgeGroup' => __DIR__ . '/../..' . '/app/Models/AgeGroup.php',
@@ -446,6 +457,7 @@ class ComposerStaticInit3fcd3ff21b3155308dc4b865fa30227c
         'App\\Models\\VideoMeta' => __DIR__ . '/../..' . '/app/Models/VideoMeta.php',
         'App\\Models\\Wishlist' => __DIR__ . '/../..' . '/app/Models/Wishlist.php',
         'App\\Notifications\\InboxMessage' => __DIR__ . '/../..' . '/app/Notifications/InboxMessage.php',
+        'App\\Notifications\\MailResetPasswordNotification' => __DIR__ . '/../..' . '/app/Notifications/MailResetPasswordNotification.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -517,6 +529,8 @@ class ComposerStaticInit3fcd3ff21b3155308dc4b865fa30227c
         'DrewM\\MailChimp\\Batch' => __DIR__ . '/..' . '/drewm/mailchimp-api/src/Batch.php',
         'DrewM\\MailChimp\\MailChimp' => __DIR__ . '/..' . '/drewm/mailchimp-api/src/MailChimp.php',
         'DrewM\\MailChimp\\Webhook' => __DIR__ . '/..' . '/drewm/mailchimp-api/src/Webhook.php',
+        'Ecrmnn\\LaravelHttps\\Http\\Middleware\\ForceHttps' => __DIR__ . '/..' . '/ecrmnn/laravel-https/src/Http/Middleware/ForceHttps.php',
+        'Ecrmnn\\LaravelHttps\\Providers\\ServiceProvider' => __DIR__ . '/..' . '/ecrmnn/laravel-https/src/Providers/ServiceProvider.php',
         'Egulias\\EmailValidator\\EmailLexer' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/EmailLexer.php',
         'Egulias\\EmailValidator\\EmailParser' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/EmailParser.php',
         'Egulias\\EmailValidator\\EmailValidator' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/EmailValidator.php',

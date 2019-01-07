@@ -1,6 +1,0 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /themoneymile/
-    #RewriteRule ^(.*)$ public/$1 [L]
-    RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/public/$1 [L,R=301]
-</IfModule>

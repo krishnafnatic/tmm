@@ -43,7 +43,7 @@
 						<div class="row video-list-card">
 							<div class="col-sm-3 pl-0">
 								<a href="{{ url( 'video/'.$videos[$i]['slug'] ) }}">
-									@if( !empty( $video['images']['thumbnail']['src'] ) )
+									@if( !empty( $videos[$i]['images']['thumbnail']['src'] ) )
 										<img src="{{ $videos[$i]['images']['thumbnail']['src'] }}" title="{{ $videos[$i]['name'] }}" alt="{{ $videos[$i]['name'] }}" />
 									@else
 			                            <img class="card-img-top" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" title="{{ $videos[$i]['name'] }}" alt="{{ $videos[$i]['name'] }}">

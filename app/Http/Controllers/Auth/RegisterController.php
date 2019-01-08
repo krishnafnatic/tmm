@@ -232,10 +232,12 @@ class RegisterController extends Controller
 
 
         if( !empty( $request->get( 'previous' ) ) ) {
-            return Socialite::driver('linkedin')->with(['previousURL' => $request->get( 'previous' ) ])->redirect();
+            session()->put('previousURL', $request->get( 'previous' ));
         } else {
-            return Socialite::driver('linkedin')->with(['previousURL' => '' ])->redirect();
+            session()->put('previousURL', '');
         }
+
+        return Socialite::driver('linkedin')->redirect();
     }
 
     /**
@@ -244,9 +246,7 @@ class RegisterController extends Controller
      */
     public function handleLinkedinCallback(Request $request, User $user) {
         
-        echo $request->get('previousURL');
-
-        echo request()->input('previousURL'); 
+        echo session('previousURL'); die(' ff');
         /*
             If user cancel the page: send it to 404;
         */

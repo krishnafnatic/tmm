@@ -2,10 +2,6 @@
 <html lang="{{ app()->getLocale() }}">
 	@include('frontend.elements.video_meta')
 <body>
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55GSLDJ"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
     <!-- Load Facebook SDK for JavaScript -->
   	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
@@ -89,6 +85,15 @@
 	        })
 	    });
 	    
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131947227-1"></script>
+	<script>
+	  	window.dataLayer = window.dataLayer || [];
+	  	function gtag(){dataLayer.push(arguments);}
+	  	gtag('js', new Date());
+
+	  	gtag('config', 'UA-131947227-1');
 	</script>
 </body>
 </html>

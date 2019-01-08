@@ -2,10 +2,6 @@
 <html lang="{{ app()->getLocale() }}">
 	@include('frontend.elements.account_meta')
 <body>
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55GSLDJ"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
 	@include('frontend.elements.header')
 	@include('frontend.elements.message')
 		<main role="main">
@@ -21,5 +17,14 @@
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.js"></script>
 	<script type="text/javascript" src="{{ asset( 'frontend/js/profile_setting.js' ) }}" defer="defer"></script>
 	<script type="text/javascript" src="{{ asset( 'frontend/js/slick.min.js' ) }}" defer="defer"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131947227-1"></script>
+	<script>
+	  	window.dataLayer = window.dataLayer || [];
+	  	function gtag(){dataLayer.push(arguments);}
+	  	gtag('js', new Date());
+
+	  	gtag('config', 'UA-131947227-1');
+	</script>
 </body> 
 </html>

@@ -2,10 +2,6 @@
 <html lang="{{ app()->getLocale() }}">
 	@include('frontend.elements.500_meta')
 <body>
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55GSLDJ"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
 	@include('frontend.elements.header')
 		<main role="main">
 			@yield('content')
@@ -18,5 +14,14 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="{{ asset( 'frontend/js/subscribe_me.js' ) }}"></script>
 	<script type="text/javascript" src="{{ asset( 'frontend/js/slick.min.js' ) }}"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131947227-1"></script>
+	<script>
+	  	window.dataLayer = window.dataLayer || [];
+	  	function gtag(){dataLayer.push(arguments);}
+	  	gtag('js', new Date());
+
+	  	gtag('config', 'UA-131947227-1');
+	</script>
 </body>
 </html>

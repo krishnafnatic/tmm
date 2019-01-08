@@ -245,8 +245,6 @@ class RegisterController extends Controller
      *
      */
     public function handleLinkedinCallback(Request $request, User $user) {
-        
-        echo session('previousURL'); die(' ff');
         /*
             If user cancel the page: send it to 404;
         */
@@ -273,11 +271,9 @@ class RegisterController extends Controller
             Auth::login($checkUser);
 
             /* if from video detail page*/
-            if( !empty( $request->get('previousURL') ) ) {
-
-                die('ss');
-                return redirect( $request->get('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
-            }die('sst');
+            if( !empty( session('previousURL') ) ) {
+                return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
+            }
 
             /* from login page*/
             if(session()->has('redirect.url') ) {

@@ -244,6 +244,9 @@ class RegisterController extends Controller
      */
     public function handleLinkedinCallback(Request $request, User $user) {
         
+        echo $request->get('previousURL');
+
+        echo request()->input('state'); 
         /*
             If user cancel the page: send it to 404;
         */
@@ -262,7 +265,7 @@ class RegisterController extends Controller
         /*
             If user submit the page: Do Login;
         */
-        $linkedINUser = Socialite::driver('linkedin')->user();
+        $linkedINUser = Socialite::driver('linkedin')->stateless()->->user();
         
         
         if(User::where('email', '=', $linkedINUser->getEmail())->first()){
@@ -271,8 +274,10 @@ class RegisterController extends Controller
 
             /* if from video detail page*/
             if( !empty( $request->get('previousURL') ) ) {
+
+                die('ss');
                 return redirect( $request->get('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
-            }
+            }die('sst');
 
             /* from login page*/
             if(session()->has('redirect.url') ) {

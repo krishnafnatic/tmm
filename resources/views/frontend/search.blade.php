@@ -44,9 +44,9 @@
 							<div class="col-sm-3 pl-0">
 								<a href="{{ url( 'video/'.$videos[$i]['slug'] ) }}">
 									@if( !empty( $videos[$i]['images']['thumbnail']['src'] ) )
-										<img src="{{ $videos[$i]['images']['thumbnail']['src'] }}" title="{{ $videos[$i]['name'] }}" alt="{{ $videos[$i]['name'] }}" />
+										<img src="{{ $videos[$i]['images']['thumbnail']['src'] }}" title="{{ $videos[$i]['name'] }}" alt="{{ $videos[$i]['name'] }}" style="width: 100% !important;" />
 									@else
-			                            <img class="card-img-top" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" title="{{ $videos[$i]['name'] }}" alt="{{ $videos[$i]['name'] }}">
+			                            <img class="card-img-top" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" title="{{ $videos[$i]['name'] }}" alt="{{ $videos[$i]['name'] }}" style="width: 100% !important;">
 			                        @endif
 								</a>
 							</div>

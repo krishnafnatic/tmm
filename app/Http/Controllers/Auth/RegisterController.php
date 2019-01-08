@@ -219,6 +219,10 @@ class RegisterController extends Controller
      *
      */
     public function redirectToLinkedin() {
+         $fullUrl = $request->fullUrl();
+            print '<pre>';
+                print_r( $fullUrl ) ;
+            print '</pre>';die;
         return Socialite::driver('linkedin')->redirect();
     }
 
@@ -227,11 +231,6 @@ class RegisterController extends Controller
      *
      */
     public function handleLinkedinCallback(Request $request, User $user) {
-            
-        $fullUrl = $request->fullUrl();
-            print '<pre>';
-                print_r( $fullUrl ) ;
-            print '</pre>';die;
         /*
             If user cancel the page: send it to 404;
         */

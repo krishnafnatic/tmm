@@ -230,7 +230,7 @@ class RegisterController extends Controller
             
         $fullUrl = $request->fullUrl();
             print '<pre>';
-                print_r( $fullUrl) ) ;
+                print_r( $fullUrl ) ;
             print '</pre>';die;
         /*
             If user cancel the page: send it to 404;

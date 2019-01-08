@@ -53,10 +53,10 @@ var resize = $('#upload-demo').croppie({
     /*
     	boundary options
     */
-    boundary: {
-        width: 200,
-        height: 200
-    },
+    // boundary: {
+    //     width: 200,
+    //     height: 200
+    // },
     enableZoom: false,
     /*
     	image zoom with mouse wheel

@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-sm-3 text-center">  
                         <!-- <div id="proife_picture"></div> onclick="uploadImage();"-->
-                        <div class="col-sm-12 text-center user-initials-2" style="padding: 0;" id="upload-demo" title="Auth::user()->name, 0, 1)">
+                        <div class="col-sm-12 text-center user-initials-2" style="padding: 0;" id="upload-demo" title="{{ Auth::user()->name }}">
                             {{ substr( Auth::user()->name, 0, 1) }}
                             <!-- <img class="user-profile-pic" src="" title="{{ Auth::user()->name }}" alt="{{ Auth::user()->name }}" /> -->
                         </div>

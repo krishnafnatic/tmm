@@ -133,9 +133,9 @@ class RegisterController extends Controller
     public function redirectToFacebook( Request $request ) {
 
         if( !empty( $request->get( 'previous' ) ) ) {
-            return Socialite::driver('facebook')->redirectUrl( $request->get( 'previous' ) )->redirect();
+            return Socialite::driver('facebook')->with(['previousURL' => $request->get( 'previous' ) ])->redirect();
         } else {
-            return Socialite::driver('facebook')->redirect();
+            return Socialite::driver('facebook')->with(['previousURL' => '' ])->redirect();
         } 
     }
 
@@ -170,9 +170,9 @@ class RegisterController extends Controller
             Auth::login($checkUser);
 
             /* if from video detail page*/
-            // if( !empty( request()->input('previousURL') ) ) {
-            //     return redirect( request()->input('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
-            // }
+            if( !empty( request()->input('previousURL') ) ) {
+                return redirect( request()->input('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
+            }
 
             /* from login page*/
             if(session()->has('redirect.url') ) {
@@ -232,9 +232,9 @@ class RegisterController extends Controller
 
 
         if( !empty( $request->get( 'previous' ) ) ) {
-            return Socialite::driver('linkedin')->redirectUrl( $request->get( 'previous' ) )->redirect();
+            return Socialite::driver('linkedin')->with(['previousURL' => $request->get( 'previous' ) ])->redirect();
         } else {
-            return Socialite::driver('linkedin')->redirect();
+            return Socialite::driver('linkedin')->with(['previousURL' => '' ])->redirect();
         }
     }
 
@@ -270,9 +270,9 @@ class RegisterController extends Controller
             Auth::login($checkUser);
 
             /* if from video detail page*/
-            // if( !empty( request()->input('previousURL') ) ) {
-            //     return redirect( request()->input('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
-            // }
+            if( !empty( request()->input('previousURL') ) ) {
+                return redirect( request()->input('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
+            }
 
             /* from login page*/
             if(session()->has('redirect.url') ) {
@@ -331,9 +331,9 @@ class RegisterController extends Controller
     public function redirectToGoogle( Request $request ) {
 
         if( empty( $request->get( 'previous' ) ) ) {
-            return Socialite::driver('google')->redirectUrl( $request->get( 'previous' ) )->redirect();
+            return Socialite::driver('google')->with(['previousURL' => $request->get( 'previous' ) ])->redirect();
         } else {
-            return Socialite::driver('google')->redirect();
+            return Socialite::driver('google')->with(['previousURL' => '' ])->redirect();
         } 
     }
 
@@ -361,9 +361,9 @@ class RegisterController extends Controller
             Auth::login($checkUser); 
 
             /* if from video detail page*/
-            // if( !empty( request()->input('previousURL') ) ) {
-            //     return redirect( request()->input('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
-            // }
+            if( !empty( request()->input('previousURL') ) ) {
+                return redirect( request()->input('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
+            }
 
             /* from login page*/
             if(session()->has('redirect.url') ) {

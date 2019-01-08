@@ -227,7 +227,11 @@ class RegisterController extends Controller
      *
      */
     public function handleLinkedinCallback(Request $request, User $user) {
-        
+            
+
+            print '<pre>';
+                print_r( $request->get('previous') ) ;
+            print '</pre>';die;
         /*
             If user cancel the page: send it to 404;
         */

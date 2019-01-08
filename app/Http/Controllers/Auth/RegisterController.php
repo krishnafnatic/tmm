@@ -170,7 +170,7 @@ class RegisterController extends Controller
             Auth::login($checkUser);
 
             /* if from video detail page*/
-            if( isset( request()->input('previousURL') ) && !empty( request()->input('previousURL') ) ) {
+            if( !empty( request()->input('previousURL') ) ) {
                 return redirect( request()->input('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
             }
 
@@ -270,7 +270,7 @@ class RegisterController extends Controller
             Auth::login($checkUser);
 
             /* if from video detail page*/
-            if( isset( request()->input('previousURL') ) && !empty( request()->input('previousURL') ) ) {
+            if( !empty( request()->input('previousURL') ) ) {
                 return redirect( request()->input('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
             }
 
@@ -361,7 +361,7 @@ class RegisterController extends Controller
             Auth::login($checkUser); 
 
             /* if from video detail page*/
-            if( isset( request()->input('previousURL') ) && !empty( request()->input('previousURL') ) ) {
+            if( !empty( request()->input('previousURL') ) ) {
                 return redirect( request()->input('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
             }
 

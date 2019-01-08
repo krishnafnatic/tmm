@@ -8,8 +8,8 @@
             <div class="col-sm-6">
                 <div class="row">
                     <div class="col-sm-3 text-center">  
-                        <!-- <div id="proife_picture"></div> -->
-                        <div class="col-sm-12 text-center user-initials-2" style="padding: 0;" id="upload-demo" onclick="uploadImage();">
+                        <!-- <div id="proife_picture"></div> onclick="uploadImage();"-->
+                        <div class="col-sm-12 text-center user-initials-2" style="padding: 0;" id="upload-demo" title="Auth::user()->name, 0, 1)">
                             {{ substr( Auth::user()->name, 0, 1) }}
                             <!-- <img class="user-profile-pic" src="" title="{{ Auth::user()->name }}" alt="{{ Auth::user()->name }}" /> -->
                         </div>
@@ -22,7 +22,7 @@
                         </div> -->
                     </div>
                     <div class="col-sm-8">
-                        <h2>{{ Auth::user()->name }}</h2>
+                        <h2 title="User Name">{{ Auth::user()->name }}</h2>
                         <input type="text" id="designation" class="float-left col-sm-12"  disabled style="display: none;" name="designation" value="{{ $user_profile['designation'] }}" />
                         <h4 id="content_designation">{{ $user_profile['designation'] }}</h4>
                         <button class="btn btn-sm btn-primary text-right" id="edit_designation" onclick="UpdateUserProfileButton( 'designation', '{{route("update.profile") }}'  )" style="position: relative;">

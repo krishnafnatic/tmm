@@ -1010,8 +1010,8 @@ a.card-title, .card a {
 					display: none;
 			   }
 .cr-boundary canvas{
-						width: 100% !important;
-						height: 100% !important;	
+						/*width: 100% !important;
+						height: 100% !important;*/	
 					}			   													   
 .cr-overlay{
 				width: 100% !important;

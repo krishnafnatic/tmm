@@ -186,6 +186,8 @@ function UpdateUserProfile( key, url ) {
 
 	      	}
 	    }); 
+	} else {
+		$("#designation").after( '<p>Please Enter your Designation</p>');
 	}
 }
 

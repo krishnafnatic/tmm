@@ -29,29 +29,38 @@
                             {{ __( 'messages.edit_designation' ) }}
                         </button><br><br>
                         <ul class="user-profile-social-ico">
+
+                            @if( isset( $user_profile['social']['facebook']) && !empty( $user_profile['social']['facebook'] ) )
                             <li> 
                                 <a href="{{ $user_profile['social']['facebook'] }}" target="_tab">
                                     <i class="fab fa-facebook fa-2x"></i> 
                                 </a> 
                             </li>
+                            @endif
 
+                             @if( isset( $user_profile['social']['linkedin']) && !empty( $user_profile['social']['linkedin'] ) )
                             <li>
                                 <a href="{{ $user_profile['social']['linkedin'] }}" target="_tab">
                                     <i class="fab fa-linkedin fa-2x"></i>
                                 </a>
                             </li>
+                            @endif
 
+                            @if( isset( $user_profile['social']['google']) && !empty( $user_profile['social']['google'] ) )
                             <li>
                                 <a href="{{ $user_profile['social']['google'] }}" target="_tab">
                                     <i class="fab fa-google fa-2x"></i>
                                 </a>
                             </li>
+                            @endif
 
+                            @if( isset( $user_profile['social']['twitter']) && !empty( $user_profile['social']['twitter'] ) )
                             <li>
                                 <a href="{{ $user_profile['social']['twitter'] }}" target="_tab">
                                     <i class="fab fa-twitter-square fa-2x"></i>
                                 </a>
                             </li>
+                            @endif
                         </ul>
                         @if( isset( $user_profile['user_tag'] ) && !empty( $user_profile['user_tag'] ) )
                             <h6>{{ __( 'messages.interests' ) }}</h6>

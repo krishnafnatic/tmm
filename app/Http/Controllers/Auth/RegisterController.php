@@ -173,7 +173,7 @@ class RegisterController extends Controller
 
             /* if from video detail page*/
             if( !empty( session('previousURL') ) ) {
-                return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
+                return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
             }
 
             /* from login page*/
@@ -218,7 +218,7 @@ class RegisterController extends Controller
 
         /* if from video detail page*/
         if( !empty( session('previousURL') ) ) {
-            return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
+            return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
         }
 
         if ($request->session()->has('redirect.url')) {
@@ -279,7 +279,7 @@ class RegisterController extends Controller
 
             /* if from video detail page*/
             if( !empty( session('previousURL') ) ) {
-                return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "LinkedIn"]));
+                return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "LinkedIn"]));
             }
 
             /* from login page*/
@@ -324,7 +324,7 @@ class RegisterController extends Controller
 
         /* if from video detail page*/
         if( !empty( session('previousURL') ) ) {
-            return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "LinkedIn"]));
+            return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "LinkedIn"]));
         }
 
         if ($request->session()->has('redirect.url')) {
@@ -377,7 +377,7 @@ class RegisterController extends Controller
 
             /* if from video detail page*/
             if( !empty( session('previousURL') ) ) {
-                return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Google"]));
+                return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "Google"]));
             }
 
             /* from login page*/
@@ -422,7 +422,7 @@ class RegisterController extends Controller
 
         /* if from video detail page*/
         if( !empty( session('previousURL') ) ) {
-            return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "LinkedIn"]));
+            return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "LinkedIn"]));
         }
 
         if ($request->session()->has('redirect.url')) {

@@ -246,7 +246,7 @@ class RegisterController extends Controller
         
         echo $request->get('previousURL');
 
-        echo request()->input('state'); 
+        echo request()->input('previousURL'); 
         /*
             If user cancel the page: send it to 404;
         */

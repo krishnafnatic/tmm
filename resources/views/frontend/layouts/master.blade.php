@@ -2,6 +2,10 @@
 <html lang="{{ app()->getLocale() }}">
 	@include('frontend.elements.meta')
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55GSLDJ"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 	@include('frontend.elements.header')
 		<main role="main">
 			@yield('content')

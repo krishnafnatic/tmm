@@ -130,7 +130,7 @@ class RegisterController extends Controller
      * redirect to facebook login
      *
      */
-    public function redirectToFacebook() {
+    public function redirectToFacebook( Request $request ) {
 
         if( !empty( $request->get( 'previous' ) ) ) {
             return Socialite::driver('facebook')->with(['previousURL' => $request->get( 'previous' ) ])->redirect();
@@ -328,7 +328,7 @@ class RegisterController extends Controller
      * redirect to google login
      *
      */
-    public function redirectToGoogle() {
+    public function redirectToGoogle( Request $request ) {
 
         if( empty( $request->get( 'previous' ) ) ) {
             return Socialite::driver('google')->with(['previousURL' => $request->get( 'previous' ) ])->redirect();

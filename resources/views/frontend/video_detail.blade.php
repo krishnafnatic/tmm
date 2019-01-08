@@ -30,7 +30,7 @@
               </a>
             </li>
             <li>
-            	<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo URL::current(); ?>&title={{ $video_detail['name'] }}&summary={{ $video_detail['description'] }}&source=TheMoneyMile" target="_blank">
+            	<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode( URL::current() ) ?>" target="_blank">
                  <img src="{{ asset( 'frontend/images/social/linkedin.png' ) }}" alt="LinkedIn Share" title="LinkedIn Share" />
             	</a>
             </li>

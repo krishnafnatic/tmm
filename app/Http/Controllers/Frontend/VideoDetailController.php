@@ -89,11 +89,15 @@ class VideoDetailController extends Controller
                     
                     $speaker_descriptions = SpeakerDescription::where( 'speaker_id', $speaker->id )->first();
 
+                    $userAvatarIMGName = pathinfo($speaker->avatar, PATHINFO_BASENAME);
+                    $extractIMGName = explode( '.', $userAvatarIMGName);
+
                     $all_speakers[] = array(
                         'speaker_id'    =>  $speaker->id,
                         'name'          =>  $speaker_descriptions->name,
-                        'slug'          =>  $speaker->slug,
+                        'slug'          =>  $speaker->slug, 
                         'avatar'        =>  $speaker->avatar,
+                        'crop'          =>  'speaker/'.$extractIMGName[0].'_crop.'.$extractIMGName[1],
                         'designation'   =>  $speaker_descriptions->designation,
                         'short_description'   =>  $speaker_descriptions->short_description,
                     );

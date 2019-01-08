@@ -28,4 +28,6 @@
   @if( !empty( $meta['meta_keyword'] ) )
     <meta name="keywords" content="{{ $meta['meta_keyword'] }}">
   @endif
+  <!-- Google WebMaster-->
+  <meta name="google-site-verification" content="AHrDaEmRXAy1RWs6NtDpq8z1llYurCKN4w_h1RcB2f4" />
 </head>

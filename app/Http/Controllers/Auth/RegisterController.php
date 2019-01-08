@@ -265,7 +265,7 @@ class RegisterController extends Controller
         /*
             If user submit the page: Do Login;
         */
-        $linkedINUser = Socialite::driver('linkedin')->stateless()->->user();
+        $linkedINUser = Socialite::driver('linkedin')->stateless()->user();
         
         
         if(User::where('email', '=', $linkedINUser->getEmail())->first()){

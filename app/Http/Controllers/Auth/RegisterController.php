@@ -130,13 +130,15 @@ class RegisterController extends Controller
      * redirect to facebook login
      *
      */
-    public function redirectToFacebook( Request $request ) {
+    public function redirectToFacebook( Request $request ) { 
 
         if( !empty( $request->get( 'previous' ) ) ) {
-            return Socialite::driver('facebook')->with(['previousURL' => $request->get( 'previous' ) ])->redirect();
+            session()->put('previousURL', $request->get( 'previous' ));
         } else {
-            return Socialite::driver('facebook')->with(['previousURL' => '' ])->redirect();
-        } 
+            session()->put('previousURL', '');
+        }
+
+        return Socialite::driver('facebook')->redirect();
     }
 
     /**
@@ -163,15 +165,15 @@ class RegisterController extends Controller
         /*
             If user submit the page: Do Login;
         */
-        $fbUser = Socialite::driver('facebook')->user();
+        $fbUser = Socialite::driver('facebook')->stateless()->user();
     
         if(User::where('email', '=', $fbUser->getEmail())->first()) {
             $checkUser = User::where('email', '=', $fbUser->getEmail())->first();
             Auth::login($checkUser);
 
             /* if from video detail page*/
-            if( !empty( $request->get('previousURL') ) ) {
-                return redirect( $request->get('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
+            if( !empty( session('previousURL') ) ) {
+                return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
             }
 
             /* from login page*/
@@ -213,6 +215,11 @@ class RegisterController extends Controller
             Authorize User & Redirect
         */
         Auth::login($user);
+
+        /* if from video detail page*/
+        if( !empty( session('previousURL') ) ) {
+            return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
+        }
 
         if ($request->session()->has('redirect.url')) {
             $URL = $request->session()->get('redirect.url').'#comments';
@@ -272,7 +279,7 @@ class RegisterController extends Controller
 
             /* if from video detail page*/
             if( !empty( session('previousURL') ) ) {
-                return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
+                return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "LinkedIn"]));
             }
 
             /* from login page*/
@@ -315,6 +322,11 @@ class RegisterController extends Controller
         */
         Auth::login($user); 
 
+        /* if from video detail page*/
+        if( !empty( session('previousURL') ) ) {
+            return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "LinkedIn"]));
+        }
+
         if ($request->session()->has('redirect.url')) {
             $URL = $request->session()->get('redirect.url').'#comments';
             $request->session()->forget('redirect.url');
@@ -331,11 +343,13 @@ class RegisterController extends Controller
      */
     public function redirectToGoogle( Request $request ) {
 
-        if( empty( $request->get( 'previous' ) ) ) {
-            return Socialite::driver('google')->with(['previousURL' => $request->get( 'previous' ) ])->redirect();
+        if( !empty( $request->get( 'previous' ) ) ) {
+            session()->put('previousURL', $request->get( 'previous' ));
         } else {
-            return Socialite::driver('google')->with(['previousURL' => '' ])->redirect();
-        } 
+            session()->put('previousURL', '');
+        }
+
+        return Socialite::driver('google')->redirect();
     }
 
     /**
@@ -355,15 +369,15 @@ class RegisterController extends Controller
         /*
             If user submit the page: Do Login;
         */
-        $googleUser = Socialite::driver('google')->user();
+        $googleUser = Socialite::driver('google')->stateless()->user();
         
         if(User::where('email', '=', $googleUser->getEmail())->first()){
             $checkUser = User::where('email', '=', $googleUser->getEmail())->first();
             Auth::login($checkUser); 
 
             /* if from video detail page*/
-            if( !empty( $request->get('previousURL') ) ) {
-                return redirect( $request->get('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
+            if( !empty( session('previousURL') ) ) {
+                return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Google"]));
             }
 
             /* from login page*/
@@ -405,6 +419,11 @@ class RegisterController extends Controller
             Authorize User & Redirect
         */
         Auth::login($user);  
+
+        /* if from video detail page*/
+        if( !empty( session('previousURL') ) ) {
+            return redirect( session('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "LinkedIn"]));
+        }
 
         if ($request->session()->has('redirect.url')) {
             $URL = $request->session()->get('redirect.url').'#comments';

@@ -49,4 +49,7 @@
   <meta name="twitter:player:height" content="360"/>
   <meta name="twitter:stream" content="<?php echo URL::current(); ?>"/>
   <meta name="twitter:player:stream:content_type" content="video/mp4" />
+
+  <!-- Google WebMaster-->
+  <meta name="google-site-verification" content="AHrDaEmRXAy1RWs6NtDpq8z1llYurCKN4w_h1RcB2f4" />
 </head>

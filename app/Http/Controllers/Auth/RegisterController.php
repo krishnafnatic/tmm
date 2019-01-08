@@ -218,7 +218,11 @@ class RegisterController extends Controller
      * redirect to linkedIn login
      *
      */
-    public function redirectToLinkedin() {
+    public function redirectToLinkedin( Request $request ) {
+
+        print '<pre>';
+            print_r( $request->get( 'previous' ) );
+        print '</pre>';die;
         return Socialite::driver('linkedin')->redirect();
     }
 
@@ -247,14 +251,7 @@ class RegisterController extends Controller
             If user submit the page: Do Login;
         */
         $linkedINUser = Socialite::driver('linkedin')->user();
-
-        print '<pre>';
-            print_r($linkedINUser);
-        print '</pre>';
-
-        print '<pre>';
-            print_r($request);
-        print '</pre>';die;
+        
         
         if(User::where('email', '=', $linkedINUser->getEmail())->first()){
             $checkUser = User::where('email', '=', $linkedINUser->getEmail())->first();

@@ -187,7 +187,8 @@ function UpdateUserProfile( key, url ) {
 	      	}
 	    }); 
 	} else {
-		$("#designation").after( '<p>Please Enter your Designation</p>');
+		$('.dwait').remove();
+		$("#designation").after( '<p class="dwait">Please Enter your Designation</p>');
 	}
 }
 

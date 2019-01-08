@@ -103,8 +103,6 @@ class RegisterController extends Controller
             Save User Meta
         */
 
-        //die('User id: '. $user->id);
-
         $current_time = Carbon::now()->toDateTimeString();
         $token = $data['_token'];
         DB::table('user_metas')->insert([
@@ -133,7 +131,12 @@ class RegisterController extends Controller
      *
      */
     public function redirectToFacebook() {
-        return Socialite::driver('facebook')->redirect();
+
+        if( isset( $request->get( 'previous' ) ) && !empty( $request->get( 'previous' ) ) ) {
+            return Socialite::driver('facebook')->with(['previousURL' => $request->get( 'previous' ) ])->redirect();
+        } else {
+            return Socialite::driver('facebook')->with(['previousURL' => '' ])->redirect();
+        } 
     }
 
     /**
@@ -165,6 +168,13 @@ class RegisterController extends Controller
         if(User::where('email', '=', $fbUser->getEmail())->first()) {
             $checkUser = User::where('email', '=', $fbUser->getEmail())->first();
             Auth::login($checkUser);
+
+            /* if from video detail page*/
+            if( isset( request()->input('previousURL') ) && !empty( request()->input('previousURL') ) ) {
+                return redirect( request()->input('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
+            }
+
+            /* from login page*/
             if(session()->has('redirect.url') ) {
                 $URL = session()->get( 'redirect.url' ).'#comments';
                 session()->forget( 'redirect.url' );
@@ -220,10 +230,12 @@ class RegisterController extends Controller
      */
     public function redirectToLinkedin( Request $request ) {
 
-        print '<pre>';
-            print_r( $request->get( 'previous' ) );
-        print '</pre>';die;
-        return Socialite::driver('linkedin')->redirect();
+
+        if( isset( $request->get( 'previous' ) ) && !empty( $request->get( 'previous' ) ) ) {
+            return Socialite::driver('linkedin')->with(['previousURL' => $request->get( 'previous' ) ])->redirect();
+        } else {
+            return Socialite::driver('linkedin')->with(['previousURL' => '' ])->redirect();
+        }
     }
 
     /**
@@ -257,6 +269,12 @@ class RegisterController extends Controller
             $checkUser = User::where('email', '=', $linkedINUser->getEmail())->first();
             Auth::login($checkUser);
 
+            /* if from video detail page*/
+            if( isset( request()->input('previousURL') ) && !empty( request()->input('previousURL') ) ) {
+                return redirect( request()->input('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
+            }
+
+            /* from login page*/
             if(session()->has('redirect.url') ) {
                 $URL = session()->get( 'redirect.url' ).'#comments';
                 session()->forget( 'redirect.url' );
@@ -311,7 +329,12 @@ class RegisterController extends Controller
      *
      */
     public function redirectToGoogle() {
-        return Socialite::driver('google')->redirect();
+
+        if( isset( $request->get( 'previous' ) ) && !empty( $request->get( 'previous' ) ) ) {
+            return Socialite::driver('google')->with(['previousURL' => $request->get( 'previous' ) ])->redirect();
+        } else {
+            return Socialite::driver('google')->with(['previousURL' => '' ])->redirect();
+        } 
     }
 
     /**
@@ -336,6 +359,13 @@ class RegisterController extends Controller
         if(User::where('email', '=', $googleUser->getEmail())->first()){
             $checkUser = User::where('email', '=', $googleUser->getEmail())->first();
             Auth::login($checkUser); 
+
+            /* if from video detail page*/
+            if( isset( request()->input('previousURL') ) && !empty( request()->input('previousURL') ) ) {
+                return redirect( request()->input('previousURL') )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
+            }
+
+            /* from login page*/
             if(session()->has('redirect.url') ) {
                 $URL = session()->get( 'redirect.url' ).'#comments';
                 session()->forget( 'redirect.url' );

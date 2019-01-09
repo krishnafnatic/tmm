@@ -5,7 +5,7 @@
       <img src="{{ asset('backend/dist/img/avatar5.png')}}" class="img-circle" alt="{{ __( 'messages.user_image' ) }}" />
     </div>
     <div class="pull-left info">
-      <p>{{ config('app.name', 'Laravel') }}</p>
+      <p>{{ config('app.name') }}</p>
       <a href="#"><i class="fa fa-circle text-success"></i> 
         {{ __( 'messages.online' ) }}
       </a>

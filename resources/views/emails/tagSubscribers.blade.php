@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Tag Subcribers</title>
+	<title>Tag Subcribers | {{ config('app.name') }}</title>
 	<link rel="stylesheet" type="text/css" href="{{ asset( 'frontend/css/email.css' ) }}">
 </head>
 <body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
@@ -16,7 +16,7 @@
 						<tr>
 	                        <td class="header" style="font-family: Avenir, Helvetica, sans-serif;box-sizing: border-box; padding: 25px 0; text-align: center;">
 	                            <a href="{{ url('/') }}">
-	                                <img src="{{ asset( 'frontend/images/the_money_mile_logo.png' ) }}" width="220" height="30" title="{{ config('app.name', 'TheMoneyMile') }}" alt="{{ config('app.name', 'TheMoneyMile') }}" /><br />
+	                                <img src="{{ asset( 'frontend/images/the_money_mile_logo.png' ) }}" width="220" height="30" title="{{ config('app.name') }}" alt="{{ config('app.name') }}" /><br />
                                 <strong style="color:#999;">{{ config('app.message')  }}</strong>
 	                            </a>
 	                        </td>

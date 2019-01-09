@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Title -->
   @if( !empty( $meta['meta_title'] ) )
-    <title>{{ $meta['meta_title'] }} | {{ config('app.name', 'TheMoneyMile') }}</title>
+    <title>{{ $meta['meta_title'] }} | {{ config('app.name') }} | {{ config('app.message') }}</title>
   @else
-    <title>{{ config('app.name', 'TheMoneyMile') }} | {{ config('app.message', 'TheMoneyMile') }}</title>
+    <title>{{ config('app.name') }} | {{ config('app.message') }}</title>
   @endif
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" type="text/css" href="{{ asset( 'frontend/css/style.css' ) }}" />

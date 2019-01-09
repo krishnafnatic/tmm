@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="{{ url('/') }}" title="{{ config('app.name', 'TheMoneyMile') }}"> 
-      <img src="{{ asset( 'frontend/images/the_money_mile_logo.png' ) }}" width="220" height="30" title="{{ config('app.name', 'TheMoneyMile') }}" alt="{{ config('app.name', 'TheMoneyMile') }}" />
+    <a class="navbar-brand" href="{{ url('/') }}" title="{{ config('app.name', 'The MoneyMile') }}"> 
+      <img src="{{ asset( 'frontend/images/the_money_mile_logo.png' ) }}" width="220" height="30" title="{{ config('app.name', 'The MoneyMile') }}" alt="{{ config('app.name', 'The MoneyMile') }}" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

@@ -6,7 +6,7 @@
   <!-- viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Title -->
-  <title>{{ config('app.name', 'TheMoneyMile') }}</title>
+  <title>User Account | {{ config('app.name') }} | {{ config('app.message') }}</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" type="text/css" href="{{ asset( 'frontend/css/style.css' ) }}" />
   <!--Bootstrap Css File -->

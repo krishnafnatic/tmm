@@ -5,7 +5,7 @@
     <div class="login-logo">
       <a href="{{ url('/') }}" target="_tab">
         {{ __( 'messages.administrator' ) }}
-        {{ config('app.name', 'Laravel') }}
+        {{ config('app.name') }}
       </a>
     </div>
     <!-- /.login-logo -->

@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Title -->
   @if( !empty( $meta['meta_title'] ) )
-    <title>{{ $meta['meta_title'] }} | {{ config('app.name', 'TheMoneyMile') }}</title>
+    <title>{{ $meta['meta_title'] }} | {{ config('app.name') }} | {{ config('app.message') }}</title>
   @else
-    <title>{{ config('app.name', 'TheMoneyMile') }}</title>
+    <title>{{ config('app.name') }} | {{ config('app.message') }}</title>
   @endif
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" type="text/css" href="{{ asset( 'frontend/css/style.css' ) }}" />
@@ -29,7 +29,7 @@
     <meta name="keywords" content="{{ $meta['meta_keyword'] }}">
   @endif
   <!-- Open Graph Sharing Metadata -->
-  <meta property="og:site_name" content="{{ config('app.name', 'TheMoneyMile') }}">
+  <meta property="og:site_name" content="{{ config('app.name') }}">
   <meta property="og:title" content="{{ $video_detail['name'] }}">
   <meta property="og:description" content="{{ $video_detail['description'] }}">
   <meta property="og:url" content="<?php echo URL::current(); ?>">

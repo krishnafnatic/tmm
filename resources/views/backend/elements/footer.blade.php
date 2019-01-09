@@ -3,6 +3,6 @@
 </div>
 <strong>
 	{{ __( 'messages.copyright' ) }} &copy; {{ \Carbon\Carbon::now()->format('Y') }} 
-	<a href="{{ url('/') }}" target="_tab">{{ config('app.name', 'Laravel') }}</a>. 
+	<a href="{{ url('/') }}" target="_tab">{{ config('app.name') }}</a>. 
 </strong> 
 {{ __( 'messages.all_right_reserved' ) }}

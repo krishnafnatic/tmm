@@ -18,11 +18,11 @@
 		 	<br>
 		 	<div class="row">
 			 	<div class="col-sm-4 text-center p-0">
-			 		<img src="{{ asset( 'frontend/images/tmm-logo2.png' ) }}" class="tmm-profile-logo" title="{{ config('app.name', 'TheMoneyMile') }}" alt="{{ config('app.name', 'TheMoneyMile') }}">
+			 		<img src="{{ asset( 'frontend/images/tmm-logo2.png' ) }}" class="tmm-profile-logo" title="{{ config('app.name') }}" alt="{{ config('app.name') }}">
 			 	</div>
 		 	
                 <div class="col-sm-8 text-center"><br>
-                	<h3 title="Website Title">{{  'The MoneyMile' }}</h3>     
+                	<h3 title="Website Title">{{ config('app.name') }}</h3>     
                  	<ul class="user-profile-social-ico">
                    		<li>
                    			<a href="https://www.facebook.com/TheMoneyMile/" target="_blank" title="Follow on Linkedin" alt="Follow on Linkedin">

@@ -38,10 +38,16 @@ class ContactController extends Controller {
      */
     public function store( ContactFormRequest $message, AdminMail $admin ) {
         
-        $admin->email = $message['email'];
+        //$admin->email = $message['email'];
         //send the admin an notification
-        $admin->notify(new InboxMessage($message));
+        //$admin->notify(new InboxMessage($message));
         // redirect the user back
+
+
+        Mail::to("hello@themoneymile.com ")
+            ->cc(['admin@themoneymile.com'])
+            ->send(new InboxMessage($message));
+
         return redirect()->back()->with('success', 'thanks for the message! We will get back to you soon!');
     }
 

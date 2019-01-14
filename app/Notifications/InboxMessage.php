@@ -44,7 +44,8 @@ class InboxMessage extends Notification
     public function toMail($notifiable) {
 
         return (new MailMessage)
-                    ->from($this->message->email, $this->message->name)
+                    ->cc( "admin@themoneymile.com" )
+                    ->from( $this->message->email, $this->message->name)
                     ->subject(config('admin.name'). ", ".config('admin.msg'))
                     ->greeting( " " )
                     ->salutation( " " )

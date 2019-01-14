@@ -57,12 +57,12 @@
    ExpiresByType text/html "access plus 600 seconds"
    ExpiresDefault "access plus 2 days"
 </IfModule>
+#
+#<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)(\.gz)?$">
+#  Header set Expires "Thu, 15 Apr 2020 20:00:00 GMT"
+#</FilesMatch>
 
-<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)(\.gz)?$">
-  Header set Expires "Thu, 15 Apr 2020 20:00:00 GMT"
-</FilesMatch>
-
-<IfModule mod_headers.c>
-  Header unset ETag
-</IfModule>
-FileETag None
+#<IfModule mod_headers.c>
+#  Header unset ETag
+#</IfModule>
+#FileETag None

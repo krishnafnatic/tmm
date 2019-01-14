@@ -1,7 +1,7 @@
 <?php
 
 	return [
-	    'email' => 	'admin1@themoneymile.com',
+	    'email' => 	'viveklaw@gmail.com',
 	    'name' 	=> 	'The Money Mile',
 	    'msg'	=>	'Contact us mail!',
 	];

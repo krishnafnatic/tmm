@@ -1,5 +1,5 @@
 @if( isset( $folder_videos ) && count( $folder_videos) > 0 )
-    <section id="open-house-videos">
+    <section class="open-house-videos">
         <h2 class="bd-cyan no-bd-lft">{{ $folder_videos['folder_name'] }}</h2>  
         <div class="slider responsive">
             @foreach( $folder_videos['folder_videos'] as $video )

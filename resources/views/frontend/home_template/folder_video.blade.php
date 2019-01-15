@@ -1,5 +1,5 @@
 @if( isset( $folder_videos ) && count( $folder_videos) > 0 )
-    <section id="open-house-videos">
+    <section class="open-house-videos">
         <h2 class="bd-cyan">{{ $folder_videos['folder_heading'] }}</h2>  
         <div class="slider responsive">
             @foreach( $folder_videos['folder_videos'] as $video )
@@ -13,7 +13,7 @@
                     </a>
                     <div class="card-body">
                         <h6 class="card-title">
-                            <a href="{{ url('category/'.urlencode($folder_videos['folder_heading']).'/'.$video['slug']) }}" title="{{ $video['name'] }}">
+                            <a href="{{ url('category/'.urlencode($folder_videos['folder_heading'].'/'.$video['slug']) }}" title="{{ $video['name'] }}">
                                 {{ ucfirst( $video['name'] ) }}
                             </a>
                         </h6>

@@ -111,20 +111,20 @@ font-size: 4vh !important;
 color: #aaaaaa !important;
   }  
 
-#trending-videos, #popular-videos, #open-house-videos, #nivesh-kar-videos {
+#trending-videos, #popular-videos, .open-house-videos, #nivesh-kar-videos {
 						margin: 50px 0;
 				 }
-#trending-videos .card, #popular-videos .card, #open-house-videos .card, #nivesh-kar-videos .card{
+#trending-videos .card, #popular-videos .card, .open-house-videos .card, #nivesh-kar-videos .card{
 									background: #fff;
 									box-shadow: 2px 2px 4px #e4e4e4;
 									border:none;
 									margin: 15px;
 									
 								}
-#trending-videos .card-body,  #popular-videos .card-body, #open-house-videos .card-body, #nivesh-kar-videos .card-body{
+#trending-videos .card-body,  #popular-videos .card-body, .open-house-videos .card-body, #nivesh-kar-videos .card-body{
 								padding: .5rem;
 				 			}
-#trending-videos .card-body .card-title,  #popular-videos .card-body .card-title, #open-house-videos .card-body .card-title, #nivesh-kar-videos .card-body .card-title{
+#trending-videos .card-body .card-title,  #popular-videos .card-body .card-title, .open-house-videos .card-body .card-title, #nivesh-kar-videos .card-body .card-title{
 											margin-bottom: 0;
 									   }
 .card-image { padding: 10px 10px 0px 10px; border-radius: 10px; }

@@ -1,5 +1,5 @@
 @if(isset($videos)&& !empty($videos))
-<section id="open-house-videos">
+<section class="open-house-videos">
     <h2 class="bd-cyan">{{ $video_title }}</h2>  
     <div class="slider responsive">
         @foreach( $videos as $video )

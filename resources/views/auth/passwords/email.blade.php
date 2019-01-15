@@ -33,7 +33,7 @@
                 <div class="col-sm signup-box"> </div>
             </div>
         </div>
-        <script type="text/javascript">
+        <script>
             function cancelURL( url ) {
                 window.location.href=url;
             }

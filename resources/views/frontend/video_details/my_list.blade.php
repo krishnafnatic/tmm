@@ -6,9 +6,9 @@
                 <div class="card">
                     <a href="{{ url('video/'.$wish['slug']) }}" class="card-title">
                         @if( !empty( $wish['images']['thumbnail']['src'] ) )
-                            <img class="card-img-top" src="{{  $wish['images']['thumbnail']['src'] }}" alt="{{ $wish['name'] }}" title="{{ $wish['name'] }}" />
+                            <img class="card-img-top" src="{{  $wish['images']['thumbnail']['src'] }}" alt="{{ $wish['name'] }}" title="{{ $wish['name'] }}" width="248" height="140" />
                         @else
-                            <img class="card-img-top" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" alt="{{ $wish['name'] }}" title="{{ $wish['name'] }}">
+                            <img class="card-img-top" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" alt="{{ $wish['name'] }}" title="{{ $wish['name'] }}" width="248" height="140" />
                         @endif
                     </a>
                     <div class="card-body">

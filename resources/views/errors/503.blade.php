@@ -1,8 +1,7 @@
 @extends('frontend.layouts.down')
 
 @section('title')
-
-	<title>503 - Website Under Maintenance | {{ config('app.name') }} | {{ config('app.message') }}</title>
+	503 - Website Under Maintenance | {{ config('app.name') }} | {{ config('app.message') }}
 @stop
 
 @section('logo')

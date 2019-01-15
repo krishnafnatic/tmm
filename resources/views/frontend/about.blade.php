@@ -4,8 +4,8 @@
 <div class="container">
 	<div class="row about-us">
 		<div class="col-sm-6">
-		 	<!--<iframe width="100%" height="100%" src="https://www.youtube.com/embed/9prd9nCNQXI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-		 	<video width="100%" height="100%" controls>
+		 	<!--<iframe width="100" height="100" src="https://www.youtube.com/embed/9prd9nCNQXI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+		 	<video width="100" height="100" controls>
         <source src="{{ asset( 'frontend/video/WHATSAP_MONEYMILE_PROMO.mp4' ) }}" type="video/mp4">
       Your browser does not support the video tag.
       </video>
@@ -25,12 +25,12 @@
                 	<h3 title="Website Title">{{ config('app.name') }}</h3>     
                  	<ul class="user-profile-social-ico">
                    		<li>
-                   			<a href="https://www.facebook.com/TheMoneyMile/" target="_blank" title="Follow on Linkedin" alt="Follow on Linkedin">
+                   			<a href="https://www.facebook.com/TheMoneyMile/" target="_blank" title="Follow on Linkedin">
                    				<i class="fab fa-facebook fa-2x"></i>
                    			</a>
                    		</li>
                    		<li>
-                   			<a href="https://www.linkedin.com/company/themoneymile/" target="_blank" title="Follow on Linkedin" alt="Follow on Linkedin">
+                   			<a href="https://www.linkedin.com/company/themoneymile/" target="_blank" title="Follow on Linkedin">
                    				<i class="fab fa-linkedin fa-2x"></i>
                    			</a>
                    		</li>
@@ -40,7 +40,7 @@
                    			</a>
                    		</li> -->
                    		<li>
-                   			<a href="https://twitter.com/money_mile" target="_blank" title="Follow on Linkedin" alt="Follow on Twitter">
+                   			<a href="https://twitter.com/money_mile" target="_blank" title="Follow on Linkedin">
                    				<i class="fab fa-twitter-square fa-2x"></i>
                    			</a>
                    		</li>

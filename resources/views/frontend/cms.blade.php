@@ -11,7 +11,7 @@
 		{!!  $cms['description']  !!}
 	</div>	
 </div>  	
-<style type="text/css">
+<style>
 	.about-us h2 {
 		width: 100%;
 	}

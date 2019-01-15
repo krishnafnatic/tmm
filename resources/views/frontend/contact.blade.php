@@ -18,7 +18,7 @@
 		 	  		<a href="mailto:hello@themoneymile.com" target="_top">hello@themoneymile.com</a>
 		 	  		<br> <hr> <br>
 		 	  		<h5>Send us a message</h5>
-		 	  		<form class="col-12 contact-us-from pl-0" action="{{ route( 'contact_us' ) }}" method="get" role="contact">
+		 	  		<form class="col-12 contact-us-from pl-0" action="{{ route( 'contact_us' ) }}" method="get">
 		 	  			<div class="form-group{{ $errors->has('name') ? '' : '' }}">
 			 	  			<label>Name</label>
 			 	  			<input type="text" name="name" id="name" class="form-control" value="{{ old( 'name' )}}" placeholder="{{ __('messages.enter_name') }}" autocomplete="off" required>
@@ -41,8 +41,8 @@
 
 		                <div class="form-group{{ $errors->has('message') ? '' : '' }}">
 			 	  			<label>Message</label>
-			 	  			<textarea class="col" name="message" id="message"  value="{{ old( 'message' )}}" placeholder="{{ __('messages.enter_message') }}" style="border: 1px solid #ced4da;" required></textarea>
-			 	  			<input type="submit" name="" value="{{ __('messages.send') }}">
+			 	  			<textarea class="col" name="message" id="message" placeholder="{{ __('messages.enter_message') }}" style="border: 1px solid #ced4da;" required>{{ old( 'message' ) }}</textarea>
+			 	  			<input type="submit" name="send" value="{{ __('messages.send') }}">
 			 	  			@if ($errors->has('message'))
 			                    <span class="text-danger">
 			                        {{ $errors->first('message') }}

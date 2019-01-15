@@ -8,7 +8,7 @@
   <!-- Title -->
   <title>User Account | {{ config('app.name') }} | {{ config('app.message') }}</title>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" type="text/css" href="{{ asset( 'frontend/css/style.css' ) }}" />
+  <link rel="stylesheet" href="{{ asset( 'frontend/css/style.css' ) }}" />
   <!--Bootstrap Css File -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
   <!-- Croppie Css File -->

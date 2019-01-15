@@ -126,7 +126,9 @@
           	</div>
           	<!-- Remaning Ad and Page with Videos Start-->
           	<div class="tmm-image-ad d-none" id="home-ad-1">
-             	<a href="#"> <img src="{{ asset( 'frontend/images/tmm-ad.jpg' ) }}"  class="img-fluid"> </a>
+             	<a href="#">
+                <img src="{{ asset( 'frontend/images/tmm-ad.jpg' ) }}" class="img-fluid"  title="Advertisment" alt="Advertisment" /> 
+              </a>
           	</div>  
           	@if( isset( $watch_next ) && count( $watch_next) > 0 )
           		@include('frontend.video_details.watch_next')
@@ -155,7 +157,7 @@
        	@endguest
        @include('frontend.video_details.login_popup')
 
-       <script type="text/javascript">
+       <script>
 			var account_id 	= 	"{{ $video_detail['account_id'] }}",
 				video_id 	= 	"{{ $video_detail['video_id'] }}",
 				analyticsURL =  "{{ url( 'bc/analytics' ) }}",

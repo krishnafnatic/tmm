@@ -43,7 +43,7 @@
                   <label class="form-control-label" for="password">{{ __( 'messages.password' ) }}</label>
                   <input type="password" class="form-control" id="password"  name="password" autocomplete="current-password"  />
                   <span class="invalid-feedback" id="msg_password"></span>
-                  <label class="remember-me" for="forget_password">
+                  <label class="remember-me">
                      <a href="{{ route( 'password.request' ) }}"> {{ __( 'messages.forgot_password' ) }} </a>
                   </label>
               </div>

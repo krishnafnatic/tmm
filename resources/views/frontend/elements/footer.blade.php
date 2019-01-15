@@ -60,7 +60,7 @@
                     @if( isset( $menu_cms_footer ) && count( $menu_cms_footer ) > 0 )
                         @foreach( $menu_cms_footer as $cms_footer )
                             <li class="{{ $cms_footer->icon_class }} {{ Request::is( $cms_footer->slug ) ? 'active' : '' }}">
-                                <a href="{{  url('/'.$cms_footer->slug)  }}" target="{{ $cms_footer->target }}" title="{{ $cms_footer->title }}">
+                                <a href="{{  url('/'.$cms_footer->slug)  }}" @if( !empty( $cms_footer->target ) ) target="{{ $cms_footer->target }}" @endif title="{{ $cms_footer->title }}">
                                     {{ $cms_footer->title }}
                                 </a> 
                             </li>

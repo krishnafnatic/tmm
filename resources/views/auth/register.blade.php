@@ -84,9 +84,9 @@
                 </div>
             </div>
         </div>
+        <script>
+            function socialURL( url ) {
+                window.location.href=url;
+            }
+        </script>
     @endsection
-    <script type="text/javascript">
-        function socialURL( url ) {
-            window.location.href=url;
-        }
-    </script>

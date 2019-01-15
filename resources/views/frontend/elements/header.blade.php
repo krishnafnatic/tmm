@@ -24,19 +24,19 @@
           @foreach( $menu_header as $header )
             @if(count($header->child_menu_items) == 0 )
               <li class="nav-item {{ Request::is( $header->slug ) ? 'active' : '' }}">
-                <a class="nav-link" href="{{ url( $header->slug ) }}" title="{{ $header->title }}" alt="{{ $header->title }}">
+                <a class="nav-link" href="{{ url( $header->slug ) }}" title="{{ $header->title }}">
                   {{ $header->title }}
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
             @else 
               <li class="nav-item dropdown {{ Request::is('speaker*') ? 'active' : '' }}">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ $header->title }}" alt="{{ $header->title }}">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ $header->title }}">
                   {{ $header->title }}
                 </a>
                 <div class="dropdown-menu master-speaker" aria-labelledby="navbarDropdown">
                   @foreach( $header->child_menu_items as $child )
-                    <a class="dropdown-item" href="{{ url( $child->slug ) }}" title="{{ $child->title }}" alt="{{ $child->title }}">{{ $child->title }}</a>
+                    <a class="dropdown-item" href="{{ url( $child->slug ) }}" title="{{ $child->title }}">{{ $child->title }}</a>
                   @endforeach
                 </div>
               </li>
@@ -45,19 +45,19 @@
         @endif
         @guest
           <li class="nav-item active">
-            <a class="nav-link" href="{{ route('login') }}" title="{{ __( 'messages.log_in' ) }}" alt="{{ __( 'messages.log_in' ) }}">
+            <a class="nav-link" href="{{ route('login') }}" title="{{ __( 'messages.log_in' ) }}">
               {{ __( 'messages.log_in' ) }}
             </a>
           </li>
         @else
           <li class="nav-item dropdown dropleft">
-            <a class="nav-link dropdown-toggle user-login-initials" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ Auth::user()->name }}" alt="{{ Auth::user()->name }}" style="color: #fff !important; background: #666 !important; ">
+            <a class="nav-link dropdown-toggle user-login-initials" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ Auth::user()->name }}" style="color: #fff !important; background: #666 !important; ">
               {{ substr( Auth::user()->name, 0, 1) }}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               @if( isset( $menu_profile ) && count( $menu_profile ) > 0 )
                 @foreach( $menu_profile as $profile )
-                  <a href="{{ url( $profile->slug ) }}" target="{{ $profile->target }}" class="dropdown-item {{ $profile->icon_class}}" title="{{ $profile->title }}" alt="{{ $profile->title }}">
+                  <a href="{{ url( $profile->slug ) }}" target="{{ $profile->target }}" class="dropdown-item {{ $profile->icon_class}}" title="{{ $profile->title }}">
                       {{ $profile->title }}
                   </a>
                 @endforeach
@@ -65,7 +65,7 @@
               <div class="dropdown-divider"></div> 
               <a href="#" class="btn btn-default btn-flat"
                         onclick="event.preventDefault();
-                           document.getElementById('logout-form').submit();" title="{{ __( 'messages.logout' ) }}" alt="{{ __( 'messages.logout' ) }}">
+                           document.getElementById('logout-form').submit();" title="{{ __( 'messages.logout' ) }}">
                 {{ __( 'messages.logout' ) }}
               </a>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

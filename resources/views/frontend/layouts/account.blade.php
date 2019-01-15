@@ -4,7 +4,7 @@
 <body>
 	@include('frontend.elements.header')
 	@include('frontend.elements.message')
-		<main role="main">
+		<main>
 			@yield('content')
 		</main>
 	@include('frontend.elements.footer')
@@ -15,8 +15,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.js"></script>
-	<script type="text/javascript" src="{{ asset( 'frontend/js/profile_setting.js' ) }}" defer="defer"></script>
-	<script type="text/javascript" src="{{ asset( 'frontend/js/slick.min.js' ) }}" defer="defer"></script>
+	<script src="{{ asset( 'frontend/js/profile_setting.js' ) }}" defer="defer"></script>
+	<script src="{{ asset( 'frontend/js/slick.min.js' ) }}" defer="defer"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131947227-1"></script>
 	<script>

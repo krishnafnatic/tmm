@@ -6,7 +6,7 @@
                     @if( isset( $menu_footer ) &&count( $menu_footer ) > 0 )
                         @foreach( $menu_footer as $footer )
                             <li class="{{ $footer->icon_class }} nav-item {{ Request::is( $footer->slug ) ? 'active' : '' }}">
-                                <a href="{{ url('/'.$footer->slug) }}" target="{{ $footer->target }}" title="{{ $footer->title }}" alt="{{ $footer->title }}">
+                                <a href="{{ url('/'.$footer->slug) }}" target="{{ $footer->target }}" title="{{ $footer->title }}">
                                     {{ $footer->title }}
                                 </a> 
                             </li>
@@ -17,7 +17,7 @@
             <div class="col-md-auto footer-subscribe" id="divSubscribeMe">
                 <h5>{{ __( 'messages.subscribe_newsletter' ) }}</h5>
                 <div class="alert alert-dismissible" id="msgSubscribMe" style="display: none;"></div>
-                <div class="form-inline my-2 my-lg-0 ml-auto {{ $errors->has('name') ? ' was-validated' : '' }}" role="subscribe" style="margin-bottom: 20px !important;">
+                <div class="form-inline my-2 my-lg-0 ml-auto {{ $errors->has('name') ? ' was-validated' : '' }}" style="margin-bottom: 20px !important;">
                     <input type="text" name="subscribe_name" id="subscribe_name" placeholder="{{ __( 'messages.name' ) }}" autocomplete="off" required />
                     <input type="email" name="subscribe_email" id="subscribe_email" placeholder="{{ __( 'messages.email' ) }}" autocomplete="off" required />
                     <button type="submit" onclick="subscribeMe();" id="subscribeMe">{{ __( 'messages.subscribe' ) }}</button>
@@ -34,17 +34,17 @@
                 <ul class="">
                     <!-- <li> <a href="" target="_blank"> <i class="fab fa-youtube-square"></i>  </a> </li> -->
                     <li> 
-                        <a href="https://www.facebook.com/TheMoneyMile/" target="_blank" title="Find us on Facebook" alt="Find us on Facebook">
+                        <a href="https://www.facebook.com/TheMoneyMile/" target="_blank" title="Find us on Facebook">
                             <i class="fab fa-facebook-square"></i> 
                         </a> 
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/company/themoneymile/" target="_blank" title="Find us on Linkedin" alt="Find us on Linkedin">
+                        <a href="https://www.linkedin.com/company/themoneymile/" target="_blank" title="Find us on Linkedin">
                             <i class="fab fa-linkedin"></i> 
                         </a> 
                     </li>
                     <li>
-                        <a href="https://twitter.com/money_mile" target="_blank" title="Find us on Twitter" alt="Find us on Twitter">
+                        <a href="https://twitter.com/money_mile" target="_blank" title="Find us on Twitter">
                             <i class="fab fa-twitter"></i> 
                         </a> 
                     </li>
@@ -60,7 +60,7 @@
                     @if( isset( $menu_cms_footer ) && count( $menu_cms_footer ) > 0 )
                         @foreach( $menu_cms_footer as $cms_footer )
                             <li class="{{ $cms_footer->icon_class }} {{ Request::is( $cms_footer->slug ) ? 'active' : '' }}">
-                                <a href="{{  url('/'.$cms_footer->slug)  }}" target="{{ $cms_footer->target }}" title="{{ $cms_footer->title }}" alt="{{ $cms_footer->title }}">
+                                <a href="{{  url('/'.$cms_footer->slug)  }}" target="{{ $cms_footer->target }}" title="{{ $cms_footer->title }}">
                                     {{ $cms_footer->title }}
                                 </a> 
                             </li>
@@ -74,7 +74,7 @@
             </div>
         </div> 
     </div>
-    <script type="text/javascript">
+    <script>
         var subscribeMeURL=  "{{ url( '/subscribe' ) }}",
             loader    =   "{{ asset( 'frontend/images/loader.png' ) }}";
     </script>

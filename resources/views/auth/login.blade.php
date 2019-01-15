@@ -73,7 +73,7 @@
 	            </div>
         	</div>
       	</div>
-        <script type="text/javascript">
+        <script>
             function socialURL( url ) {
                 window.location.href=url;
             }

@@ -660,7 +660,7 @@ class VideoDetailController extends Controller
         }
     } 
 
-    public function folderWatchNext( urldecode ($category_name ), $video_slug, VideoMeta $videoMeta ) {
+    public function folderWatchNext( $category_name, $video_slug, VideoMeta $videoMeta ) {
 
         $verifyVideoSlug = Video::where( 'slug', $video_slug )->first();
 
@@ -749,6 +749,8 @@ class VideoDetailController extends Controller
                 Watch Next based on Folder_ID of Videos
             */
             $type = array();
+
+            $category_name = urldecode( $category_name );
 
             switch ($category_name) {
                 case 'Ask Surya':

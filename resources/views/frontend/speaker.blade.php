@@ -30,7 +30,7 @@
 	                            <ul class="user-profile-social-ico">
                                     @if( isset( $social['facebook'] ) && !empty( $social['facebook'] ) )
 	                                   <li> 
-                                            <a href="{{ $social['facebook'] }}" target="_blank" title="Follow on Facebook" alt="Follow on Facebook">
+                                            <a href="{{ $social['facebook'] }}" target="_blank" title="Follow on Facebook">
                                                 <i class="fab fa-facebook fa-2x"></i>
                                             </a>
                                         </li>
@@ -38,7 +38,7 @@
 
                                     @if( isset( $social['linkedin'] ) && !empty( $social['linkedin'] ) )
                                        <li> 
-                                            <a href="{{ $social['linkedin'] }}" target="_blank" title="Follow on Linkedin" alt="Follow on Linkedin">
+                                            <a href="{{ $social['linkedin'] }}" target="_blank" title="Follow on Linkedin">
                                                 <i class="fab fa-linkedin fa-2x"></i>
                                             </a>
                                         </li>
@@ -46,7 +46,7 @@
 
                                     @if( isset( $social['google'] ) && !empty( $social['google'] ) )
                                        <li> 
-                                            <a href="{{ $social['google'] }}" target="_blank" title="Follow on Google" alt="Follow on Google">
+                                            <a href="{{ $social['google'] }}" target="_blank" title="Follow on Google">
                                                 <i class="fab fa-google fa-2x"></i>
                                             </a>
                                         </li>
@@ -54,7 +54,7 @@
 
                                     @if( isset( $social['twitter'] ) && !empty( $social['twitter'] ) )
                                        <li> 
-                                            <a href="{{ $social['twitter'] }}" target="_blank" title="Follow on Twitter" alt="Follow on Twitter">
+                                            <a href="{{ $social['twitter'] }}" target="_blank" title="Follow on Twitter">
                                                 <i class="fab fa-twitter-square fa-2x"></i>
                                             </a>
                                         </li>

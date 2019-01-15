@@ -67,7 +67,7 @@
                         <span class="profile-seperator"> </span> 
                     </div>   -->
                     <div class="col-sm-6 pl-5 pt-0" title="Speaker Short Description">
-                        <p> {!! $description !!} </p> 
+                        {!! $description !!}
                     </div>
                 </div>
             </div>  

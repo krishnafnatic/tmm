@@ -6,7 +6,7 @@
                     @if( isset( $menu_footer ) &&count( $menu_footer ) > 0 )
                         @foreach( $menu_footer as $footer )
                             <li class="{{ $footer->icon_class }} nav-item {{ Request::is( $footer->slug ) ? 'active' : '' }}">
-                                <a href="{{ url('/'.$footer->slug) }}" target="{{ $footer->target }}" title="{{ $footer->title }}">
+                                <a href="{{ url('/'.$footer->slug) }}" @if( !empty( $footer->target ) ) target="{{ $footer->target }}" @endif title="{{ $footer->title }}">
                                     {{ $footer->title }}
                                 </a> 
                             </li>

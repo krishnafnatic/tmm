@@ -57,7 +57,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               @if( isset( $menu_profile ) && count( $menu_profile ) > 0 )
                 @foreach( $menu_profile as $profile )
-                  <a href="{{ url( $profile->slug ) }}" target="{{ $profile->target }}" class="dropdown-item {{ $profile->icon_class}}" title="{{ $profile->title }}">
+                  <a href="{{ url( $profile->slug ) }}" @if( !empty( $profile->target ) )target="{{ $profile->target }}" @endif class="dropdown-item {{ $profile->icon_class}}" title="{{ $profile->title }}">
                       {{ $profile->title }}
                   </a>
                 @endforeach

@@ -13,7 +13,7 @@
                     </a>
                     <div class="card-body">
                         <h6 class="card-title">
-                            <a href="{{ url('category/'.urlencode($folder_videos['folder_heading'].'/'.$video['slug']) }}" title="{{ $video['name'] }}">
+                            <a href="{{ url('category/'.urlencode($folder_videos['folder_heading']).'/'.$video['slug']) }}" title="{{ $video['name'] }}">
                                 {{ ucfirst( $video['name'] ) }}
                             </a>
                         </h6>

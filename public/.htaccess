@@ -58,7 +58,23 @@
    ExpiresDefault "access plus 2 days"
 </IfModule>
 
+# Disable ETags
+<IfModule mod_headers.c>
+  
+  Header unset ETag
+  
+  <filesMatch "\.(ico|jpe?g|png|gif|swf)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </filesMatch>
+  <filesMatch "\.(css)$">
+    Header set Cache-Control "max-age=604800, public"
+  </filesMatch>
+  <filesMatch "\.(js)$">
+    Header set Cache-Control "max-age=216000, private"
+  </filesMatch>
+  <filesMatch "\.(x?html?|php)$">
+    Header set Cache-Control "max-age=420, private, must-revalidate"
+  </filesMatch>
+</IfModule>
 
-<filesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
-  Header set Cache-Control "max-age=604800, public"
-</filesMatch>
+FileETag None

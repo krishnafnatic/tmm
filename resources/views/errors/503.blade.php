@@ -1,5 +1,5 @@
 @extends('errors::layout')
 
-@section('title', 'Website Under Maintenance Mode')
+@section('title', 'Website Under Maintenance Mode | The MoneyMile')
 
-@section('message', ' Be right back. ')
+@section('message', ' Website Under Maintenance. Be right back. ')

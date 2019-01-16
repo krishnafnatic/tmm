@@ -169,7 +169,7 @@ class RegisterController extends Controller
     
         if(User::where('email', '=', $fbUser->getEmail())->first()) {
             $checkUser = User::where('email', '=', $fbUser->getEmail())->first();
-            
+
             Auth::loginUsingId($checkUser['id'], true);
 
             /* if from video detail page*/
@@ -184,7 +184,6 @@ class RegisterController extends Controller
                 return redirect( $URL )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
             } else {
                 $URL = env('APP_URL');
-                die($URL);
                 return redirect($URL)->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
             }
         }

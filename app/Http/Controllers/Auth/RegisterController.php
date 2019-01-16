@@ -226,7 +226,7 @@ class RegisterController extends Controller
             $request->session()->forget('redirect.url');
             return redirect( $URL )->with('success', Lang::get('messages.logged_by', ['by' => "Fac ebook"]));
         } else {
-            return return redirect()->action('Frontend\HomeController@show')->with('success', Lang::get('messages.logged_by', ['by' => "F acebook"]));
+            return redirect()->action('Frontend\HomeController@show')->with('success', Lang::get('messages.logged_by', ['by' => "F acebook"]));
         }
         
     }

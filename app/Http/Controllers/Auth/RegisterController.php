@@ -165,7 +165,7 @@ class RegisterController extends Controller
         /*
             If user submit the page: Do Login;
         */
-        $fbUser = Socialite::driver('facebook')->user();
+        $fbUser = Socialite::driver('facebook')->stateless()->user();
     
         if(User::where('email', '=', $fbUser->getEmail())->first()) {
             $checkUser = User::where('email', '=', $fbUser->getEmail())->first();
@@ -173,16 +173,16 @@ class RegisterController extends Controller
 
             /* if from video detail page*/
             if( !empty( session('previousURL') ) ) {
-                return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "Faceb ook"]));
+                return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "Faceboo k"]));
             }
 
             /* from login page*/
             if(session()->has('redirect.url') ) {
                 $URL = session()->get( 'redirect.url' ).'#comments';
                 session()->forget( 'redirect.url' );
-                return redirect( $URL )->with('success', Lang::get('messages.logged_by', ['by' => "Face book"]));
+                return redirect( $URL )->with('success', Lang::get('messages.logged_by', ['by' => "Facebo ok"]));
             } else {
-                return redirect('/')->with('success', Lang::get('messages.logged_by', ['by' => "Faceboo k"]));
+                return redirect('/')->with('success', Lang::get('messages.logged_by', ['by' => "Faceb ook"]));
             }
         }
         
@@ -218,7 +218,7 @@ class RegisterController extends Controller
 
         /* if from video detail page*/
         if( !empty( session('previousURL') ) ) {
-            return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "F acebook"]));
+            return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "Face book"]));
         }
 
         if ($request->session()->has('redirect.url')) {
@@ -226,7 +226,7 @@ class RegisterController extends Controller
             $request->session()->forget('redirect.url');
             return redirect( $URL )->with('success', Lang::get('messages.logged_by', ['by' => "Fac ebook"]));
         } else {
-            return redirect('/profile')->with('success', Lang::get('messages.logged_by', ['by' => "Fa cebook"]));
+            return redirect('/profile')->with('success', Lang::get('messages.logged_by', ['by' => "F acebook"]));
         }
         
     }
@@ -270,7 +270,7 @@ class RegisterController extends Controller
         /*
             If user submit the page: Do Login;
         */
-        $linkedINUser = Socialite::driver('linkedin')->user();
+        $linkedINUser = Socialite::driver('linkedin')->stateless()->user();
         
         
         if(User::where('email', '=', $linkedINUser->getEmail())->first()){
@@ -369,7 +369,7 @@ class RegisterController extends Controller
         /*
             If user submit the page: Do Login;
         */
-        $googleUser = Socialite::driver('google')->user();
+        $googleUser = Socialite::driver('google')->stateless()->user();
         
         if(User::where('email', '=', $googleUser->getEmail())->first()){
             $checkUser = User::where('email', '=', $googleUser->getEmail())->first();

@@ -182,7 +182,7 @@ class RegisterController extends Controller
                 session()->forget( 'redirect.url' );
                 return redirect( $URL )->with('success', Lang::get('messages.logged_by', ['by' => "Facebo ok"]));
             } else {
-                return redirect('/')->with('success', Lang::get('messages.logged_by', ['by' => "Faceb ook"]));
+                return redirect()->with('success', Lang::get('messages.logged_by', ['by' => "Faceb ook"]));
             }
         }
         

@@ -214,7 +214,7 @@ return [
     'notification'     => 'Notification',
     'deactivate_account'    =>  'Deactivate Account',
     'how_old'               =>  'How old are you?',
-    'detail_setup'          =>  "Let’s find !",
+    'detail_setup'          =>  "Let's personalize your experience!",
     'interested_in'         =>  'I am Interested In',
     'social_links'          =>  'Your Social Links',
     'cancel'                =>  'Cancel',

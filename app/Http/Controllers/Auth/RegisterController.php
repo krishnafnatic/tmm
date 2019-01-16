@@ -173,16 +173,17 @@ class RegisterController extends Controller
 
             /* if from video detail page*/
             if( !empty( session('previousURL') ) ) {
-                return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "Faceboo k"]));
+                return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
             }
 
             /* from login page*/
             if(session()->has('redirect.url') ) {
                 $URL = session()->get( 'redirect.url' ).'#comments';
                 session()->forget( 'redirect.url' );
-                return redirect( $URL )->with('success', Lang::get('messages.logged_by', ['by' => "Facebo ok"]));
+                return redirect( $URL )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
             } else {
-                return redirect()->with('success', Lang::get('messages.logged_by', ['by' => "Faceb ook"]));
+                $URL = env('APP_URL');
+                return redirect($URL)->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
             }
         }
         
@@ -218,15 +219,15 @@ class RegisterController extends Controller
 
         /* if from video detail page*/
         if( !empty( session('previousURL') ) ) {
-            return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "Face book"]));
+            return redirect( session('previousURL').'#comments' )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
         }
 
         if ($request->session()->has('redirect.url')) {
             $URL = $request->session()->get('redirect.url').'#comments';
             $request->session()->forget('redirect.url');
-            return redirect( $URL )->with('success', Lang::get('messages.logged_by', ['by' => "Fac ebook"]));
+            return redirect( $URL )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
         } else {
-            return redirect()->action('Frontend\HomeController@show')->with('success', Lang::get('messages.logged_by', ['by' => "F acebook"]));
+            return redirect('/profile')->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
         }
         
     }

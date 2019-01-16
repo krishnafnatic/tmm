@@ -183,6 +183,7 @@ class RegisterController extends Controller
                 return redirect( $URL )->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
             } else {
                 $URL = env('APP_URL');
+                die($URL);
                 return redirect($URL)->with('success', Lang::get('messages.logged_by', ['by' => "Facebook"]));
             }
         }

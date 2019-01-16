@@ -169,7 +169,7 @@ class RegisterController extends Controller
     
         if(User::where('email', '=', $fbUser->getEmail())->first()) {
             $checkUser = User::where('email', '=', $fbUser->getEmail())->first();
-            echo $checkUser['id'];
+            
             Auth::loginUsingId($checkUser['id'], true);
 
             /* if from video detail page*/

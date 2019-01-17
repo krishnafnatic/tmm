@@ -47,7 +47,6 @@
 			                        {{ $errors->first('message') }}
 			                    </span>
 		                  	@endif
-			 	  			<input type="submit" name="send" value="{{ __('messages.send') }}">
 			 	  		</div>
 
 			 	  		<div class="form-group{{ $errors->has('g-recaptcha-response') ? '' : '' }}">
@@ -58,6 +57,8 @@
 			                        {{ $errors->first('g-recaptcha-response') }}
 			                    </span>
 		                  	@endif
+		                  	
+			 	  			<input type="submit" name="send" value="{{ __('messages.send') }}">
 			 	  		</div>
 		 	  		</form>
 		 	 	</div>

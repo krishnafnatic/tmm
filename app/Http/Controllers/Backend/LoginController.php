@@ -43,7 +43,7 @@ class LoginController extends Controller {
       $this->validate($request, [
           $this->username() => 'required|exists:users,' . $this->username() . ',role_id,1',
           'password' => 'required',
-          'g-recaptcha-response' => 'required|captcha',
+          //'g-recaptcha-response' => 'required|captcha',
       ], [
           $this->username() . '.exists' => 'The selected email is invalid or the account has been disabled.'
       ]);
@@ -56,7 +56,8 @@ class LoginController extends Controller {
     // Validate the form data
     $this->validate($request, [
       'email'   => 'required|email',
-      'password' => 'required|min:8'
+      'password' => 'required|min:8',
+      'g-recaptcha-response' => 'required|captcha',
     ]);
     // Attempt to log the user in
     if (Auth::guard('admin')->attempt(['role_id' => 1, 'email' => $request->email, 'password' => $request->password])) {

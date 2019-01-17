@@ -41,7 +41,7 @@
                                     </span>
                                 @endif
                         </div>
-                        <div class="form-group{{ $errors->has('password') ? ' was-validated' : '' }}">
+                        <div class="form-group{{ $errors->has('password') ? '' : '' }}">
                             <label>{{ __( 'messages.password' ) }}</label>
                             <input id="password" type="password" class="form-control @if ($errors->has('password')) is-invalid  @endif" name="password" required autocomplete="current-password" />
                                 @if ($errors->has('password'))
@@ -50,11 +50,11 @@
                                     </span>
                                 @endif
                         </div>
-                        <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' was-validated' : '' }}">
+                        <div class="form-group{{ $errors->has('g-recaptcha-response') ? '' : '' }}">
                             <!-- <label>{{ __( 'messages.captcha' ) }}</label> -->
                             {!! app('captcha')->display() !!}
                             @if ($errors->has('g-recaptcha-response'))
-                                <span class="help-block">
+                                <span class="invalid-feedback">
                                     {{ $errors->first('g-recaptcha-response') }}
                                 </span>
                             @endif

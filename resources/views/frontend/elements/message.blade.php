@@ -1,7 +1,7 @@
 @if(isset($success) || Session::has('success') )
 	<div class="alert alert-success alert-dismissable">
 		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-		<strong>{{ __( 'messages.success' ) }}</strong> {{ isset($success) ? $info : Session::get('success') }}
+		<strong>{{ __( 'messages.success' ) }}</strong> {{ isset($success) ? $success : Session::get('success') }}
 	</div>
 @endif
 

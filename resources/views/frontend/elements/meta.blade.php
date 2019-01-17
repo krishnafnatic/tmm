@@ -31,5 +31,5 @@
   <!-- Google WebMaster-->
   <meta name="google-site-verification" content="AHrDaEmRXAy1RWs6NtDpq8z1llYurCKN4w_h1RcB2f4" />
   <!-- ReCaptcha-->
-  <script src='https://www.google.com/recaptcha/api.js?render=6LfufIoUAAAAAPMHlm8m-8xnR75xI5O5Zh5-uGnh'></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>

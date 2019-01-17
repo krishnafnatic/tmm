@@ -41,7 +41,7 @@ class ContactController extends Controller {
         //$admin->email = $message['email'];
         //send the admin an notification
         $admin->notify(new InboxMessage($message));
-
+        die('vvv');
         // redirect the user back
         return redirect('/contact')->with('success', 'thanks for the message! We will get back to you soon!');
     }

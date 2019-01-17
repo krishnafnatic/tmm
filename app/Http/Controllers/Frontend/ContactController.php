@@ -38,11 +38,13 @@ class ContactController extends Controller {
      */
     public function store( ContactFormRequest $message, AdminMail $admin ) {
         
+        print '<pre>';print_r($message);die;
         //$admin->email = $message['email'];
         //send the admin an notification
         $admin->notify(new InboxMessage($message));
+
         // redirect the user back
-        return redirect()->back()->with('success', 'thanks for the message! We will get back to you soon!');
+        return redirect('/contact')->with('success', 'thanks for the message! We will get back to you soon!');
     }
 
     /**

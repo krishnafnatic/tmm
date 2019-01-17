@@ -42,7 +42,7 @@ class ContactController extends Controller {
         //send the admin an notification
         $admin->notify(new InboxMessage($message));
         // redirect the user back
-        return redirect('/')->with('success', 'thanks for the message! We will get back to you soon!');
+        return redirect()->route('/contact')->with('flashMessage', 'thanks for the message! We will get back to you soon!');
     }
 
     /**

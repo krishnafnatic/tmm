@@ -4,8 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class VideoMeta extends Model
-{
+class VideoMeta extends Model {
     protected $guarded = [];
     
     /**

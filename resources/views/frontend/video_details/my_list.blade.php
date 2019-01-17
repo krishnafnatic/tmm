@@ -4,7 +4,7 @@
         <div class="slider responsive">
             @foreach( $wishlist as $wish )
                 <div class="card">
-                    <a href="{{ url('video/'.$wish['slug']) }}" class="card-title">
+                    <a href="{{ url('video/'.$wish['slug']) }}" class="card-title" title="{{ $wish['name'] }}">
                         @if( !empty( $wish['images']['thumbnail']['src'] ) )
                             <img class="card-img-top" src="{{  $wish['images']['thumbnail']['src'] }}" alt="{{ $wish['name'] }}" title="{{ $wish['name'] }}" width="248" height="140" />
                         @else
@@ -13,7 +13,7 @@
                     </a>
                     <div class="card-body">
                         <h6 class="card-title">
-                            <a href="{{ url('video/'.$wish['slug']) }}" class="card-title">
+                            <a href="{{ url('video/'.$wish['slug']) }}" class="card-title" title="{{ $wish['name'] }}">
                                 {{ ucfirst( $wish['name'] ) }}
                             </a>
                         </h6>

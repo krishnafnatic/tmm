@@ -16,6 +16,8 @@ return [
     'name' => env('APP_NAME', 'The MoneyMile'),
     'message' => env('APP_MESSAGE', 'Your Money\'s Best Friend'),
     'about_us'  =>  'India\'s premier money, investment and personal finance offering. Founded by veteran business journalists Vivek Law, Mitali Mukherjee, finance guru Surya Bhatia and content creator Sumit Sabharwal that cuts across digital, TV and other mediums.',
+    'pagination'    =>  env('pagination', 10),
+    'char_limit'    =>  env('char_limit', 45),
 
     /*
     |--------------------------------------------------------------------------

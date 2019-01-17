@@ -36,7 +36,7 @@ class ContactController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store( ContactFormRequest $message, AdminMail $admin ) {
+    public function store( Request $request, ContactFormRequest $message, AdminMail $admin ) {
 
         $this->validate($request, 
                 [

@@ -24,6 +24,8 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <!-- ReCaptcha-->
+  <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
 </head>
 <body class="hold-transition login-page">
   <!-- Content Wrapper. Contains page content -->

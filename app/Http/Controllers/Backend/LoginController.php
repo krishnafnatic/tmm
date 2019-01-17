@@ -43,7 +43,7 @@ class LoginController extends Controller {
       $this->validate($request, [
           $this->username() => 'required|exists:users,' . $this->username() . ',role_id,1',
           'password' => 'required',
-          //'g-recaptcha-response' => 'required|captcha',
+          'g-recaptcha-response' => 'required|captcha',
       ], [
           $this->username() . '.exists' => 'The selected email is invalid or the account has been disabled.'
       ]);

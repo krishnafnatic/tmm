@@ -43,6 +43,15 @@
               </span>
           @endif
         </div>
+        <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }} has-feedback">
+          {!! app('captcha')->display() !!}
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+           @if ($errors->has('g-recaptcha-response'))
+              <span class="help-block">
+                  <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+              </span>
+          @endif
+        </div>
         <div class="row">
           <!-- /.col -->
           <div class="col-xs-4">

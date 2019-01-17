@@ -50,15 +50,15 @@
 			 	  			<input type="submit" name="send" value="{{ __('messages.send') }}">
 			 	  		</div>
 
-			 	  		<!-- <div class="form-group{{ $errors->has('g-recaptcha-response') ? '' : '' }}">
-			 	  			 <label>Captcha</label>
+			 	  		<div class="form-group{{ $errors->has('g-recaptcha-response') ? '' : '' }}">
+			 	  			<!-- <label>Captcha</label> -->
 			 	  			{!! app('captcha')->display() !!}
 			 	  			@if ($errors->has('g-recaptcha-response'))
 			                    <span class="text-danger">
 			                        {{ $errors->first('g-recaptcha-response') }}
 			                    </span>
 		                  	@endif
-			 	  		</div> -->
+			 	  		</div>
 		 	  		</form>
 		 	 	</div>
 			</div>	

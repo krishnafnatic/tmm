@@ -53,17 +53,17 @@
                             @endif
                         </div>
 
-                        <!--<div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">
+                        <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                            <!-- <label class="col-md-4 control-label">
                                 {{ __( 'messages.captcha' ) }}
-                            </label>
+                            </label> -->
                             {!! app('captcha')->display() !!}
                             @if ($errors->has('g-recaptcha-response'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
                                 </span>
                             @endif
-                        </div>-->
+                        </div>
                         <div class="form-group">
                             <br>    
                             <button type="button" class="btn-secondary" value="{{ __( 'messages.cancel' ) }}" onclick="cancelURL( '{{ route('login') }} ' )">

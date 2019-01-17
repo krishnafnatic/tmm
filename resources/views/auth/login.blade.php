@@ -51,13 +51,13 @@
                                 @endif
                         </div>
                         <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' was-validated' : '' }}">
-                            <label>{{ __( 'messages.captcha' ) }}</label>
-                                {!! app('captcha')->display() !!}
-                                @if ($errors->has('g-recaptcha-response'))
-                                    <span class="invalid-feedback">
-                                        {{ $errors->first('g-recaptcha-response') }}
-                                    </span>
-                                @endif
+                            <!-- <label>{{ __( 'messages.captcha' ) }}</label> -->
+                            {!! app('captcha')->display() !!}
+                            @if ($errors->has('g-recaptcha-response'))
+                                <span class="invalid-feedback">
+                                    {{ $errors->first('g-recaptcha-response') }}
+                                </span>
+                            @endif
                             <br />
                             <label class="remember-me">
                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>{{ __( 'messages.remember_me' ) }}

@@ -71,7 +71,7 @@
                         </div>
 
                         <div class="form-group {{ $errors->has('g-recaptcha-response') ? '' : '' }}">
-                            <label>{{ __( 'messages.captcha' ) }}</label>
+                            <!-- <label>{{ __( 'messages.captcha' ) }}</label> -->
                             {!! app('captcha')->display() !!}
                             @if ($errors->has('g-recaptcha-response'))
                                 <span class="invalid-feedback">

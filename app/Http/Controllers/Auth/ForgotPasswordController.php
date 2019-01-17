@@ -48,7 +48,7 @@ class ForgotPasswordController extends Controller
         $this->validate($request, 
                 [
                     'email' => 'required|email|exists:users',
-                   // 'g-recaptcha-response' => 'required|captcha',
+                    'g-recaptcha-response' => 'required|captcha',
                 ]);
 
         // We will send the password reset link to this user. Once we have attempted

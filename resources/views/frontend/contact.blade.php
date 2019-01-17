@@ -3,12 +3,6 @@
 	@section('content')
 		<div class="container">
 			<br /><br /> @include('frontend.elements.message')
-			@if(Session::has('flashMessage'))
-			  	<div class="alert alert-danger alert-block">
-					<button type="button" class="close" data-dismiss="alert">×</button>	
-			        <strong>{{ Session::get('flashMessage') }}</strong>
-				</div>
-			@endif
 			<div class="row contact-us">
 			 	<div class="col-sm-5">
 		 	  		<h1> 

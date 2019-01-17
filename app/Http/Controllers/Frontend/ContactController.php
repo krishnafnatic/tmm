@@ -36,12 +36,7 @@ class ContactController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store( Request $request, ContactFormRequest $message, AdminMail $admin ) {
-
-        $this->validate($request, 
-                [
-                    'g-recaptcha-response' => 'required|captcha',
-                ]);
+    public function store( ContactFormRequest $message, AdminMail $admin ) {
         
         //$admin->email = $message['email'];
         //send the admin an notification

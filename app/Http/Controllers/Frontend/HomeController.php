@@ -333,7 +333,7 @@ class HomeController extends Controller {
 
                 if( isset( $video) &&  !empty( $video ) ) {
                     $vidoe_images       = unserialize( $videoMeta->getVideoMeta( $video_data->video_id, 'images' ) );
-                    die( env('char_limit') );
+
                     $videos_array[] = array(
                         'video_id'       =>  $video_data->video_id,
                         'name'           =>  substr( $video['name'], 0, env('char_limit') ).' ...',

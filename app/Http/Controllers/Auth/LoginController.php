@@ -63,7 +63,7 @@ class LoginController extends Controller
         $this->validate($request, [
             $this->username() => 'required|exists:users,' . $this->username() . ',state,2,role_id,2',
             'password' => 'required',
-            //'g-recaptcha-response' => 'required|captcha',
+            'g-recaptcha-response' => 'required|captcha',
         ], [
             $this->username() . '.exists' => Lang::get( 'messages.accunt_disabled' )
         ]);

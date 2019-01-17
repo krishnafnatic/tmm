@@ -76,7 +76,7 @@ class RegisterController extends Controller
             'email'     => 'required|string|email|max:255|unique:users',
             //'mobile' => 'required|regex:/[0-9]{10}/|digits:10',
             'password' => 'required|string|min:8|confirmed|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/',
-            //'g-recaptcha-response' => 'required|captcha',
+            'g-recaptcha-response' => 'required|captcha',
         ]);
     }
 

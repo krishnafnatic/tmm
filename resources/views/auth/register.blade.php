@@ -70,6 +70,16 @@
                             <input id="password-confirm" type="password" class="form-control @if ($errors->has('password')) is-invalid  @endif" autocomplete="new-password" name="password_confirmation" required>
                         </div>
 
+                        <div class="form-group {{ $errors->has('g-recaptcha-response') ? '' : '' }}">
+                            <label>{{ __( 'messages.captcha' ) }}</label>
+                            {!! app('captcha')->display() !!}
+                            @if ($errors->has('g-recaptcha-response'))
+                                <span class="invalid-feedback">
+                                    <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+
                         <div class="form-group">
                             <input type="submit" class="" value="{{ __( 'messages.sign_up' ) }}" />
                             <span class="already-account"> &nbsp; &nbsp;

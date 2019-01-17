@@ -54,7 +54,7 @@
                             <!-- <label>{{ __( 'messages.captcha' ) }}</label> -->
                             {!! app('captcha')->display() !!}
                             @if ($errors->has('g-recaptcha-response'))
-                                <span class="invalid-feedback">
+                                <span class="invalid-feedback" style="display: block !important;">
                                     {{ $errors->first('g-recaptcha-response') }}
                                 </span>
                             @endif

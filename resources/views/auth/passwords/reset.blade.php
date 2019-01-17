@@ -53,13 +53,13 @@
                             @endif
                         </div>
 
-                        <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('g-recaptcha-response') ? '' : '' }}">
                             <!-- <label class="col-md-4 control-label">
                                 {{ __( 'messages.captcha' ) }}
                             </label> -->
                             {!! app('captcha')->display() !!}
                             @if ($errors->has('g-recaptcha-response'))
-                                <span class="help-block">
+                                <span class="invalid-feedback" style="display: block !important;">
                                     <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
                                 </span>
                             @endif

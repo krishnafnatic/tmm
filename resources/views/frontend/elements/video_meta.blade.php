@@ -33,7 +33,9 @@
   <meta property="og:title" content="{{ $video_detail['name'] }}">
   <meta property="og:description" content="{{ $video_detail['description'] }}">
   <meta property="og:url" content="<?php echo URL::current(); ?>">
+  @if(!empty($video_detail['images']['poster']['src']))
   <meta property="og:image" content="{{ $video_detail['images']['poster']['src'] }}">
+  @endif
   <meta property="og:type" content="video">
   <meta property="og:video" content="https://players.brightcove.net/{{ $video_detail['account_id'] }}/oNgLTdNCH_default/index.html?videoId={{ $video_detail['video_id'] }}">
   <meta property="og:video:width" content="640">
@@ -43,7 +45,9 @@
   <meta name="twitter:site" content="@username" />
   <meta name="twitter:title" content="{{ $video_detail['name'] }}"/>
   <meta name="twitter:description" content="{{ $video_detail['description'] }}"/>
+  @if(!empty($video_detail['images']['thumbnail']['src']))
   <meta name="twitter:image" content="{{ $video_detail['images']['thumbnail']['src'] }}"/>
+  @endif
   <meta name="twitter:player" content="<?php echo URL::current(); ?>"/>
   <meta name="twitter:player:width" content="640"/>
   <meta name="twitter:player:height" content="360"/>

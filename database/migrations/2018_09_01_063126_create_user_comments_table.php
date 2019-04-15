@@ -21,6 +21,10 @@ class CreateUserCommentsTable extends Migration
             $table->unsignedInteger('parent_id')->default('0');
             $table->longText('comments')->nullable();
             $table->timestamps();
+ 	    $table->foreign('user_id')
+		  ->references('id')
+		  ->on('users')
+		  ->onDelete('cascade');
         });
     }
 

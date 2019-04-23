@@ -46,6 +46,23 @@
     </li>
     <li class="treeview">
       <a href="#">
+        <i class="fa fa-volume-up"></i>
+        <span>{{ __( 'messages.manage_video' ) }}</span>
+        <span class="pull-right-container">
+          <i class="fa fa-angle-left pull-right"></i>
+        </span>
+      </a>
+      <ul class="treeview-menu">
+        <li class="active">
+          <a href="{{ route('admin.video') }}">
+            <i class="fa fa-list"></i>
+            {{ __( 'messages.listing_video' ) }}
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="treeview">
+      <a href="#">
         <i class="fa fa-info"></i>
         <span>{{ __( 'messages.manage_info' ) }}</span>
         <span class="pull-right-container">
@@ -57,6 +74,12 @@
           <a href="{{ route('admin.information') }}">
             <i class="fa fa-list"></i>
             {{ __( 'messages.listing_info' ) }}
+          </a>
+        </li>
+        <li>
+          <a href="{{ route('admin.staticpages') }}">
+            <i class="fa fa-file"></i>
+            <span>{{ __( 'messages.manage_staticpages' ) }}</span>
           </a>
         </li>
         <li>

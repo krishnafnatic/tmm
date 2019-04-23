@@ -25,12 +25,7 @@
     /*
         Home page Controller
     */
-    Route::get('/', 'Frontend\HomeController@show');
-
-    /*
-        Video Listing Page 
-    */
-    Route::get('/video', 'Frontend\VideoDetailController@index');
+    Route::get('/', 'Frontend\HomeController@show')->name('public');
 
     /*
         Video Details Page 
@@ -70,7 +65,7 @@
     /*
     *   Frontend Search Route; 
     */
-    Route::get('/search', 'Frontend\SearchController@index');
+    Route::get('/search', 'Frontend\SearchController@index')->name('search');
     Route::post('/search', 'Frontend\SearchController@show')->name( 'search' );
 
     /*
@@ -112,13 +107,13 @@
     /*
         User Account Change Password
     */
-    Route::get('/change-password', 'Auth\AccountController@showPasswordForm');
+    Route::get('/change-password', 'Auth\AccountController@showPasswordForm')->name( 'change-password' );
     Route::post('/change-password','Auth\AccountController@updatePassword')->name('change-password');
 
     /*
         User Profile
     */
-    Route::get('/profile', 'Auth\AccountController@showProfileForm');
+    Route::get('/profile', 'Auth\AccountController@showProfileForm')->name( 'profile' );;
     Route::post('/profile','Auth\AccountController@updateProfile')->name('profile');
 
     /*
@@ -195,13 +190,13 @@
     /*
         Contact page
     */
-    Route::get('/contact', 'Frontend\ContactController@index');
+    Route::get('/contact', 'Frontend\ContactController@index')->name( 'contact' );
     Route::get('/contact_us', 'Frontend\ContactController@store')->name( 'contact_us' );
 
     /*
         CMS page
     */
-    Route::get('/about', 'Frontend\CmsController@index');
+    Route::get('/about', 'Frontend\CmsController@index')->name( 'about' );
 
     /*
         Speaker page
@@ -383,4 +378,30 @@ Route::group(['prefix' => 'admin', /*'middleware' => 'super_admin'*/ ], function
     Route::get('/commentState','Backend\CommentController@store')->name( 'admin.commentState' );
     Route::get('/comment/{id}/view', 'Backend\CommentController@show')->name('admin.comment.id.view');
 
+    /*
+        Video Listing
+    */
+    Route::get('/video', 'Backend\VideoController@index')->name( 'admin.video' );
+    
+    Route::get('/video/{id}/manageSeoTag', 'Backend\VideoController@manageSeoTag')->name('admin.video.id.manageSeoTag');
+    Route::post('/seoTagAdd', 'Backend\VideoController@storeSeoTags')->name('admin.seoTagAdd');
+    Route::post('/seoTagEdit', 'Backend\VideoController@editSeoTags')->name('admin.seoTagEdit');
+
+
+    /*
+        Static Pages Listing
+    */
+    Route::get('/staticpages', 'Backend\StaticPageController@index')->name( 'admin.staticpages' );
+
+    /*
+        Add Static Pages
+    */
+    Route::get('/staticpages/create', 'Backend\StaticPageController@create')->name('admin.staticpages.create');
+    Route::post('/staticpages/create', 'Backend\StaticPageController@store')->name('admin.staticpages.create.submit');
+
+    /*
+        Edit Static Pages
+    */ 
+    Route::get('/staticpages/{id}/edit', 'Backend\StaticPageController@edit')->name('admin.staticpages.id.edit');
+    Route::post('/staticpages/{id}/edit', 'Backend\StaticPageController@update')->name('admin.staticpages.id.edit.submit');
 });

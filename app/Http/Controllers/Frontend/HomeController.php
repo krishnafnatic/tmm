@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\SubscribeMe;
 use App\Mail\UnSubscribeMe;
 use App\Repositories\User\UserInterface as UserInterface;
+use Illuminate\Support\Facades\Route;
+use App\Models\StaticPageSeo;
 
 class HomeController extends Controller {
 
@@ -41,6 +43,12 @@ class HomeController extends Controller {
      */
     public function show( VideoMeta $videoMeta, PlaylistMeta $playlistMeta ) {
 
+        /*
+            Meta tags
+        */
+
+        $frontend_meta = $this->meta_tags();
+        
         /*
             Home page setting for carousels;
         */
@@ -81,7 +89,7 @@ class HomeController extends Controller {
             }
         }
 
-        return view('frontend.home', [ 'settings' => $home_setting, 'home_settings' => $home_setting_array ]);
+        return view('frontend.home', [ 'settings' => $home_setting, 'home_settings' => $home_setting_array, 'meta' => $frontend_meta ]);
     }
 
      /**
@@ -360,4 +368,42 @@ class HomeController extends Controller {
 
     }
 
+    /**
+     * Create a new controller instance.
+     * return meta tags using current route.
+     *
+     * @return void
+     */
+    private function meta_tags() {
+
+        /*
+            Create an empty array
+        */
+
+        $frontend_meta = array();
+
+        /*
+            Get Current Route
+        */
+
+        $current_route = !empty( Route::getCurrentRoute()->getName() ) ? Route::getCurrentRoute()->getName() : '';
+        
+        if( isset( $current_route ) && !empty( $current_route) )  {
+
+            /*
+                Get Meta Fields using current route;
+            */
+            $metaTags = StaticPageSeo::where( 'route', $current_route )->first();
+
+            if( isset( $metaTags ) && !empty( $metaTags) )  {
+               $frontend_meta['name']            =   $metaTags['name'];
+               $frontend_meta['route']           =   $metaTags['route'];
+               $frontend_meta['meta_title']      =   $metaTags['meta_title'];
+               $frontend_meta['meta_description']=   $metaTags['meta_description'];
+               $frontend_meta['meta_keyword']    =   $metaTags['meta_keyword'];
+            }
+        }
+
+        return $frontend_meta;
+    }
 }

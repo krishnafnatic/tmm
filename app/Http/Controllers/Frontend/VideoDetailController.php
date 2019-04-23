@@ -14,6 +14,7 @@ use Auth;
 use DB;
 use App\Models\Playlist;
 use App\Models\PlaylistMeta;
+use App\Models\VideoSeo;
 
 class VideoDetailController extends Controller
 {
@@ -61,8 +62,19 @@ class VideoDetailController extends Controller
         if(isset($verifyVideoSlug) ){
 
             $video_detail = array();
+            $meta_tags = array();
 
-            $videoMeta = new VideoMeta;
+            /*
+                Get Video seo id
+            */
+            $VideoSeo = VideoSeo::where( 'video_id', $verifyVideoSlug->id )->get();
+
+            /*
+                Meta of speaker
+            */
+            $meta_tags['meta_title']        = isset( $VideoSeo[0]['meta_title'] ) ? $VideoSeo[0]['meta_title'] : '';
+            $meta_tags['meta_description']  = isset( $VideoSeo[0]['meta_description'] ) ? $VideoSeo[0]['meta_description'] : '';
+            $meta_tags['meta_keyword']      = isset( $VideoSeo[0]['meta_tag'] ) ? $VideoSeo[0]['meta_tag'] : '';
 
             $video_detail['account_id']  = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'account_id' );
             $video_detail['video_id']  = $verifyVideoSlug->id;
@@ -70,6 +82,7 @@ class VideoDetailController extends Controller
             $video_detail['slug']      = $verifyVideoSlug->slug;
             $video_detail['tags']      = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'tags' ));
             $video_detail['description']    = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'description' );
+            $video_detail['long_description']    = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'long_description' );
             $video_detail['images']    = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'images' ) );
             $video_detail['custom_fields']  = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'custom_fields' ) );
             /*
@@ -240,8 +253,19 @@ class VideoDetailController extends Controller
         if(isset($verifyVideoSlug) ){
 
             $video_detail = array();
+            $meta_tags = array();
 
-            $videoMeta = new VideoMeta;
+            /*
+                Get Video seo id
+            */
+            $VideoSeo = VideoSeo::where( 'video_id', $verifyVideoSlug->id )->get();
+
+            /*
+                Meta of speaker
+            */
+            $meta_tags['meta_title']        = isset( $VideoSeo[0]['meta_title'] ) ? $VideoSeo[0]['meta_title'] : '';
+            $meta_tags['meta_description']  = isset( $VideoSeo[0]['meta_description'] ) ? $VideoSeo[0]['meta_description'] : '';
+            $meta_tags['meta_keyword']      = isset( $VideoSeo[0]['meta_tag'] ) ? $VideoSeo[0]['meta_tag'] : '';
 
             $video_detail['account_id']  = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'account_id' );
             $video_detail['video_id']  = $verifyVideoSlug->id;
@@ -249,6 +273,7 @@ class VideoDetailController extends Controller
             $video_detail['slug']      = $verifyVideoSlug->slug;
             $video_detail['tags']      = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'tags' ));
             $video_detail['description']    = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'description' );
+            $video_detail['long_description']    = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'long_description' );
             $video_detail['images']    = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'images' ) );
             $video_detail['custom_fields']  = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'custom_fields' ) );
 
@@ -363,8 +388,19 @@ class VideoDetailController extends Controller
         if(isset($verifyVideoSlug) ){
 
             $video_detail = array();
+            $meta_tags = array();
 
-            $videoMeta = new VideoMeta;
+            /*
+                Get Video seo id
+            */
+            $VideoSeo = VideoSeo::where( 'video_id', $verifyVideoSlug->id )->get();
+
+            /*
+                Meta of speaker
+            */
+            $meta_tags['meta_title']        = isset( $VideoSeo[0]['meta_title'] ) ? $VideoSeo[0]['meta_title'] : '';
+            $meta_tags['meta_description']  = isset( $VideoSeo[0]['meta_description'] ) ? $VideoSeo[0]['meta_description'] : '';
+            $meta_tags['meta_keyword']      = isset( $VideoSeo[0]['meta_tag'] ) ? $VideoSeo[0]['meta_tag'] : '';
 
             $video_detail['account_id']  = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'account_id' );
             $video_detail['video_id']  = $verifyVideoSlug->id;
@@ -372,6 +408,7 @@ class VideoDetailController extends Controller
             $video_detail['slug']      = $verifyVideoSlug->slug;
             $video_detail['tags']      = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'tags' ));
             $video_detail['description']    = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'description' );
+            $video_detail['long_description']    = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'long_description' );
             $video_detail['images']    = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'images' ) );
             $video_detail['custom_fields']  = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'custom_fields' ) );
 
@@ -485,8 +522,19 @@ class VideoDetailController extends Controller
         if(isset($verifyVideoSlug) ){
 
             $video_detail = array();
+            $meta_tags = array();
 
-            $videoMeta = new VideoMeta;
+            /*
+                Get Video seo id
+            */
+            $VideoSeo = VideoSeo::where( 'video_id', $verifyVideoSlug->id )->get();
+
+            /*
+                Meta of speaker
+            */
+            $meta_tags['meta_title']        = isset( $VideoSeo[0]['meta_title'] ) ? $VideoSeo[0]['meta_title'] : '';
+            $meta_tags['meta_description']  = isset( $VideoSeo[0]['meta_description'] ) ? $VideoSeo[0]['meta_description'] : '';
+            $meta_tags['meta_keyword']      = isset( $VideoSeo[0]['meta_tag'] ) ? $VideoSeo[0]['meta_tag'] : '';
 
             $video_detail['account_id']  = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'account_id' );
             $video_detail['video_id']  = $verifyVideoSlug->id;
@@ -494,6 +542,7 @@ class VideoDetailController extends Controller
             $video_detail['slug']      = $verifyVideoSlug->slug;
             $video_detail['tags']      = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'tags' ));
             $video_detail['description']    = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'description' );
+            $video_detail['long_description']    = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'long_description' );
             $video_detail['images']    = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'images' ) );
             $video_detail['custom_fields']  = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'custom_fields' ) );
             /*
@@ -667,6 +716,7 @@ class VideoDetailController extends Controller
         if(isset($verifyVideoSlug) ){
 
             $video_detail = array();
+            $meta_tags = array();
 
             $videoMeta = new VideoMeta;
 
@@ -676,6 +726,7 @@ class VideoDetailController extends Controller
             $video_detail['slug']      = $verifyVideoSlug->slug;
             $video_detail['tags']      = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'tags' ));
             $video_detail['description']    = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'description' );
+            $video_detail['long_description']    = $videoMeta->getVideoMeta($verifyVideoSlug->id, 'long_description' );
             $video_detail['images']    = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'images' ) );
             $video_detail['custom_fields']  = unserialize( $videoMeta->getVideoMeta($verifyVideoSlug->id, 'custom_fields' ) );
             /*

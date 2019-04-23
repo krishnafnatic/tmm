@@ -154,7 +154,7 @@ class VideoDetailController extends Controller
 
             
 
-            return view('frontend.video_detail', ['video_detail' =>  $video_detail, 'wishlist' => $all_videos, 'speakers' => $all_speakers ]);
+            return view('frontend.video_detail', ['video_detail' =>  $video_detail, 'wishlist' => $all_videos, 'speakers' => $all_speakers, 'meta' => $meta_tags ]);
             
         } else {
             return redirect()->route('404');
@@ -368,7 +368,7 @@ class VideoDetailController extends Controller
                 }
             }
 
-            return view('frontend.video_detail', ['video_detail' =>  $video_detail, 'wishlist' => $all_videos, 'speakers' => $all_speakers, 'watch_next' => $videos_array, 'type' => 'popular' ]);
+            return view('frontend.video_detail', ['video_detail' =>  $video_detail, 'wishlist' => $all_videos, 'speakers' => $all_speakers, 'watch_next' => $videos_array, 'type' => 'popular', 'meta' => $meta_tags ]);
             
         } else {
             return redirect()->route('404');
@@ -502,7 +502,7 @@ class VideoDetailController extends Controller
                 }
             }
 
-            return view('frontend.video_detail', ['video_detail' =>  $video_detail, 'wishlist' => $all_videos, 'speakers' => $all_speakers, 'watch_next' => $videos_array, 'type' => 'trending' ]);
+            return view('frontend.video_detail', ['video_detail' =>  $video_detail, 'wishlist' => $all_videos, 'speakers' => $all_speakers, 'watch_next' => $videos_array, 'type' => 'trending', 'meta' => $meta_tags ]);
             
         } else {
             return redirect()->route('404');
@@ -658,7 +658,7 @@ class VideoDetailController extends Controller
             $playlist_videos['playlist']['playlist_slug']   =   $playlist_slug['slug'];
             $playlist_videos['playlist']['playlist_videos'] =   $videos_array;
 
-            return view('frontend.video_detail', ['video_detail' =>  $video_detail, 'wishlist' => $all_videos, 'speakers' => $all_speakers, 'playlist_watch_next' => $playlist_videos ]);
+            return view('frontend.video_detail', ['video_detail' =>  $video_detail, 'wishlist' => $all_videos, 'speakers' => $all_speakers, 'playlist_watch_next' => $playlist_videos, 'meta' => $meta_tags ]);
             
         } else {
             return redirect()->route('404');

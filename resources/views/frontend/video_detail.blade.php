@@ -88,7 +88,8 @@
 	                  	</a>
 	                </li>
                   <li class="nav-item">
-                      <a class="nav-link" id="comment-tab" data-toggle="tab" href="#descriptions" role="tab" aria-controls="comment" aria-selected="false">Descriptions</a>
+                      <a class="nav-link" id="comment-tab" data-toggle="tab" href="#descriptions" role="tab" aria-controls="comment" aria-selected="false">
+                      {{ __( 'messages.description') }}</a>
                   </li>
 	                <li class="nav-item">
 	                  	<a class="nav-link" id="comment-tab" data-toggle="tab" href="#comments" role="tab" aria-controls="comment" aria-selected="false">Comments</a>

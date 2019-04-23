@@ -2,7 +2,7 @@
 
 return [
 
-	/*
+    /*
     |--------------------------------------------------------------------------
     | Cusotm Language Lines
     |--------------------------------------------------------------------------
@@ -120,11 +120,14 @@ return [
     'main_navigation'   =>  'MAIN NAVIGATION',
     'version'           =>  'Version',
     'listing'           =>  'Listing',
+    'listing_video'     =>  'Video Listing',
     'listing_menu'      =>  'Menu Listing',
     'listing_info'      =>  'Information Listing',
     'listing_user'      =>  'User Listing',
     'listing_lang'      =>  'Language Listing',
     'listing_speaker'   =>  'Speaker Listing',
+    'manage_staticpages'=>  'Manage Static Pages',
+    'manage_video'      =>  'Manage Video',
     'manage_menu'       =>  'Manage Menu',
     'manage_info'       =>  'Manage Information',
     'manage_lang'       =>  'Manage Language',
@@ -299,4 +302,19 @@ return [
     'requred_url_server'    =>  'The requested URL could not be found on the server.',
     'internal_server_error_msg' => '500 Internal Server Error is a generic error message, given when no more specific message is suitable. There are a number of causes for a 500 Internal Server Error to display in a web browser. Below is a sample error message.',
     'follow_us_on'          =>  'Follow Me',
+    'import_video_seo'      =>  'Import Videos Seo Keyword',
+    'video'                 =>  'Video',
+    'name_of_the_video'     =>  'Name of the video',
+    'image_of_the_video'    =>  'Thumbnail',
+    'brightcove_video_id'   =>  'Video ID',
+    'meta_tags'             =>  'Meta Tags',
+    'manage_seotags'        =>  'Seo / Meta Tags',
+    'video_meta_response'   =>  'Meta Tags :response Successfully',
+    'user_comments_videos'  =>  'User Comments on Videos',
+    'video_seotags'         =>  'Video Seo Tags',
+    'staticpages'           =>  'Static Page',
+    'staticpagesseo'        =>  'Static Pages Seo',
+    'listing_stps'          =>  'Static Pages Seo Listing',
+    'page_name'             =>  'Page Name',
+    'page_route'            =>  'Page Route',
 ];

@@ -21,9 +21,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" /> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
 
-  @if( !empty( $meta['meta_title'] ) )
+  <!-- @if( !empty( $meta['meta_title'] ) )
     <meta name="author" content="{{ $meta['meta_title'] }}">
-  @endif
+  @endif -->
 
   @if( !empty( $meta['meta_description'] ) )
     <meta name="description" content="{{ $meta['meta_description'] }}">

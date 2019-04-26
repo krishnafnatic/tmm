@@ -56,6 +56,7 @@ return [
     'image'     =>  'Image',
     'profile'   =>  'Profile',
     'email'     =>  'Your Email Address',
+    's_email'   =>  'Email',
     'mobile'    =>  'Mobile',
     'age_group' =>  'Age Group',
     'user_tags' =>  'User Tags',

@@ -371,7 +371,7 @@ footer{
 												border-radius: 25px;
 												cursor: pointer;
 											}										 
-.footer-subscribe h6{
+.footer-subscribe h6, .subscribe_now_popup h6s{
 						font-size: .7rem;
 						color: #9f9f9f;
 						text-align: right;
@@ -1116,6 +1116,12 @@ border: 0 none !important;
 .vjs-share-control {
 	display: none !important;
 }
+
+.subscribe_now_popup #div_text{ width: 45%; margin-right: 5%; float:left; }
+.subscribe_now_popup #div_email{ width: 45%; margin-right: 5%; float:left;}
+.subscribe_now_popup #div_text input[type="text"]{ color: #495057;}
+.subscribe_now_popup #div_btn { text-align: right }
+#subscribeMe {margin-top: 2%;}
 
 
 /*.vjs-button.vjs-share-control{

@@ -56,6 +56,9 @@ var showStatus = function ( status, id, message ) {
 
   	//$("html, body").animate({ scrollTop: 0 }, "slow");
   	$( "#"+id ).show();
+  	$( "#"+id ).removeClass( 'alert-danger' );
+  	$( "#"+id ).removeClass( 'alert-warning' );
+  	$( "#"+id ).removeClass( 'alert-success' );
   	$( "#"+id ).addClass( 'alert-'+status );
   	$( "#"+id ).html( '<button type="button" class="close" data-dismiss="alert">×</button><strong>'+message+'</strong>' );
 
@@ -70,6 +73,85 @@ var isDefined = function ( x ) {
 	    return false;
 	}
 	return true;
+}
+
+var subscribePopupMe = function() {
+
+	var name 	= document.getElementById( 'subscribeName' ),
+		email 	= document.getElementById( 'subscribeEmail' ),
+		msgSubscribPopupMe 	= document.getElementById( 'msgSubscribPopupMe' ),
+		//loader    =   "{{ asset( 'frontend/images/loader.png' ) }}",
+		ck_name = /^[A-Za-z ]{3,25}$/;
+
+	if( !isDefined( msgSubscribPopupMe ) ) {
+		$( "#subscribeNowPopup h5" ).after('<div class="alert alert-dismissible" id="msgSubscribPopupMe" style="display: none;"></div>');
+	}
+
+
+	if( !isDefined( name.value ) ) {
+	    showStatus( 'danger', 'msgSubscribPopupMe', "Please enter your name!");
+	    name.focus();
+	    return false;
+	}
+
+	if (!ck_name.test( name.value )) {
+		showStatus( 'danger', 'msgSubscribPopupMe', "Please enter valid name!");
+	    name.focus();
+	    return false;
+	}
+
+	if( !isDefined( email.value ) ) {
+	    showStatus( 'danger', 'msgSubscribPopupMe', "Please enter your email!");
+	    email.focus();
+	    return false;
+	}
+
+	if( email.value != '' ) {
+	    if ( !validateEmail( email.value ) ) {
+	      showStatus( 'danger', 'msgSubscribPopupMe', "Please enter valid email!");
+	      return false;
+	    }
+	}
+
+	$.ajax({
+	    type: 'post',
+	    dataType: 'json',
+	    url:subscribeMeURL,
+	    data:{ name:name.value, email:email.value },
+	    beforeSend: function() {
+
+	    	$( "#subscribeMe" ).attr( 'disabled', true );
+	      	$( '#subscribeMe' ).after( '&nbsp;<img src="'+loader+'" alt="loading" class="wait" style="position: absolute; top: 14px;" />' );
+	    },
+	    complete: function() {
+	    	$( "#subscribeMe" ).attr( 'disabled', false );
+	      	$( '.wait' ).remove();
+	    },
+	    success:function(data) {
+
+	    	console.log(data.status);
+	    	console.log('asdfsadf');
+	    	switch( data.status ) {
+	    		case "error":
+	    			showStatus( 'danger', 'msgSubscribPopupMe', data.message);
+	    		break;
+
+	    		case "warning":
+	    			showStatus( 'warning', 'msgSubscribPopupMe', data.message);
+	    		break;
+
+	    		case "success":
+	    			alert("sdfsdf");
+	    			showStatus( 'success', 'msgSubscribPopupMe', data.message);
+	    		break;
+
+	    		default:
+	    			showStatus( 'danger', 'msgSubscribPopupMe', data.message);
+	    		break;
+
+	    	}
+	    }
+	});
 }
 
 var subscribeMe = function() {

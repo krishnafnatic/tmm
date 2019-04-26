@@ -79,3 +79,40 @@
             loader    =   "{{ asset( 'frontend/images/loader.png' ) }}";
     </script>
 </footer>
+
+<!-- Modal Login Start -->
+  <div class="modal fade" id="subscribePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="exampleModalCenterTitle">{{ __( 'messages.subscribe_newsletter' ) }}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #000;">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body subscribe_now_popup" id="subscribeNowPopup"> 
+          <h5></h5>
+          <div class="alert alert-dismissible" id="msgSubscribPopupMe" style="display: none;"></div>
+          <div class="row justify-content-md-center">
+            <div class="col signup-box" id="signup"> 
+              <div class="form-group" id="div_text">
+                  <label class="form-control-label" for="email">{{ __( 'messages.name' ) }}</label>
+                  <input type="text" name="subscribeName" id="subscribeName" class="form-control" autocomplete="off" required />
+              </div>
+
+              <div class="form-group" id="div_email">
+                  <label class="form-control-label" for="password">{{ __( 'messages.s_email' ) }}</label>
+                  <input type="email" name="subscribeEmail" id="subscribeEmail" class="form-control" autocomplete="off" required />
+              </div>
+
+              <div class="form-group" id="div_btn">
+                  <input type="submit" class="btn btn-primary" value="{{ __( 'messages.subscribe' ) }}" id="subscribeMe" onclick="return subscribePopupMe();" /> 
+              </div>
+              <h6>{{ __( 'messages.never_span' ) }}</h6> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Modal Login End -->

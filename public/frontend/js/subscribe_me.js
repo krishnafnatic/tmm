@@ -129,8 +129,6 @@ var subscribePopupMe = function() {
 	    },
 	    success:function(data) {
 
-	    	console.log(data.status);
-	    	console.log('asdfsadf');
 	    	switch( data.status ) {
 	    		case "error":
 	    			showStatus( 'danger', 'msgSubscribPopupMe', data.message);
@@ -141,7 +139,6 @@ var subscribePopupMe = function() {
 	    		break;
 
 	    		case "success":
-	    			alert("sdfsdf");
 	    			showStatus( 'success', 'msgSubscribPopupMe', data.message);
 	    		break;
 

@@ -371,13 +371,14 @@ footer{
 												border-radius: 25px;
 												cursor: pointer;
 											}										 
-.footer-subscribe h6, .subscribe_now_popup h6s{
-						font-size: .7rem;
-						color: #9f9f9f;
-						text-align: right;
-						 margin-left: .25rem;
-						margin-top:5px; 
-					}											
+.footer-subscribe h6, .subscribe_now_popup h6 {
+	font-size: .7rem;
+	color: #9f9f9f;
+	text-align: right;
+	 margin-left: .25rem;
+	margin-top:5px; 
+}
+
 .footer-social h5{
 					font-size: 1.25rem;
 						text-align: left;

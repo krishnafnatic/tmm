@@ -320,7 +320,7 @@ Route::group(['prefix' => 'admin', /*'middleware' => 'super_admin'*/ ], function
     /*
 		Add / Update Videos;
     */
-	Route::get('/video', 'Backend\Manual\BC\VideoController@manageVideoFromBC')->name('admin.video');
+	Route::get('/videoFromBC', 'Backend\Manual\BC\VideoController@manageVideoFromBC')->name('admin.video');
 
 	/*
 		Add / Update Playlist;

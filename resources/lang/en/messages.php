@@ -129,6 +129,7 @@ return [
     'listing_speaker'   =>  'Speaker Listing',
     'manage_staticpages'=>  'Static Pages - SEO Meta Tags',
     'manage_video'      =>  'Video - SEO Meta Tags',
+    'listing_video_small'      =>  'SEO Meta Tags',
     'manage_menu'       =>  'Manage Menu',
     'manage_info'       =>  'Manage Information',
     'manage_lang'       =>  'Manage Language',

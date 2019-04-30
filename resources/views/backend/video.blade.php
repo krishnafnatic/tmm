@@ -8,7 +8,7 @@
       <h1>
         <i class="fa fa-video-camera"></i>
         {{ __( 'messages.video' ) }}
-        <small>{{ __( 'messages.listing' ) }}</small> 
+        <small>{{ __( 'messages.listing_video_small' ) }}</small> 
       </h1>
       <ol class="breadcrumb">
         <li>
@@ -18,7 +18,7 @@
           </a>
         </li>
         <li class="active">
-          {{ __( 'messages.listing_video' ) }}
+          {{ __( 'messages.video' ) }} - {{ __( 'messages.listing_video_small' ) }}
         </li>
       </ol>
     </section>

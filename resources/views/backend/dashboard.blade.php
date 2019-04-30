@@ -83,7 +83,7 @@
             <div class="inner">  
               <i class="fa fa-video-camera"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{ __( 'messages.add_update_videos' ) }}
             </div> 
-            <a href="{{ route( 'admin.video' ) }}" class="small-box-footer">
+            <a href="{{ route( 'admin.videoFromBC' ) }}" class="small-box-footer">
               {{ __( 'messages.manually' ) }} <i class="fa fa-arrow-circle-right"></i>
             </a>
           </div> 

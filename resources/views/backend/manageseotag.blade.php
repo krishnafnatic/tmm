@@ -8,7 +8,11 @@
     <section class="content-header">
       <h1>
           <i class="fa fa-video-camera"></i>
-          {{ __( 'messages.manage_video' ) }}
+          @if( isset( $video->seoID ) && !empty( $video->seoID ) )
+            {{ __( 'messages.manage_video_seotags', [ 'action' => 'Edit'] ) }}
+          @else 
+            {{ __( 'messages.manage_video_seotags', [ 'action' => 'Add'] ) }}
+          @endif
         <small>{{ __( 'messages.manage_seotags' ) }}</small>
         <button type="button" class="btn btn-success btn-add-new" onclick="window.location='{{ url("admin/video") }}'">
           <i class="fa fa-arrow-circle-left"></i>

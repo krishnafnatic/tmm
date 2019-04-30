@@ -154,6 +154,7 @@ class VideoController extends Controller {
 	public function manageVideoFromBC(Request $request) {
 
 		$getcURLResponse = $this->getcURLResponseVideo();
+		echo $getcURLResponse;die;
 		
 		if( !is_array( $getcURLResponse ) ) {
 			return redirect('/admin/dashboard')->with('warning', $getcURLResponse);

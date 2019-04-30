@@ -20,17 +20,17 @@
               </a>
             </li>
             <li>
-              <a href="http://twitter.com/share?text={{ $video_detail['description'] }}&url=<?php echo URL::current(); ?>" target="_blank">
+              <a href="http://twitter.com/share?text={{ $video_detail['description'] }}&url=<?php echo URL::current(); ?>&twclid=true" target="_blank">
                 <img src="{{ asset( 'frontend/images/social/twitter.png' ) }}" alt="Twitter Share" title="Twitter Share" />
               </a>
             </li>
             <li>
-              <a href="https://plus.google.com/share?url=<?php echo URL::current(); ?>" target="_blank">
+              <a href="https://plus.google.com/share?url=<?php echo URL::current(); ?>&ggclid=true" target="_blank">
                 <img src="{{ asset( 'frontend/images/social/google_plus.png' ) }}" alt="Google+ Share" title="Google+ Share" />
               </a>
             </li>
             <li>
-            	<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode( URL::current() ) ?>" target="_blank">
+            	<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode( URL::current() ) ?>&liclid=true" target="_blank">
                  <img src="{{ asset( 'frontend/images/social/linkedin.png' ) }}" alt="LinkedIn Share" title="LinkedIn Share" />
             	</a>
             </li>

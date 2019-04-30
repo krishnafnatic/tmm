@@ -371,13 +371,14 @@ footer{
 												border-radius: 25px;
 												cursor: pointer;
 											}										 
-.footer-subscribe h6{
-						font-size: .7rem;
-						color: #9f9f9f;
-						text-align: right;
-						 margin-left: .25rem;
-						margin-top:5px; 
-					}											
+.footer-subscribe h6, .subscribe_now_popup h6 {
+	font-size: .7rem;
+	color: #9f9f9f;
+	text-align: right;
+	 margin-left: .25rem;
+	margin-top:5px; 
+}
+
 .footer-social h5{
 					font-size: 1.25rem;
 						text-align: left;
@@ -1116,6 +1117,12 @@ border: 0 none !important;
 .vjs-share-control {
 	display: none !important;
 }
+
+.subscribe_now_popup #div_text{ width: 45%; margin-right: 5%; float:left; }
+.subscribe_now_popup #div_email{ width: 45%; margin-right: 5%; float:left;}
+.subscribe_now_popup #div_text input[type="text"]{ color: #495057;}
+.subscribe_now_popup #div_btn { text-align: right }
+#subscribeMe {margin-top: 2%;}
 
 
 /*.vjs-button.vjs-share-control{

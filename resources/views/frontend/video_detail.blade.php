@@ -53,7 +53,8 @@
 									  data-player="oNgLTdNCH" 
 									  data-embed="default" 
 									  data-application-id 
-									  class="video-js" 
+									  class="video-js"
+                    @if( null !== app('request')->input('fbclid') ) autoplay muted @endif
 									  controls style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></video>
 									<script src="//players.brightcove.net/{{ $video_detail['account_id'] }}/oNgLTdNCH_default/index.min.js"></script>
 								</div>
@@ -86,6 +87,10 @@
 	                  		{{ __( 'messages.speakers') }}
 	                  	</a>
 	                </li>
+                  <li class="nav-item">
+                      <a class="nav-link" id="comment-tab" data-toggle="tab" href="#descriptions" role="tab" aria-controls="comment" aria-selected="false">
+                      {{ __( 'messages.description') }}</a>
+                  </li>
 	                <li class="nav-item">
 	                  	<a class="nav-link" id="comment-tab" data-toggle="tab" href="#comments" role="tab" aria-controls="comment" aria-selected="false">Comments</a>
 	                </li>
@@ -94,6 +99,9 @@
                 	<div class="tab-pane fade show active" id="tab-speaker" role="tabpanel" aria-labelledby="speaker-tab">
                     	@include('frontend.video_details.speaker', [ 'speakers' => $speakers])
                 	</div>
+                  <div class="tab-pane fade" id="descriptions" role="tabpanel" aria-labelledby="speaker-tab">
+                       {!! $video_detail['long_description'] !!}
+                  </div>
 	                <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comment-tab">
 	                	@guest
 		                  	<div class="not-login">

@@ -44,6 +44,12 @@
         </li>
       </ul>
     </li>
+    <li>
+      <a href="{{ route('admin.video') }}">
+        <i class="fa fa-users"></i>
+        <span>{{ __( 'messages.manage_video' ) }}</span>
+      </a>
+    </li>
     <li class="treeview">
       <a href="#">
         <i class="fa fa-info"></i>
@@ -63,6 +69,12 @@
           <a href="{{ route('admin.information.create') }}">
             <i class="fa  fa-plus"></i>
             {{ __( 'messages.create_info' ) }}
+          </a>
+        </li>
+        <li>
+          <a href="{{ route('admin.staticpages') }}">
+            <i class="fa fa-file"></i>
+            <span>{{ __( 'messages.manage_staticpages' ) }}</span>
           </a>
         </li>
       </ul>

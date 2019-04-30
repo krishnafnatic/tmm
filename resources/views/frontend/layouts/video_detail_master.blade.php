@@ -31,8 +31,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="{{ asset( 'frontend/js/slick.min.js' ) }}" defer="defer"></script>
 	<script>
 		
-
-
 		var hash = document.location.hash;
 		if (hash) {
 		    console.log(hash);

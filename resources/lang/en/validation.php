@@ -111,12 +111,12 @@ return [
         ],
         'information_description.*.meta_title'   =>  [
             'required'  =>  'The meta title field is required.',
-            'regex'     =>  'The title may only contain letters.',
+            'regex'     =>  'The meta title may only contain letters.',
             'max'       =>  'Contain atleast 100 chars',
         ],
         'information_description.*.meta_description'   =>  [
             'required'  =>  'The meta description field is required.',
-            'regex'     =>  'The title may only contain letters.',
+            'regex'     =>  'The meta description may only contain letters.',
             'max'       =>  'Contain atleast 155 chars',
         ],
         'speaker_description.*.name'   =>  [
@@ -135,12 +135,12 @@ return [
         ],
         'speaker_description.*.meta_title'   =>  [
             'required'  =>  'The meta title field is required.',
-            'regex'     =>  'The title may only contain letters.',
+            'regex'     =>  'The meta title may only contain letters.',
             'max'       =>  'Contain atleast 100 chars',
         ],
         'speaker_description.*.meta_description'   =>  [
             'required'  =>  'The meta description field is required.',
-            'regex'     =>  'The title may only contain letters.',
+            'regex'     =>  'The meta description may only contain letters.',
             'max'       =>  'Contain atleast 155 chars',
         ],
         // 'setting.*.type'   =>  [

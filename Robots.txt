@@ -1,0 +1,2 @@
+Disallow: /dev.themoneymile.com/
+Disallow: /dev.themoneymile.com/public/

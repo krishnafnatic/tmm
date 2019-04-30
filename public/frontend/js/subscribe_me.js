@@ -56,6 +56,9 @@ var showStatus = function ( status, id, message ) {
 
   	//$("html, body").animate({ scrollTop: 0 }, "slow");
   	$( "#"+id ).show();
+  	$( "#"+id ).removeClass( 'alert-danger' );
+  	$( "#"+id ).removeClass( 'alert-warning' );
+  	$( "#"+id ).removeClass( 'alert-success' );
   	$( "#"+id ).addClass( 'alert-'+status );
   	$( "#"+id ).html( '<button type="button" class="close" data-dismiss="alert">×</button><strong>'+message+'</strong>' );
 

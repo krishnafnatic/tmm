@@ -60,6 +60,7 @@ class VideoController extends Controller {
             if you do not provide defaults, the client id, and client secret must
             be sent in the request body for each request
         */
+	$errorMessage   =   '';
         $account_id     =   env('account_id');
         $client_id      =   env('cms_video_client_id');
         $client_secret  =   env('cms_video_client_secret');
@@ -84,9 +85,7 @@ class VideoController extends Controller {
 
         // Check for errors
         if ($response === FALSE) {
-            $message = "Error: there was a problem with your Oauth API call" + curl_error($ch);
-            Log::debug($message);
-            die();
+            $errorMessage = "Error: there was a problem with your Oauth API call: " . curl_error($ch);
         }
 
         // Decode the response
@@ -126,9 +125,7 @@ class VideoController extends Controller {
             directory as the proxy and is writable
         */
         if ($response === FALSE) {
-            $message = "Error: there was a problem with your CMS API call" + curl_error($ch);
-            Log::debug($message);
-            die();
+            $message = "Error: there was a problem with your CMS API call: " . curl_error($ch);
         }
 
         /**
@@ -142,7 +139,11 @@ class VideoController extends Controller {
             $response = '{null}';
         }
 
-        return $responseDecoded;
+	if ( isset( $errorMessage ) && !empty( $errorMessage ) ) {
+	    return $errorMessage;
+	} else {
+	    return $responseDecoded;
+	}
     }
 
     /**
@@ -153,6 +154,10 @@ class VideoController extends Controller {
 	public function manageVideoFromBC(Request $request) {
 
 		$getcURLResponse = $this->getcURLResponseVideo();
+		
+		if( !is_array( $getcURLResponse ) ) {
+			return redirect('/admin/dashboard')->with('warning', $getcURLResponse);
+		}
 
         /*
             Count Total Videos Fetch from brightcove via CMS API

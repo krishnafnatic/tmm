@@ -45,21 +45,21 @@
       </ul>
     </li>
     <li class="treeview">
-      <a href="#">
+      <a href="{{ route('admin.video') }}">
         <i class="fa fa-volume-up"></i>
         <span>{{ __( 'messages.manage_video' ) }}</span>
         <span class="pull-right-container">
           <i class="fa fa-angle-left pull-right"></i>
         </span>
       </a>
-      <ul class="treeview-menu">
+      <!-- <ul class="treeview-menu">
         <li class="active">
           <a href="{{ route('admin.video') }}">
             <i class="fa fa-list"></i>
             {{ __( 'messages.listing_video' ) }}
           </a>
         </li>
-      </ul>
+      </ul> -->
     </li>
     <li class="treeview">
       <a href="#">
@@ -77,15 +77,15 @@
           </a>
         </li>
         <li>
-          <a href="{{ route('admin.staticpages') }}">
-            <i class="fa fa-file"></i>
-            <span>{{ __( 'messages.manage_staticpages' ) }}</span>
-          </a>
-        </li>
-        <li>
           <a href="{{ route('admin.information.create') }}">
             <i class="fa  fa-plus"></i>
             {{ __( 'messages.create_info' ) }}
+          </a>
+        </li>
+        <li>
+          <a href="{{ route('admin.staticpages') }}">
+            <i class="fa fa-file"></i>
+            <span>{{ __( 'messages.manage_staticpages' ) }}</span>
           </a>
         </li>
       </ul>

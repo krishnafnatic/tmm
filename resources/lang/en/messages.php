@@ -311,7 +311,7 @@ return [
     'brightcove_video_id'   =>  'Video ID',
     'meta_tags'             =>  'Meta Tags',
     'manage_seotags'        =>  'Seo / Meta Tags',
-    'manage_video_seotags'  =>  'Video - :action SEO Meta Tags',
+    'manage_video_seotags'  =>  ':action SEO Meta Tags',
     'video_meta_response'   =>  'Meta Tags :response Successfully',
     'user_comments_videos'  =>  'User Comments on Videos',
     'video_seotags'         =>  'Video Seo Tags',

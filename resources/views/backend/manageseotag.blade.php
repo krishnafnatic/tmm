@@ -9,11 +9,12 @@
       <h1>
           <i class="fa fa-video-camera"></i>
           @if( isset( $video->seoID ) && !empty( $video->seoID ) )
-            {{ __( 'messages.manage_video_seotags', [ 'action' => 'Edit'] ) }}
+            {{ __( 'messages.video' ) }}
+            <small>{{ __( 'messages.manage_video_seotags', [ 'action' => 'Edit'] ) }}</small>
           @else 
-            {{ __( 'messages.manage_video_seotags', [ 'action' => 'Add'] ) }}
+            {{ __( 'messages.video' ) }}
+            <small>{{ __( 'messages.manage_video_seotags', [ 'action' => 'Add'] ) }}</small>
           @endif
-        <small>{{ __( 'messages.manage_seotags' ) }}</small>
         <button type="button" class="btn btn-success btn-add-new" onclick="window.location='{{ url("admin/video") }}'">
           <i class="fa fa-arrow-circle-left"></i>
           {{ __( 'messages.back' ) }}

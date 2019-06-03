@@ -13,7 +13,7 @@
 		               				<i class="fab fa-gratipay fa-2x"></i>
 							    </a>
 			                    <a href="{{ url('video/'.$wish['slug']) }}">
-			                    	<img class="card-img-top" src="{{  $wish['images']['thumbnail']['src'] }}" alt="{{ $wish['name'] }}" title="{{ $wish['name'] }}" />
+			                    	<img class="card-img-top img-fluid" src="{{  $wish['images']['thumbnail']['src'] }}" alt="{{ $wish['name'] }}" title="{{ $wish['name'] }}" />
 			                    </a>
 			                    <div class="card-body">
 			                    	<a href="{{ url('video/'.$wish['slug']) }}" class="card-title">

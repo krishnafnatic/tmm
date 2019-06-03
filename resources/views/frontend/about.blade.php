@@ -18,10 +18,10 @@
 		 	<br>
 		 	<div class="row">
 			 	<div class="col-sm-4 text-center p-0">
-			 		<img src="{{ asset( 'frontend/images/tmm-logo2.png' ) }}" class="tmm-profile-logo" title="{{ config('app.name') }}" alt="{{ config('app.name') }}">
+			 		<img src="{{ asset( 'frontend/images/logo_white.png' ) }}" class="tmm-profile-logo" title="{{ config('app.name') }}" alt="{{ config('app.name') }}">
 			 	</div>
 		 	
-                <div class="col-sm-8 text-center"><br>
+                <div class="col-sm-8 text-center" style="bottom: 20px;"><br>
                 	<h3 title="Website Title">{{ config('app.name') }}</h3>     
                  	<ul class="user-profile-social-ico">
                    		<li>
@@ -34,6 +34,16 @@
                    				<i class="fab fa-linkedin fa-2x"></i>
                    			</a>
                    		</li>
+                      <li>
+                        <a href="https://www.youtube.com/TheMoneyMile" target="_blank" title="Follow on Youtube">
+                          <i class="fab fa-youtube fa-2x"></i></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" title="Follow on Instagram">
+                          <i class="fab fa-instagram fa-2x"></i></i>
+                        </a>
+                      </li>
                    		<!-- <li>
                    			<a href="">
                    				<i class="fab fa-google fa-2x"></i>
@@ -47,7 +57,7 @@
                  	</ul>
              	</div>
 		    </div>  
-		    <br><br><br>
+		    <br><br>
 		    <h1 title="Website TagLine">{{ config('app.message') }}</h1>
 		    <p title="Website About Us">{{ config('app.about_us') }}</p>
 		</div>

@@ -57,7 +57,7 @@ class LoginController extends Controller {
     $this->validate($request, [
       'email'   => 'required|email',
       'password' => 'required|min:8',
-      'g-recaptcha-response' => 'required|captcha',
+      //'g-recaptcha-response' => 'required|captcha',
     ]);
     // Attempt to log the user in
     if (Auth::guard('admin')->attempt(['role_id' => 1, 'email' => $request->email, 'password' => $request->password])) {

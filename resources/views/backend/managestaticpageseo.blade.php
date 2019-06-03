@@ -55,9 +55,9 @@
                   <tr>
                     <td>
                       @if( !empty( $video->images['thumbnail']['src'] ) )
-                        <img class="card-img-top" src="{{  $video->images['thumbnail']['src'] }}" alt="{{ $video->name }}" title="{{ $video->name }}" width="120" height="80" />
+                        <img class="card-img-top img-fluid" src="{{  $video->images['thumbnail']['src'] }}" alt="{{ $video->name }}" title="{{ $video->name }}" width="120" height="80" />
                       @else
-                        <img class="card-img-top" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" alt="{{ $video->name }}" title="{{ $video->name }}" width="120" height="80" />
+                        <img class="card-img-top img-fluid" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" alt="{{ $video->name }}" title="{{ $video->name }}" width="120" height="80" />
                       @endif
                     </td>
                     <td>{{ $video->id }}</td> 

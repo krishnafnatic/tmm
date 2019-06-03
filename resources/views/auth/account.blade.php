@@ -9,18 +9,27 @@
                 <div class="row">
                     <div class="col-sm-3 text-center">  
                         <!-- <div id="proife_picture"></div> onclick="uploadImage();"-->
-                        <div class="col-sm-12 text-center user-initials-2" style="padding: 0;" id="upload-demo" title="{{ Auth::user()->name }}">
-                            {{ substr( Auth::user()->name, 0, 1) }}
-                            <!-- <img class="user-profile-pic" src="" title="{{ Auth::user()->name }}" alt="{{ Auth::user()->name }}" /> -->
+                        <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:100%;  float: left; border-radius: 50%; margin-right: 25px;">
+                        <!-- <div class="col-sm-12 text-center user-initials-2" style="padding: 0;" id="upload-demo" title="{{ Auth::user()->name }}">
+                          
+                            <img class="user-profile-pic" src="" title="{{ Auth::user()->name }}" alt="{{ Auth::user()->name }}" /> 
                         </div>
-
+ -->
+                        
                         <!-- <div class="col-sm-12 " style="padding:5%;"> 
                             <input type="file" id="image" style="display: none;" />
                             <button class="btn btn-sm btn-primary btn-block upload-image" style="margin-top:2%;" disabled>
                                 {{ __( 'messages.upload_image' ) }}
                             </button>
                         </div> -->
+                        <form enctype="multipart/form-data" action="/profile-settings" method="POST">
+                          <!--   <label>Update profile image</label> -->
+                            <input type="file" name="avatar" class="mt-2" style="color: transparent;">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="submit" name="" class="btn btn-sm btn-primary mt-2" value="Upload">
+                        </form>
                     </div>
+
                     <div class="col-sm-8">
                         <h2 title="User Name">{{ Auth::user()->name }}</h2>
                         <input type="text" id="designation" class="float-left col-sm-12"  disabled style="display: none;" name="designation" value="{{ $user_profile['designation'] }}" />
@@ -84,7 +93,8 @@
             </div>
             <div class="col-sm-1">
                 <span class="profile-seperator"> </span> 
-            </div>  
+            </div> 
+            
             <div class="col-sm-5">
                 <div id="div_biography">  
                     <textarea name="biography" id="biography" class="type-main-comment float-left m-0" disabled style="display: none;">@if( $user_profile['biography'] ){{ $user_profile['biography'] }}@else{{ __( 'messages.add_about' ) }}@endif
@@ -101,12 +111,25 @@
                     {{ __( 'messages.edit_biography' ) }}
                 </button>
             </div>
+
+<!--<div class="row justify-content-center">
+            <form action="/profile" method="post" enctype="multipart/form-data">
+                @csrf
+                <div class="form-group">
+                    <input type="file" class="form-control-file" name="avatar" id="avatarFile" aria-describedby="fileHelp">
+                    <small id="fileHelp" class="form-text text-muted">Please upload a valid image file. Size of image should not be more than 2MB.</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>-->
+
         </div> 
         @if( isset( $recommended_videos ) && count( $recommended_videos) > 0 )
             @include('frontend.account.recommended_video')
         @endif
     </div> 
 </div>
+
 <script type="text/javascript">
     var loader = "{{ asset( 'frontend/images/loader.png' ) }}",
         edit_biography = "{{ __( 'messages.edit_biography' ) }}",

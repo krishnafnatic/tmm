@@ -27,5 +27,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	  	gtag('config', 'UA-131947227-1');
 	</script>
+	<script type="text/javascript">
+
+$( document ).ready(function() {
+   
+var mouseX = 0;
+var mouseY = 0;
+var popupCounter = 0;
+
+document.addEventListener("mousemove", function(e) {
+   mouseX = e.clientX;
+   mouseY = e.clientY;
+   //document.getElementById("coordinates").innerHTML = "<br />X: " + e.clientX + "px<br />Y: " + e.clientY + "px";
+});
+
+$(document).mouseleave(function () {
+   if (mouseY < 100) {
+       if (popupCounter < 1) {
+           //alert("Please don't close the tab!");
+           $("#close_tab").modal();
+       }
+       popupCounter ++;
+   }
+});
+
+});
+   </script>
 </body>
 </html>

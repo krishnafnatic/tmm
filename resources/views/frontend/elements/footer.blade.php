@@ -32,7 +32,7 @@
             <div class="col footer-social">
                 <h5>{{ __( 'messages.find_on_social' ) }}</h5>
                 <ul class="">
-                    <!-- <li> <a href="" target="_blank"> <i class="fab fa-youtube-square"></i>  </a> </li> -->
+                    <li> <a href="https://www.youtube.com/channel/UC73_eY1weV0FiplMNhzCWXQ" target="_blank"> <i class="fab fa-youtube-square"></i>  </a> </li> 
                     <li> 
                         <a href="https://www.facebook.com/TheMoneyMile/" target="_blank" title="Find us on Facebook">
                             <i class="fab fa-facebook-square"></i> 
@@ -44,7 +44,7 @@
                         </a> 
                     </li>
                     <li>
-                        <a href="https://twitter.com/money_mile" target="_blank" title="Find us on Twitter">
+                        <a href="https://twitter.com/themoney_mile" target="_blank" title="Find us on Twitter">
                             <i class="fab fa-twitter"></i> 
                         </a> 
                     </li>
@@ -74,8 +74,40 @@
             </div>
         </div> 
     </div>
+<!-- Modal Login Start -->
+  <div class="modal fade" id="close_tab" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="exampleModalCenterTitle"><b>{{ __( 'messages.subscribe_popup' ) }}</b></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #000;">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"> 
+          <div class="alert alert-danger alert-block" id="danger" style="display: none;">
+            
+          </div>
+          <div class="alert alert-success alert-dismissable" id="success" style="display: none;">
+            
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col pr-0">
+                  <a href="https://m.me/TheMoneyMile" target="_blank"> <img src="/frontend/images/close_tab_fb.png" class="img-fluid"> </a>
+                
+            </div> 
+            <div class="col p-0 mr-3"> 
+                <a href="" target="_blank"> <img src="/frontend/images/close_tab_whatsapp.png" class="img-fluid"> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Modal Login End --> 
     <script>
         var subscribeMeURL=  "{{ url( '/subscribe' ) }}",
             loader    =   "{{ asset( 'frontend/images/loader.png' ) }}";
     </script>
+    
 </footer>

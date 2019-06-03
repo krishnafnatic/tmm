@@ -51,8 +51,8 @@
           </li>
         @else
           <li class="nav-item dropdown dropleft">
-            <a class="nav-link dropdown-toggle user-login-initials" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ Auth::user()->name }}" style="color: #fff !important; background: #666 !important; ">
-              {{ substr( Auth::user()->name, 0, 1) }}
+            <a class="nav-link dropdown-toggle user-login-initials" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ Auth::user()->name }}" style="color: #fff !important; background: #666 !important;  padding: 0 !important;"><img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width: 32px; height: 32px; top: 10px; left: 10px; border-radius: 50%;">
+              <!-- {{ substr( Auth::user()->name, 0, 1) }} -->
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               @if( isset( $menu_profile ) && count( $menu_profile ) > 0 )

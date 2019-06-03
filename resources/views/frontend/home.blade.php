@@ -3,7 +3,9 @@
 	@section('content')
 		@include('frontend.elements.message')
 		@include('frontend.home_template.banner_video')
+		@include('frontend.follow_us')
 		<div class="container">
+			@include('frontend.fb')
 			@if( isset( $settings ) && count ( $settings ) > 0 )	
 				@foreach( $settings as $setting )
 					@if( $setting->type == 'ads' )

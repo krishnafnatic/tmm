@@ -12,9 +12,9 @@
                 <div class="card">
                     <a href="{{ url('trending/'.$trending['slug']) }}" title="{{ $trending['name'] }}">
                         @if( !empty( $trending['images']['thumbnail']['src'] ) )
-                            <img class="card-img-top img-fluid" src="{{  $trending['images']['thumbnail']['src'] }}" alt="{{ $trending['name'] }}" title="{{ $trending['name'] }}" width="248" height="140" />
+                            <img class="card-img-top" src="{{  $trending['images']['thumbnail']['src'] }}" alt="{{ $trending['name'] }}" title="{{ $trending['name'] }}" width="248" height="140" />
                         @else
-                            <img class="card-img-top img-fluid" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" alt="{{ $trending['name'] }}" title="{{ $trending['name'] }}" width="248" height="140" />
+                            <img class="card-img-top" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" alt="{{ $trending['name'] }}" title="{{ $trending['name'] }}" width="248" height="140" />
                         @endif
                     </a>
                     <div class="card-body">

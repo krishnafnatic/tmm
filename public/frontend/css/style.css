@@ -843,14 +843,14 @@ button[type="submit"], input[type="submit"], button[type="button"]{
 					width: 7rem !important;
 					height: 7rem !important;
 					text-align: center;
-					/*background: #e2e2e2;*/
+					background: #e2e2e2;
 					color: #f8f8f8;
 					font-size: 3rem; 
 					border-radius: 100%;
 					line-height: 6.25rem;
 				}
 .speaker_fullprofile {
-	text-align: center;	
+	text-align: center;
     /*background: #e2e2e2;*/
     color: #f8f8f8;
     font-size: 3rem;
@@ -1003,7 +1003,7 @@ a.card-title, .card a {
 																	box-shadow: none !important; 
 																	border: none !important;
 															   }						 
-.upload-demo .cr-viewport .cr-vp-circle{
+#upload-demo .cr-viewport .cr-vp-circle{
 											width: 100% !important;
 											height: 100% !important;
 										}															   
@@ -1056,7 +1056,7 @@ a.card-title, .card a {
     color:#fff !important;
 }
 .social_share {
-    margin-top: 20px !important;
+    margin-top: 45px;
     margin-bottom: 0px !important;
 }
 .social_share li {
@@ -1651,16 +1651,3 @@ border: 0 none !important;
       top: -21rem !important;
                                        } 
 }
-/* Fb_whatsapp_banner */
-.fb_whatsapp_banner {
-	background:url('../images/social_media_leads-banner.png') center no-repeat; height:250px; background-size:contain; background-position:center;
-}
-
-/* follow us */
-.tmm-social-follow-us{ list-style: none; position: fixed; left: 0; top: 40%; margin: 0; padding:0; }
-.tmm-social-follow-us .fab{ padding: 15px; margin-bottom: 1px; width: 50px; height: 50px; color: #fff; text-align: center;}
-.tmm-social-follow-us .fa-facebook-f{ background: #3C5A9A; }
-.tmm-social-follow-us .fa-twitter{ background: #2DAAE1; }
-.tmm-social-follow-us .fa-youtube{ background: #FF0000; }
-.tmm-social-follow-us .fa-linkedin-in{ background: #1781B9;}
-.video-js .vjs-overlay-background{width: 100% !important;}

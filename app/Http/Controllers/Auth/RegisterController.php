@@ -96,10 +96,7 @@ class RegisterController extends Controller
             'name'          => $data['name'],
             'email'         => $data['email'],
             'mobile'        => '', //$data['mobile'],
-           // 'avatar'        => $data['avatar'],
             'password'      => bcrypt($data['password']),
-            
-
         ]);
 
         /*
@@ -121,12 +118,7 @@ class RegisterController extends Controller
             'user_id' => $user->id,
             'token' => str_random(40)
         ]);
-        /*if (isset($data['avatar'])) {
-            $user->addMediaFromRequest('avatar')->toMediaCollection('avatars');
-            $request->file('image')->move(
-        base_path() . '/public/' , $avatar);
-        }
-        */
+        
         /*
             Send email to user
         */
@@ -474,5 +466,4 @@ class RegisterController extends Controller
 
         return view( 'auth.verify', [ 'verification_link' => Lang::get('messages.verification_link') ] );
     }
-   
 }

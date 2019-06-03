@@ -60,21 +60,42 @@ class VideoController extends Controller {
             if you do not provide defaults, the client id, and client secret must
             be sent in the request body for each request
         */
-	    $errorMessage   =   '';
         $account_id     =   env('account_id');
-        $client_id      =   env('player_client_id');
-        $client_secret  =   env('player_client_secret');
-        $request_url    =   env('edge_player_url').$account_id.'/videos';
+        $client_id      =   env('cms_video_client_id');
+        $client_secret  =   env('cms_video_client_secret');
+        $end_point      =   '?sort=-created_at&limit=100';
+        $request_url    =   env('cms_video_url').$account_id.'/videos'.$end_point;
 
-        /*
-            To create access token 
-            One Need below credentials
-            account_id
-            client_id
-            client_secret
-        */
-        $access_token   = 'BCpkADawqM2YYcnD5q5XkV4woHGs6Hkijv386DIJa1VWFayUigs3t_iQgU4U5Dv1KmGJaZ6eVOIbyA-sQXJzmw0iQ2-BbjT5Nb0VQGHPx1LcKEnS729ufLxOJ_kCd1a6r14rfWRwshqTI8CH';
+        $auth_string    = "{$client_id}:{$client_secret}";
+        $request_oauth  = env('oauth_url')."?grant_type=client_credentials";
+        $ch             = curl_init($request_oauth);
+        curl_setopt_array($ch, array(
+            CURLOPT_POST           => TRUE,
+            CURLOPT_RETURNTRANSFER => TRUE,
+            CURLOPT_SSL_VERIFYPEER => FALSE,
+            CURLOPT_USERPWD        => $auth_string,
+            CURLOPT_HTTPHEADER     => array(
+                'Content-type: application/x-www-form-urlencoded',
+            ),
+        ));
+
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        // Check for errors
+        if ($response === FALSE) {
+            $message = "Error: there was a problem with your Oauth API call" + curl_error($ch);
+            Log::debug($message);
+            die();
+        }
+
+        // Decode the response
+        $responseData = json_decode($response, TRUE);
+        $access_token = $responseData["access_token"];
+
+        // get request type or default to GET
         $method = "GET";
+
         /**
             more security checks
             optional: you might want to check the URL for the API request here
@@ -89,14 +110,26 @@ class VideoController extends Controller {
             curl_setopt_array($ch, array(
             CURLOPT_CUSTOMREQUEST  => $method,
             CURLOPT_RETURNTRANSFER => TRUE,
-            CURLOPT_SSL_VERIFYPEER => TRUE,
+            CURLOPT_SSL_VERIFYPEER => FALSE,
             CURLOPT_HTTPHEADER     => array(
               'Content-type: application/json',
-              "Authorization: BCOV-Policy {$access_token}",
+              "Authorization: Bearer {$access_token}",
             )
         ));
         $response = curl_exec($ch);
         curl_close($ch);
+
+        /**
+            Check for errors and log them if any
+            note that logging will fail unless
+            the file log.txt exists in the same
+            directory as the proxy and is writable
+        */
+        if ($response === FALSE) {
+            $message = "Error: there was a problem with your CMS API call" + curl_error($ch);
+            Log::debug($message);
+            die();
+        }
 
         /**
             Decode the response
@@ -107,23 +140,9 @@ class VideoController extends Controller {
         $responseDecoded = json_decode($response, TRUE);
         if (!isset($responseDecoded)) {
             $response = '{null}';
-        } 
-
-        /**
-            Check for errors and log them if any
-            note that logging will fail unless
-            the file log.txt exists in the same
-            directory as the proxy and is writable
-        */
-        if ( $responseDecoded === FALSE ) {
-            $errorMessage = "Error: there was a problem with your PlayBack API call: " . curl_error($ch);
         }
 
-    	if ( isset( $errorMessage ) && !empty( $errorMessage ) ) {
-    	    return $errorMessage; 
-    	} else {
-    	    return $responseDecoded;
-    	}
+        return $responseDecoded;
     }
 
     /**
@@ -134,11 +153,6 @@ class VideoController extends Controller {
 	public function manageVideoFromBC(Request $request) {
 
 		$getcURLResponse = $this->getcURLResponseVideo();
-		echo '<pre>';print_r( $getcURLResponse );die;
-		
-		if( !is_array( $getcURLResponse ) ) {
-			return redirect('/admin/dashboard')->with('warning', $getcURLResponse);
-		}
 
         /*
             Count Total Videos Fetch from brightcove via CMS API

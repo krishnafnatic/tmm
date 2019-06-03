@@ -70,14 +70,6 @@
                             <input id="password-confirm" type="password" class="form-control @if ($errors->has('password')) is-invalid  @endif" autocomplete="new-password" name="password_confirmation" required>
                         </div>
 
-
-                <!--    <div class="form-group row">
-                        <label for="avatar" class="col-md-4 col-form-label text-md-right">{{ __('Avatar (optional)') }}</label>
-
-                        <div class="col-md-6">
-                             <input type="file" class="form-control" name="avatar" id="avatar">
-                        </div>-->
-
                         <div class="form-group {{ $errors->has('g-recaptcha-response') ? '' : '' }}">
                             <!-- <label>{{ __( 'messages.captcha' ) }}</label> -->
                             {!! app('captcha')->display() !!}

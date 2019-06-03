@@ -187,7 +187,6 @@ return [
         App\Repositories\User\UserRepoServiceProvide::class,
         \Ecrmnn\LaravelHttps\Providers\ServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
     ],
 
     /*
@@ -238,7 +237,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Newsletter' => Spatie\Newsletter\NewsletterFacade::class,
-        'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];

@@ -11,7 +11,7 @@
       @foreach( $recommended_videos as $next )
         <div class="card">
           <a href="{{ url('video/'.$next['slug']) }}">
-            <img class="card-img-top img-fluid" src="{{  $next['images']['thumbnail']['src'] }}" alt="{{ $next['name'] }}" title="{{ $next['name'] }}" />
+            <img class="card-img-top" src="{{  $next['images']['thumbnail']['src'] }}" alt="{{ $next['name'] }}" title="{{ $next['name'] }}" />
           </a>
           <div class="card-body">
             <h6 class="card-title">

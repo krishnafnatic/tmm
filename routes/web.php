@@ -98,7 +98,7 @@
     *	User Account URL 
     */
     Route::get('/profile-settings', 'Auth\AccountController@index')->name('profile-settings');
-    Route::post('/profile-settings', 'Auth\AccountController@avatar');
+
     /*
         User Account Save profile
     */
@@ -404,9 +404,4 @@ Route::group(['prefix' => 'admin', /*'middleware' => 'super_admin'*/ ], function
     */ 
     Route::get('/staticpages/{id}/edit', 'Backend\StaticPageController@edit')->name('admin.staticpages.id.edit');
     Route::post('/staticpages/{id}/edit', 'Backend\StaticPageController@update')->name('admin.staticpages.id.edit.submit');
-
-    Route::post('upload', function(){ echo 'hello'; });
 });
- 
-Route::get('/p', 'PostsController@create');
-

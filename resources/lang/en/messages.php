@@ -320,5 +320,4 @@ return [
     'listing_stps'          =>  'Static Pages Seo Listing',
     'page_name'             =>  'Page Name',
     'page_route'            =>  'Page Route',
-    'subscribe_popup'       =>  'Subscribe with us on Social Media!',
 ];

@@ -6,7 +6,6 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\UserMeta;
 
-
 class User extends Authenticatable
 {
     use Notifiable;
@@ -100,12 +99,5 @@ class User extends Authenticatable
     public function sendPasswordResetNotification($token) {
         $this->notify(new \App\Notifications\MailResetPasswordNotification($token));
     }
-    /*public function registerMediaConversions(Media $media = null)
-    {
-        $this->addMediaConversion('thumb')
-            ->width(60)
-            ->height(60);
-    }
-    use HasMediaTrait;
-*/
+
 }

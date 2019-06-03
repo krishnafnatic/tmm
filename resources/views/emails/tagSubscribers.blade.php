@@ -40,7 +40,7 @@
 										@if( !empty( $video['images']['thumbnail']['src'] ) )
 											<img src="{{ $video['images']['thumbnail']['src'] }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}" />
 										@else
-				                            <img class="card-img-top" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}">
+				                            <img class="card-img-top img-fluid" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}">
 				                        @endif
 									</td>
 									<td>

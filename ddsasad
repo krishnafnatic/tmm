@@ -1,0 +1,593 @@
+[33mcommit 9be0388172c3de68a33deedf68af8c76ad2ac4cf[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: krishna verma <krishna.v@iwebsun.com>
+Date:   Mon Jun 3 11:12:49 2019 +0530
+
+    new repo
+
+[33mcommit b10165a0f82459b505b54a1257bca2f7a085d163[m
+Author: krishna verma <krishna.v@iwebsun.com>
+Date:   Mon Jun 3 10:58:36 2019 +0530
+
+    hover update
+
+[33mcommit 478ca2198ff32f3ac2a2214ebc0756ddc0a1b737[m
+Author: ElegantWebAustralia <43131380+elegantwebaustralia@users.noreply.github.com>
+Date:   Tue Apr 30 16:55:12 2019 +0530
+
+    Update VideoController.php
+    
+    Checking Error
+
+[33mcommit 03acd7a8b053d16117c52be796d41313d118d878[m
+Merge: 59fc7fef fe33409c
+Author: root <root@host.themoneymile.com>
+Date:   Tue Apr 30 07:15:25 2019 -0400
+
+    Merge branch 'master' of https://github.com/elegantwebaustralia/themoneymile
+
+[33mcommit 59fc7fef11dfe4ce1a48233de16c9ef49dae86f1[m
+Author: root <root@host.themoneymile.com>
+Date:   Tue Apr 30 07:14:50 2019 -0400
+
+    vendor changes
+
+[33mcommit fe33409ccccd7368e306ace7bdf48d9ef51d0670[m
+Author: ElegantWebAustralia <43131380+elegantwebaustralia@users.noreply.github.com>
+Date:   Tue Apr 30 16:43:25 2019 +0530
+
+    Update VideoController.php
+    
+    Added code for error handling.
+
+[33mcommit b2266ea5532443b2ff858c47d125c46a99a423fc[m
+Merge: 0b75a0e9 b3ef2da4
+Author: root <root@host.themoneymile.com>
+Date:   Tue Apr 30 03:51:24 2019 -0400
+
+    Merge remote-tracking branch 'origin/dev'
+    
+    Need to update First phase modification on Live website
+
+[33mcommit 0b75a0e92372fa9c075da6dbc9ffee8aaa681df0[m
+Author: root <root@host.themoneymile.com>
+Date:   Tue Apr 30 03:49:32 2019 -0400
+
+    modification on Live
+
+[33mcommit b3ef2da4c3a08ecfcb2c54c12ce4c8d221ea72b7[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 30 12:48:34 2019 +0530
+
+    remove author tag from frontend
+
+[33mcommit d21da5ab8ac3e95fb439a1db062c17224a3e7fdf[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 30 12:28:40 2019 +0530
+
+    Backend Video fetch from bc route change
+
+[33mcommit e57fa5bb7eaa1f758b79930f02e10fb17c3a1587[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 30 12:23:44 2019 +0530
+
+    Modification in backend Seo tags Meta tags
+
+[33mcommit a2291c0fbebbbbf4214d34cea97ba06dbf7682c4[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 30 12:20:51 2019 +0530
+
+    Modification in backend Seo tags Meta tags
+
+[33mcommit 8e6f23f1c62a371473a90708cadd7b4d9684895c[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 30 12:15:24 2019 +0530
+
+    Modification in backend Seo tags Meta tags
+
+[33mcommit 9dc74bc8ee85041285c8323e0ae2e33c0a473e9f[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 30 12:12:15 2019 +0530
+
+    Modification in backend for Seo/Meta task
+
+[33mcommit 2f07901f65bf63e7de0253e841bcc2f5cf23207a[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 30 12:01:55 2019 +0530
+
+    Backend Sidbar Menu Lang Changes
+
+[33mcommit 1cee2c966a0c707a1a0149dd2033825fbd234e38[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 30 11:50:33 2019 +0530
+
+    removed subscribeNowPopup js code
+
+[33mcommit 09e5533d82d333ebc27027a32583e6ab29c6038c[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 30 11:42:45 2019 +0530
+
+    remove onbeforeunload functionality
+
+[33mcommit 40b75219819c936eedcf5514aa9279dfd4a88cd4[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Mon Apr 29 12:29:42 2019 +0530
+
+    subscribe_me js modified
+
+[33mcommit 55ea74b25bb812b6fecd6a29c52524b83c26db8a[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Mon Apr 29 11:17:01 2019 +0530
+
+    style changes
+
+[33mcommit 787d95146c5646d668dbb994298a984145c797df[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Fri Apr 26 12:21:46 2019 +0530
+
+    Subscribe Now Popup
+
+[33mcommit 9859806927db18d5712d69269fda6f28dd66a65b[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 23 14:10:26 2019 +0530
+
+    author tag hidden from meta elements
+
+[33mcommit 7f22d70b529f0e828a18c2c3df0a454fcfdccf44[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 23 14:00:11 2019 +0530
+
+    meta tags changes on video page
+
+[33mcommit 8a6877a87b84a7ec1c222c605133b71f61d031af[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 23 12:28:28 2019 +0530
+
+    lang changes
+
+[33mcommit 5c8f717d41fe94a01dac78d4a850cccac51c8201[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 23 12:18:51 2019 +0530
+
+    blade
+
+[33mcommit 6b6dcfc1946135c2f05155023cd2499e82515782[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 23 12:12:27 2019 +0530
+
+    Lang vars
+
+[33mcommit a9c57108fabcd83a0c0b774f62d777cf8f247915[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 23 11:35:13 2019 +0530
+
+    Themoneymile Task P1 List Changes on Dev
+
+[33mcommit 8cba1682c56c5dfb424c48fee8c1e2bc78889dc9[m
+Author: root <root@host.themoneymile.com>
+Date:   Fri Apr 19 02:16:09 2019 -0400
+
+    db backup on 19 april
+
+[33mcommit 8f0ea8a83a7dd654c086534604874df1ae6e4e86[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Apr 18 13:48:52 2019 +0530
+
+    noindex, nofollow, robots.txt added for dev branch
+
+[33mcommit 60e7dfd3a1192009cbc61e05c10bda0035836c11[m
+Author: root <root@host.themoneymile.com>
+Date:   Thu Apr 18 03:55:02 2019 -0400
+
+    Created a new Branch 'dev'
+
+[33mcommit 367a5d1673e4517e3f4fcf73e1b7c1e9c2f38398[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Apr 16 12:47:59 2019 +0530
+
+    added google tag manager code in meta files
+
+[33mcommit 335640662672a4af18d48571da2e17fda8d6f826[m
+Author: root <root@host.themoneymile.com>
+Date:   Tue Apr 16 02:08:07 2019 -0400
+
+    Add New Database Backup
+
+[33mcommit 378f8dfc1dd053abadce0af2d62592e05ee38dd7[m
+Author: root <root@host.themoneymile.com>
+Date:   Mon Apr 15 05:41:31 2019 -0400
+
+    Live Changs
+
+[33mcommit 89b43c7c70a26503e7b3ad4d0eb8535b2a6fe122[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 16:49:49 2019 +0530
+
+    env
+
+[33mcommit b6ef0b4609eec6044a5f3a2231e7930b547fb047[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 16:43:36 2019 +0530
+
+    env
+
+[33mcommit 8300d10cfc56168721c6bed61759e496781bbe49[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 16:39:42 2019 +0530
+
+    htmlverify+env
+
+[33mcommit 31b42fbd14fbe187f3d86c8613740de53d52a789[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 16:00:19 2019 +0530
+
+    contact us 9
+
+[33mcommit 9e68bb2e408821d877378124c116626ced1e5000[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 15:57:26 2019 +0530
+
+    contact us 8
+
+[33mcommit b8145edc8713ffb21c3bd03d6f1ea638026f561a[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 15:53:40 2019 +0530
+
+    contact us 7
+
+[33mcommit 914b19b5b050ffe863059ef56a5c87688c0fbc46[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 15:51:26 2019 +0530
+
+    abc
+
+[33mcommit 297bdb8f9fcdc824e8cd303a0f7c510e8941a114[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 15:43:30 2019 +0530
+
+    contact us 5
+
+[33mcommit 20b0413a0ff890c785213c245b95b19b57a78bab[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 15:33:59 2019 +0530
+
+    contact us 4
+
+[33mcommit 9e381bcb7b5ef48cb0aa0aefd7a33cddd4f79f53[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 15:31:43 2019 +0530
+
+    contact us 3
+
+[33mcommit 9b2ae9b758a756142a979cd06be2e274bb2d1a8e[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 15:28:21 2019 +0530
+
+    contact us 2
+
+[33mcommit bb471320e93dc2c7b61a527669be61fc052711ff[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 15:24:53 2019 +0530
+
+    contact us 1
+
+[33mcommit f3b2ea27ecdfdc418b3d9e0913cd1f1cf77f345f[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 14:27:41 2019 +0530
+
+    lock removed
+
+[33mcommit deae5098c7c2ab0e42f131743d863cf74c5b76ff[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 14:24:56 2019 +0530
+
+    recpatch admin rule
+
+[33mcommit 06dd27012dde6dab6361e5cb13bcad43ba0c60f0[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 14:22:12 2019 +0530
+
+    js admin recaptcha
+
+[33mcommit fa6ac695c2eeea94b661f53802f58de43e0f24eb[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 14:18:36 2019 +0530
+
+    admin login recatptcha
+
+[33mcommit 87118674f6d27161f3c9f70bc2fa8a6898baa358[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 14:12:23 2019 +0530
+
+    removed recaptcha again from contactus
+
+[33mcommit 32624a8a09445595145c6a81ef1fc0d696ec26ac[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 14:09:20 2019 +0530
+
+    recaptcha rule contact us
+
+[33mcommit 14843db3eaeb3949787ca77fdc2c91e1a2cc92b8[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 14:05:53 2019 +0530
+
+    contact recaptcha again
+
+[33mcommit 788abdd4784ca8e210bf2e41347f10c4293b6024[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 14:03:22 2019 +0530
+
+    contact us recaptcha added
+
+[33mcommit b1ebb6246d9473f3fd5ca145c2507d700df382d8[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 14:01:45 2019 +0530
+
+    contactus controller
+
+[33mcommit 3a5862dbcf9e02a9b02ba2d928bc3cb7b9afce51[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 13:57:01 2019 +0530
+
+    remove captcha from contact
+
+[33mcommit 488e3b748a47810021b095811eca014f2497eb39[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 13:55:11 2019 +0530
+
+    recaptcha design contact us
+
+[33mcommit 19d1df0571b6c6400ea3c0e6525e615eeaeccd12[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 13:52:42 2019 +0530
+
+    recaptcha on contact us
+
+[33mcommit 188c0e3a60a5e7c1524c75d94a41dcb0b14e7dc6[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 13:48:31 2019 +0530
+
+    recaptcha strong removed
+
+[33mcommit 39222e7c50fb62b99bed1d5dcbab8e8b23a53a76[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 13:43:32 2019 +0530
+
+    recaptcha class added
+
+[33mcommit 6da206391390e72ae4467d0c00b43765021df0c4[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 13:39:58 2019 +0530
+
+    recaptcha class
+
+[33mcommit 3c55b60f49a7dbca962232a7b0cd55614dfb111a[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 13:34:57 2019 +0530
+
+    class on recaptcha
+
+[33mcommit 25d033650fb892a6193e85a89e5bd195e8b1a93c[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 13:28:15 2019 +0530
+
+    forgot+reset+login+register recaptcha
+
+[33mcommit 2898d702dc934ba0c2ec2677dfa7e3caee3edff3[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 13:21:05 2019 +0530
+
+    recaptcha
+
+[33mcommit 667357d6c136372924a2b0daec0257fd67351027[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 13:16:30 2019 +0530
+
+    js
+
+[33mcommit 54b7bbb06ac0bf470b51957fca5590b18b658ca4[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 13:09:08 2019 +0530
+
+    env+meta
+
+[33mcommit bfeeb3ce353f4004d1e02b0beb85ce39569e10cf[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 12:58:55 2019 +0530
+
+    recaptcha js and added in app
+
+[33mcommit 5ac2436a1fa7c8fdbee70d25cf59f312d693dc2a[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Thu Jan 17 12:47:06 2019 +0530
+
+    captcha
+
+[33mcommit e43357d29a20856c651d10a3c4d5bc22b5f7d64c[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:55:19 2019 +0530
+
+    fb auth fixed now
+
+[33mcommit 74c288e17dea43a5ffd045bc5cffe5f2ccb33d02[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:52:33 2019 +0530
+
+    FB AUTH
+
+[33mcommit ba5026317abfc447390c27d9c9ef8b273fc6ea92[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:49:54 2019 +0530
+
+    fb auth redirect
+
+[33mcommit 7aeaf2cdc7d2b6f710e5671fc0f7f293b76b3ca2[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:37:17 2019 +0530
+
+    fb auth redirect
+
+[33mcommit 6fa4cea26d15601472191d3e5aafa5f5cd0a2c42[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:33:54 2019 +0530
+
+    fb auth
+
+[33mcommit b6d1427bcd440c3cce4794995e21a21e0cbcd164[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:30:50 2019 +0530
+
+    auth fb fixed 1
+
+[33mcommit d3112766508aff5791ebd0027777d7e32ab5e34e[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:29:05 2019 +0530
+
+    auth fb with id
+
+[33mcommit cedf2b59979d5113cbe9e81ef0fd89b05f5cab88[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:25:49 2019 +0530
+
+    auth fb checking
+
+[33mcommit 15248f178fc0d36459069458cb80d5d789b8c7af[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:20:53 2019 +0530
+
+    auth fb die
+
+[33mcommit 27fe16db31b8aa0852597270a17de98c4b6e2b66[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:18:29 2019 +0530
+
+    auth fb env url
+
+[33mcommit 7f3467e71f2fbd0d36efc2969fddabe4ab966a36[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:14:23 2019 +0530
+
+    auth fb return removed
+
+[33mcommit 774b9723b6564f54c416fcfd001e17dddfc5d5e4[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:12:09 2019 +0530
+
+    fb auth
+
+[33mcommit 735f81162c95cba8713a17daf70299f757cdf26f[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:06:12 2019 +0530
+
+    fb auth
+
+[33mcommit 0988e3d972c5acf2515661341be66f2354c28999[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 17:03:01 2019 +0530
+
+    fb auth
+
+[33mcommit 751d7e9b9b3dc50c874967f21664420f3fada6f2[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 16:41:01 2019 +0530
+
+    sitemap + lang change
+
+[33mcommit ffa221ae539952d8d4c6db2dd6e8dea06ab82a37[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Wed Jan 16 16:37:10 2019 +0530
+
+    fb auth check
+
+[33mcommit fe86c201809f5cf26eadae5f89d7c02425ce1087[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 18:43:04 2019 +0530
+
+    html verify
+
+[33mcommit ce2051695004a36d0fd5b9cda4213df5b5799a5d[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 18:35:20 2019 +0530
+
+    html verify
+
+[33mcommit de8dab7697c753971b5b76830f92a61e89acfb63[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 18:26:36 2019 +0530
+
+    removed p tag
+
+[33mcommit b27e18ef465464b000b11abf6c7a48cc27af1a4a[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 18:20:11 2019 +0530
+
+    style
+
+[33mcommit 2f731f2bced6a00d29779a70d0d6aca6e19c19e0[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 17:49:19 2019 +0530
+
+    html verify video detail page
+
+[33mcommit 08c8f5000c08bf9fef7e4878ac63d28aeb87154f[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 17:41:06 2019 +0530
+
+    tag not close
+
+[33mcommit 63493b1ee8d63582b7ad691876e1ab2c9b71a7ed[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 17:35:12 2019 +0530
+
+    video
+
+[33mcommit 2d3f0400cfecd8b34b3e5f24c45dbee94ef88d7b[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 17:33:02 2019 +0530
+
+    video
+
+[33mcommit 22c41410ee93ba0c34bf05a78c1755c4a72addae[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 17:28:55 2019 +0530
+
+    folder
+
+[33mcommit 431e4ae1f5ad370ce71f8e6820459bbaed9cb136[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 17:26:33 2019 +0530
+
+    id
+
+[33mcommit 39d61eb8d84a252ed4ebb294adce58ccab94a5cd[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 17:18:01 2019 +0530
+
+    urlencode
+
+[33mcommit c0f1edf1ce47c6d9fa5f1f5ba7891349cfdae926[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 16:41:24 2019 +0530
+
+    down
+
+[33mcommit 85b5c277e403b37fdc03807cef6be17d8b644ef4[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 16:38:32 2019 +0530
+
+    503+down
+
+[33mcommit 6aa7a97f46bd9609ae33d1358331b42edb086f84[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 16:30:32 2019 +0530
+
+    503
+
+[33mcommit e2b8edfd40c163be36ac8878ed3e1f1e9d3c9c53[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 16:20:49 2019 +0530
+
+    .htaccess + 503
+
+[33mcommit 5342a46d76518bf7dce29453a3ae988e212cc750[m
+Author: vipinyadav10 <vipin.y@iwebsun.com>
+Date:   Tue Jan 15 16:08:06 2019 

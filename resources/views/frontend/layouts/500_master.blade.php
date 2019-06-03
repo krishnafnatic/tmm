@@ -20,6 +20,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="{{ asset( 'frontend/js/slick.min.js' ) }}" defer="defer"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131947227-1"></script>
+	<script type="text/javascript">
+
+$( document ).ready(function() {
+   
+var mouseX = 0;
+var mouseY = 0;
+var popupCounter = 0;
+
+document.addEventListener("mousemove", function(e) {
+   mouseX = e.clientX;
+   mouseY = e.clientY;
+   //document.getElementById("coordinates").innerHTML = "<br />X: " + e.clientX + "px<br />Y: " + e.clientY + "px";
+});
+
+$(document).mouseleave(function () {
+   if (mouseY < 100) {
+       if (popupCounter < 1) {
+           //alert("Please don't close the tab!");
+            $("#close_tab").modal();
+       }
+       popupCounter ++;
+   }
+});
+
+});
+   </script>
 	<script>
 	  	window.dataLayer = window.dataLayer || [];
 	  	function gtag(){dataLayer.push(arguments);}

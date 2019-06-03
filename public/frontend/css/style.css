@@ -1651,3 +1651,9 @@ border: 0 none !important;
       top: -21rem !important;
                                        } 
 }
+.tmm-social-follow-us{ list-style: none; position: fixed; left: 0; top: 40%; margin: 0; padding:0; }
+.tmm-social-follow-us .fab{ padding: 15px; margin-bottom: 1px; width: 50px; height: 50px; color: #fff; text-align: center;}
+.tmm-social-follow-us .fa-facebook-f{ background: #3C5A9A; }
+.tmm-social-follow-us .fa-twitter{ background: #2DAAE1; }
+.tmm-social-follow-us .fa-youtube{ background: #FF0000; }
+.tmm-social-follow-us .fa-linkedin-in{ background: #1781B9;}

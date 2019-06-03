@@ -20,6 +20,7 @@ use App\Mail\ChangePassword;
 use App\Mail\ChangeNotification;
 use App\Mail\AccountDeactivate;
 use Illuminate\Support\Facades\Mail;
+use Image;
 
 use App\Repositories\User\UserInterface as UserInterface;
 
@@ -653,5 +654,21 @@ class AccountController extends Controller {
             'type'   =>  $key,
             'message' => Lang::get('messages.attribute_saved', [ 'attribute' => ucwords( $label ) ])
         ]);  
+    }
+
+    public function update_avatar(Request $request){
+
+        //handle the user upload of avatar
+        if($request->hasFile('avatar')){
+            $avatar = $request->file('avatar');
+            $filename = time().'.'.$avatar->getClientOriginalExtension();
+            Image::make($avatar)->resize(300,300)->save( public_path('/uploads/avatars/'.$filename));
+
+            $user = Auth::user();
+            $user->avatar = $filename;
+            $user->save();
+        }
+
+        return redirect( '/profile-settings' )->with("success","Profile photo changed successfully !");
     }
 } 

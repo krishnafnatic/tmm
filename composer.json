@@ -9,9 +9,11 @@
         "anhskohbo/no-captcha": "^3.0",
         "ecrmnn/laravel-https": "^1.0",
         "fideloper/proxy": "~3.3",
+        "intervention/image": "^2.4",
         "laravel/framework": "5.5.*",
         "laravel/socialite": "^3.1",
         "laravel/tinker": "~1.0",
+        "monim67/laravel-user-image-croppie": "^1.0",
         "spatie/laravel-newsletter": "^4.2"
     },
     "require-dev": {

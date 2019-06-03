@@ -99,6 +99,12 @@
     */
     Route::get('/profile-settings', 'Auth\AccountController@index')->name('profile-settings');
 
+    
+    Route::post('/profile-settings','Auth\AccountController@update_avatar');
+
+
+    // Route::get('/profile-settings','Auth\AccountController@profile')
+
     /*
         User Account Save profile
     */
@@ -116,6 +122,7 @@
     Route::get('/profile', 'Auth\AccountController@showProfileForm')->name( 'profile' );;
     Route::post('/profile','Auth\AccountController@updateProfile')->name('profile');
 
+      
     /*
         User Notification
     */

@@ -6,9 +6,9 @@
                 <div class="card">
                     <a href="{{ url('category/'.urlencode( $folder_videos['folder_heading'] ).'/'.$video['slug']) }}" title="{{ $video['name'] }}">
                         @if( !empty( $video['images']['thumbnail']['src'] ) )
-                            <img class="card-img-top" src="{{  $video['images']['thumbnail']['src'] }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}" width="248" height="140" />
+                            <img class="card-img-top img-fluid" src="{{  $video['images']['thumbnail']['src'] }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}" width="248" height="140" />
                         @else
-                            <img class="card-img-top" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}" width="248" height="140" />
+                            <img class="card-img-top img-fluid" src="{{ asset( 'frontend/images/image_placeholder.png' ) }}" alt="{{ $video['name'] }}" title="{{ $video['name'] }}" width="248" height="140" />
                         @endif
                     </a>
                     <div class="card-body">
